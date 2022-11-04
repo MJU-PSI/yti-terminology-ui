@@ -1,13 +1,10 @@
 import { AbstractControl, FormArray, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import { assertNever } from 'yti-common-ui/utils/object';
-import { allMatching, anyMatching, firstMatching, flatten, normalizeAsArray, moveElement } from 'yti-common-ui/utils/array';
+import { assertNever, allMatching, anyMatching, firstMatching, flatten, normalizeAsArray, moveElement,
+  requiredList, validateLanguage, comparingPrimitive, Localizable } from '@vrk-yti/yti-common-ui';
 import { ConceptNode, KnownNode, Node, Property, Reference, TermNode } from 'app/entities/node';
 import { Cardinality, Editor, MetaModel, NodeMeta, PropertyMeta, ReferenceMeta, ReferenceType } from 'app/entities/meta';
-import { Localizable } from 'yti-common-ui/types/localization';
 import { NodeType } from 'app/entities/node-api';
 import { validateMeta } from 'app/utils/validator';
-import { requiredList, validateLanguage } from 'yti-common-ui/utils/validator';
-import { comparingPrimitive } from 'yti-common-ui/utils/comparator';
 import { removeMatchingLinks } from 'app/utils/semantic';
 import { Sortable } from 'app/directives/drag-sortable.directive';
 

@@ -2,10 +2,8 @@ import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ConceptNode } from 'app/entities/node';
 import { FormNode, FormReferenceLiteral } from 'app/services/form-state';
-import { Options } from 'yti-common-ui/components/dropdown.component';
+import { Options, ModalService, labelNameToResourceIdIdentifier } from '@vrk-yti/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
-import { ModalService } from 'yti-common-ui/services/modal.service';
-import { labelNameToResourceIdIdentifier } from 'yti-common-ui/utils/resource';
 
 @Component({
   selector: 'app-select-concept-reference-modal',

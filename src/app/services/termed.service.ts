@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { forkJoin, Observable, of, zip } from 'rxjs';
 import { catchError, flatMap, map } from 'rxjs/operators';
-import { contains, flatten, normalizeAsArray } from 'yti-common-ui/utils/array';
+import { contains, flatten, normalizeAsArray } from '@vrk-yti/yti-common-ui';
 import { MetaModelService } from './meta-model.service';
 import { Identifier, NodeExternal, NodeInternal, NodeType, VocabularyNodeType } from 'app/entities/node-api';
 import { CollectionNode, ConceptNode, GroupNode, Node, OrganizationNode, VocabularyNode } from 'app/entities/node';

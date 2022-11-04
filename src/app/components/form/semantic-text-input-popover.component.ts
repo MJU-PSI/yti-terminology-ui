@@ -3,8 +3,7 @@ import {
   Output
 } from '@angular/core';
 import { ConceptNode } from 'app/entities/node';
-import { Localizable } from 'yti-common-ui/types/localization';
-import { asLocalizable } from 'yti-common-ui/utils/localization';
+import { Localizable, asLocalizable  } from '@vrk-yti/yti-common-ui';
 
 class PopoverPositionRefresher {
 
@@ -87,8 +86,8 @@ export class SemanticTextInputLinkPopoverComponent implements AfterViewInit, OnD
         </div>
       </h3>
 
-      <div class="popover-body" *ngIf="concept" 
-           app-semantic-text-plain 
+      <div class="popover-body" *ngIf="concept"
+           app-semantic-text-plain
            [value]="conceptDefinition | translateValue"
            [format]="concept.definitionSemanticTextFormat">
       </div>

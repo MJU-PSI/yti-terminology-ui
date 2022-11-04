@@ -1,13 +1,11 @@
-import { AfterViewInit, Component, ElementRef, Injectable, Input, Renderer, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Injectable, Input, ViewChild, Renderer2 } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { GroupNode } from 'app/entities/node';
 import { BehaviorSubject, combineLatest, concat, Observable } from 'rxjs';
 import { debounceTime, map, skip, take, tap } from 'rxjs/operators';
 import { TermedService } from 'app/services/termed.service';
 import { LanguageService } from 'app/services/language.service';
-import { contains } from 'yti-common-ui/utils/array';
-import { ModalService } from 'yti-common-ui/services/modal.service';
-import {comparingLocalizable} from 'yti-common-ui/utils/comparator';
+import { contains, ModalService, comparingLocalizable } from '@vrk-yti/yti-common-ui';
 
 @Component({
   selector: 'app-search-group-modal',
@@ -73,7 +71,7 @@ export class SearchGroupModalComponent implements AfterViewInit {
   constructor(public modal: NgbActiveModal,
               termedService: TermedService,
               languageService: LanguageService,
-              private renderer: Renderer) {
+              private renderer: Renderer2) {
 
     const initialSearch = this.search$.pipe(take(1));
     const debouncedSearch = this.search$.pipe(skip(1), debounceTime(500));
@@ -105,7 +103,7 @@ export class SearchGroupModalComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.invokeElementMethod(this.searchInput.nativeElement, 'focus');
+    this.searchInput.nativeElement.focus();
   }
 
   cancel() {

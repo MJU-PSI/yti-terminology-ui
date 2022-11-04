@@ -1,8 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Injectable, ViewChild } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalService } from 'yti-common-ui/services/modal.service';
+import { ModalService, httpOrHttpsUrlRegex } from '@vrk-yti/yti-common-ui';
 import { FormControl, Validators } from '@angular/forms';
-import { httpOrHttpsUrlRegex } from 'yti-common-ui/utils/validator';
 
 @Component({
   selector: 'app-url-input-modal',

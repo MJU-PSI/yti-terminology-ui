@@ -1,10 +1,8 @@
 import * as levenshtein from 'fast-levenshtein';
-import { Localizable } from 'yti-common-ui/types/localization';
-import { isDefined } from 'yti-common-ui/utils/object';
+import { Localizable, isDefined, allMatching } from '@vrk-yti/yti-common-ui';
 // NOTE TODO: Using "local" copy of common-ui comparator.ts due to optimizer breaking things. FIX THIS.
 import { Comparator, comparingPrimitive, comparingLocalizable } from 'app/utils/comparator';
 import { Localizer } from 'app/services/language.service';
-import { allMatching } from 'yti-common-ui/utils/array';
 
 export interface TextAnalysis<T> {
   item: T;

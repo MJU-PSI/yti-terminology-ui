@@ -2,9 +2,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConceptNode, VocabularyNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
 import { Restrict, SearchConceptModalService } from './search-concept-modal.component';
-import { ignoreModalClose } from 'yti-common-ui/utils/modal';
+import { ignoreModalClose, isDefined, requireDefined } from '@vrk-yti/yti-common-ui';
 import { FormReferenceLiteral } from 'app/services/form-state';
-import { isDefined, requireDefined } from 'yti-common-ui/utils/object';
 
 @Component({
   selector: 'app-concept-reference-input',
@@ -20,7 +19,7 @@ import { isDefined, requireDefined } from 'yti-common-ui/utils/object';
     <div *ngIf="editing" [appDragSortable]="reference" [dragDisabled]="!canReorder()">
       <div *ngFor="let concept of reference.value; let i = index"
            class="removable-text"
-           [appDragSortableItem]="concept" 
+           [appDragSortableItem]="concept"
            [index]="i">
         <a><i class="fa fa-times" [id]="concept.idIdentifier + '_' + id + '_concept_reference_remove_reference_link'" (click)="removeReference(concept)"></i></a>
         <span> {{concept.label | translateValue}}</span>

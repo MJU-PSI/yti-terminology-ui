@@ -1,4 +1,4 @@
-@import '~yti-common-ui/theme/variables';
+@import '~@vrk-yti/yti-common-ui/theme/variables';
 @import '../../../mixins';
 
 $button-height: 57px;
@@ -39,7 +39,7 @@ $buttonless-height: 127px;
   @include selectable-items($button-height, $buttonless-height);
 }
 
-:host /deep/ ngb-popover-window {
+:host ::ng-deep ngb-popover-window {
   z-index: 1040; // prevent from showing on top of modal
 }
 

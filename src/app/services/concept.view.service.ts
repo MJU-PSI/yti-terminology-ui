@@ -5,7 +5,6 @@ import { TermedService } from './termed.service';
 import { BehaviorSubject, combineLatest, concat, merge, NEVER, Observable, Subject, Subscription, zip } from 'rxjs';
 import { debounceTime, filter, flatMap, map, skip, switchMap, take } from 'rxjs/operators';
 import { CollectionNode, ConceptNode, VocabularyNode } from 'app/entities/node';
-import { comparingLocalizable } from 'yti-common-ui/utils/comparator';
 import { LanguageService } from './language.service';
 import { MetaModelService } from './meta-model.service';
 import {
@@ -20,14 +19,12 @@ import {
   isSelect
 } from './action';
 import { ElasticSearchService, IndexedConcept } from './elasticsearch.service';
-import { assertNever } from 'yti-common-ui/utils/object';
-import { contains, removeMatching, replaceMatching } from 'yti-common-ui/utils/array';
+import { assertNever, comparingLocalizable, contains, removeMatching, replaceMatching, filterByPrefixPostfixSearch, splitSearchString } from '@vrk-yti/yti-common-ui';
 import { FormNode } from './form-state';
 import { MetaModel } from 'app/entities/meta';
 import { TranslateService } from '@ngx-translate/core';
 import { PrefixAndNamespace } from 'app/entities/prefix-and-namespace';
 import { HttpErrorResponse } from '@angular/common/http';
-import { filterByPrefixPostfixSearch, splitSearchString } from 'yti-common-ui/utils/search';
 
 function onlySelect<T>(action: Observable<Action<T>>): Observable<T> {
   return action.pipe(filter(isSelect), map(extractItem));
@@ -613,7 +610,7 @@ export class ConceptViewModelService implements OnDestroy {
             next(persistentConcept: ConceptNode) {
               that.resourceAction$.next(createEditAction(persistentConcept.clone()));
               that.resourceForm = new FormNode(persistentConcept, () => that.languages, metaModel);
-              resolve();
+              resolve(true);
             },
             error(err: any) {
               reject(err);
@@ -642,7 +639,7 @@ export class ConceptViewModelService implements OnDestroy {
         next() {
           that.resourceAction$.next(createRemoveAction(concept));
           that.router.navigate(['/concepts', that.graphId]);
-          resolve();
+          resolve(true);
         },
         error(err: any) {
           reject(err);
@@ -685,7 +682,7 @@ export class ConceptViewModelService implements OnDestroy {
             next(persistentCollection: CollectionNode) {
               that.resourceAction$.next(createEditAction(persistentCollection.clone()));
               that.resourceForm = new FormNode(persistentCollection, () => that.languages, metaModel);
-              resolve();
+              resolve(true);
             },
             error(err: any) {
               reject(err);
@@ -708,7 +705,7 @@ export class ConceptViewModelService implements OnDestroy {
         next() {
           that.resourceAction$.next(createRemoveAction(collection));
           that.router.navigate(['/concepts', that.graphId]);
-          resolve();
+          resolve(true);
         },
         error(err: any) {
           reject(err);
@@ -752,7 +749,7 @@ export class ConceptViewModelService implements OnDestroy {
             next(persistentVocabulary: VocabularyNode) {
               that.vocabularyAction$.next(createEditAction(persistentVocabulary.clone()));
               that.vocabularyForm = new FormNode(persistentVocabulary, () => that.languages, metaModel);
-              resolve();
+              resolve(true);
             },
             error(err: any) {
               reject(err);
@@ -775,7 +772,7 @@ export class ConceptViewModelService implements OnDestroy {
       this.termedService.removeVocabulary(vocabulary.graphId).subscribe({
         next() {
           that.router.navigate(['/']);
-          resolve();
+          resolve(true);
         },
         error(err: any) {
           reject(err);

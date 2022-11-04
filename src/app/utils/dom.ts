@@ -65,7 +65,7 @@ export class DomSelection {
 
     const s = window.getSelection();
 
-    if (s.anchorNode) {
+    if (s?.anchorNode && s.focusNode) {
       const anchor = DomPoint.create(root, s.anchorNode, s.anchorOffset);
       const focus = DomPoint.create(root, s.focusNode, s.focusOffset);
 
@@ -173,8 +173,8 @@ export function moveCursor(textNode: Node, offset: number) {
   const selection = window.getSelection();
   range.setStart(textNode, offset);
   range.collapse(true);
-  selection.removeAllRanges();
-  selection.addRange(range);
+  selection?.removeAllRanges();
+  selection?.addRange(range);
 }
 
 export const nbsp = '\u00A0';

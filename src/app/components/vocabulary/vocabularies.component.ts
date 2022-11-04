@@ -5,17 +5,12 @@ import { AuthorizationManager } from 'app/services/authorization-manager.sevice'
 import { BehaviorSubject, combineLatest, concat, Observable, Subscription } from 'rxjs';
 import { debounceTime, publishReplay, refCount, skip, take } from 'rxjs/operators';
 import { TermedService } from 'app/services/termed.service';
-import { anyMatching } from 'yti-common-ui/utils/array';
-import { comparingLocalizable } from 'yti-common-ui/utils/comparator';
+import { anyMatching, comparingLocalizable, getInformationDomainSvgIcon, getVocabularyTypeMaterialIcon, selectableStatuses, Status, Localizable, User, UserService } from '@vrk-yti/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
-import { getInformationDomainSvgIcon, getVocabularyTypeMaterialIcon } from 'yti-common-ui/utils/icons';
-import { selectableStatuses, Status } from 'yti-common-ui/entities/status';
 import { ConfigurationService } from '../../services/configuration.service';
 import { ElasticSearchService } from '../../services/elasticsearch.service';
 import { DeepSearchHitList, Terminology, TerminologySearchRequest, TerminologySearchResponse } from '../../entities/search';
-import { Localizable } from 'yti-common-ui/types/localization';
-import { User, UserService } from 'yti-common-ui/services/user.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({

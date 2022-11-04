@@ -1,8 +1,7 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { OrganizationNode } from 'app/entities/node';
-import { FilterOptions } from 'yti-common-ui/components/filter-dropdown.component';
+import { FilterOptions, comparingLocalizable } from '@vrk-yti/yti-common-ui';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
-import { comparingLocalizable } from 'yti-common-ui/utils/comparator';
 import { LanguageService } from 'app/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';

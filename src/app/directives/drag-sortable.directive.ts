@@ -1,5 +1,5 @@
 import { Directive, ElementRef, EventEmitter, Input, NgZone, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
-import { requireDefined } from 'yti-common-ui/utils/object';
+import { requireDefined } from '@vrk-yti/yti-common-ui';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
 export interface Sortable<T> {
@@ -134,7 +134,7 @@ export class DragSortableItemDirective<T> implements OnInit, OnDestroy {
   private subscriptionsToClean: Subscription[] = [];
 
   private dragStartHandler = (event: DragEvent) =>
-    this.dragSortable.startDrag(event.dataTransfer, this.index, this.element.getBoundingClientRect().width);
+    event.dataTransfer ? this.dragSortable.startDrag(event.dataTransfer, this.index, this.element.getBoundingClientRect().width) : null;
 
   private dragEndHandler = () =>
     this.dragSortable.drop();

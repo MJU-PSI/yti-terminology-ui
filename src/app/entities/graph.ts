@@ -1,4 +1,4 @@
-import { Localization } from 'yti-common-ui/types/localization';
+import { Localization } from '@vrk-yti/yti-common-ui';
 
 export interface Graph {
 

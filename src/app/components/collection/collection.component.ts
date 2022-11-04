@@ -4,7 +4,7 @@ import { EditableService, EditingComponent } from 'app/services/editable.service
 import { ConceptViewModelService } from 'app/services/concept.view.service';
 import { Subscription } from 'rxjs';
 import { DeleteConfirmationModalService } from 'app/components/common/delete-confirmation-modal.component';
-import { requireDefined } from 'yti-common-ui/utils/object';
+import { requireDefined } from '@vrk-yti/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 import { FormField } from 'app/services/form-state';
 import { collectionIdPrefix } from 'app/utils/id-prefix';
@@ -19,7 +19,7 @@ import { collectionIdPrefix } from 'app/utils/id-prefix';
       <div class="component-header">
         <h3>{{collection.label | translateValue}}</h3>
       </div>
-      
+
       <form #form="ngForm" [formGroup]="formNode.control" class="component-content">
 
         <div class="top-actions">
@@ -27,12 +27,12 @@ import { collectionIdPrefix } from 'app/utils/id-prefix';
           <app-status *ngIf="collection.hasStatus()"
                       [status]="collection.status"
                       class="float-left"></app-status>
-          
-            <app-editable-buttons [vocabulary]="vocabulary" 
+
+            <app-editable-buttons [vocabulary]="vocabulary"
                                   [form]="form"
                                   [canRemove]="true"
                                   [idPrefix]="idPrefix"></app-editable-buttons>
-          
+
         </div>
 
         <div class="row">

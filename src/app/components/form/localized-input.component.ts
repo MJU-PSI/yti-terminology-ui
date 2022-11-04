@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { ConceptNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
 import { FormPropertyLocalizable } from 'app/services/form-state';
-import { contains } from 'yti-common-ui/utils/array';
+import { contains } from '@vrk-yti/yti-common-ui';
 
 @Component({
   selector: 'app-localized-input',
@@ -45,9 +45,9 @@ import { contains } from 'yti-common-ui/utils/array';
                 {{child.control.value}}
               </div>
 
-            </ng-container>  
+            </ng-container>
           </div>
-          
+
           <div *ngIf="editing" class="form-group">
 
             <ng-container [ngSwitch]="property.editor.type">
@@ -64,7 +64,7 @@ import { contains } from 'yti-common-ui/utils/array';
                         class="form-control"
                         [ngClass]="{'is-invalid': !child.control.valid}"
                         [id]="id + '_' + child.lang + '_' + i + '_textarea'"
-                        [formControl]="child.control"></textarea>              
+                        [formControl]="child.control"></textarea>
 
               <app-semantic-text-input *ngSwitchCase="'semantic'"
                                        [id]="id + '_' + child.lang + '_' + i + '_semantic_text_input'"

@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, ElementRef, Renderer, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConceptListModel, ConceptViewModelService } from 'app/services/concept.view.service';
-import { selectableStatuses } from 'yti-common-ui/entities/status';
+import { selectableStatuses } from '@vrk-yti/yti-common-ui';
 import { v4 as uuid } from 'uuid';
 import { IndexedConcept } from 'app/services/elasticsearch.service';
 import { AuthorizationManager } from 'app/services/authorization-manager.sevice';
@@ -103,7 +103,7 @@ export class ConceptListComponent implements AfterViewInit {
 
   constructor(private conceptViewModel: ConceptViewModelService,
               private authorizationManager: AuthorizationManager,
-              private renderer: Renderer,
+              private renderer: Renderer2,
               private router: Router) {
 
     this.model = conceptViewModel.conceptList;
@@ -118,7 +118,7 @@ export class ConceptListComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.invokeElementMethod(this.searchInput.nativeElement, 'focus');
+    this.searchInput.nativeElement.focus();
   }
 
   canAddConcept() {

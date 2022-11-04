@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Injectable, Input, OnInit, Renderer, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Injectable, Input, OnInit, ViewChild, Renderer2 } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ConceptNode, VocabularyNode } from 'app/entities/node';
 import { BehaviorSubject, combineLatest, concat, Observable } from 'rxjs';
@@ -8,9 +8,8 @@ import { EditableService } from 'app/services/editable.service';
 import { ElasticSearchService, IndexedConcept } from 'app/services/elasticsearch.service';
 import { FormNode } from 'app/services/form-state';
 import { defaultLanguages } from 'app/utils/language';
-import { firstMatching } from 'yti-common-ui/utils/array';
+import { firstMatching, ModalService } from '@vrk-yti/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
-import { ModalService } from 'yti-common-ui/services/modal.service';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -170,7 +169,7 @@ export class SearchConceptModalComponent implements OnInit, AfterViewInit {
   constructor(public modal: NgbActiveModal,
               private termedService: TermedService,
               private elasticSearchService: ElasticSearchService,
-              private renderer: Renderer,
+              private renderer: Renderer2,
               private languageService: LanguageService,
               private metaModelService: MetaModelService) {
   }
@@ -314,7 +313,7 @@ export class SearchConceptModalComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.renderer.invokeElementMethod(this.searchInput.nativeElement, 'focus');
+    this.searchInput.nativeElement.focus();
   }
 
   cancel() {

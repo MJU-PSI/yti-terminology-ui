@@ -1,8 +1,7 @@
 import { OnDestroy, Pipe, PipeTransform } from '@angular/core';
-import { Localizable } from 'yti-common-ui/types/localization';
+import { Localizable, isDefined } from '@vrk-yti/yti-common-ui';
 import { Language, LanguageService } from 'app/services/language.service';
 import { Subscription } from 'rxjs';
-import { isDefined } from 'yti-common-ui/utils/object';
 
 @Pipe({
   name: 'translateSearchValue',

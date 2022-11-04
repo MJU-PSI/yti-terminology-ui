@@ -1,16 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Localization } from 'yti-common-ui/types/localization';
-import { allMatching, contains, firstMatching, flatten } from 'yti-common-ui/utils/array';
+import { Localization, allMatching, contains, firstMatching, flatten, assertNever, requireDefined, allStatuses, Status, escapeHtml } from '@vrk-yti/yti-common-ui';
 import { ConceptNode, Property, VocabularyNode } from 'app/entities/node';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { MetaModel, NodeMeta } from 'app/entities/meta';
 import { TermedService } from 'app/services/termed.service';
 import * as Papa from 'papaparse';
 import { v4 as uuid } from 'uuid';
-import { assertNever, requireDefined } from 'yti-common-ui/utils/object';
-import { allStatuses, Status } from 'yti-common-ui/entities/status';
-import { escapeHtml } from 'yti-common-ui/utils/string';
 
 type ColumnType = 'localized'
   | 'literal'

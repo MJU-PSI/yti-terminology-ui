@@ -17,32 +17,33 @@ import { ConceptComponent } from './concept.component';
 
         <div class="panel-left" appFloat>
           <div>
-            <ngb-tabset [justify]="'justified'" [activeId]="initialTabId">
-              <ngb-tab id="concepts_alphabetic_tab">
-                <ng-template ngbTabTitle>
+            <ul ngbNav #nav="ngbNav" [activeId]="initialTabId">
+              <li ngbNavItem="concepts_alphabetic_tab" id="concepts_alphabetic_tab">
+                <a ngbNavLink>
                   <p>{{'Alphabetic' | translate}}</p>
-                </ng-template>
-                <ng-template ngbTabContent>
+                </a>
+                <ng-template ngbNavContent>
                   <app-concept-list></app-concept-list>
                 </ng-template>
-              </ngb-tab>
-              <ngb-tab id="concepts_hierarchical_tab">
-                <ng-template ngbTabTitle>
+              </li>
+              <li ngbNavItem="concepts_hierarchical_tab" id="concepts_hierarchical_tab">
+                <a ngbNavLink>
                   <p>{{'Hierarchical' | translate}}</p>
-                </ng-template>
-                <ng-template ngbTabContent>
+                </a>
+                <ng-template ngbNavContent>
                   <app-concept-hierarchy></app-concept-hierarchy>
                 </ng-template>
-              </ngb-tab>
-              <ngb-tab id="concepts_collection_tab">
-                <ng-template ngbTabTitle>
+              </li>
+              <li ngbNavItem="concepts_collection_tab" id="concepts_collection_tab">
+                <a ngbNavLink>
                   <p>{{'Collection' | translate}}</p>
-                </ng-template>
-                <ng-template ngbTabContent>
+                </a>
+                <ng-template ngbNavContent>
                   <app-collection-list></app-collection-list>
                 </ng-template>
-              </ngb-tab>
-            </ngb-tabset>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="nav"></div>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import { isDefined } from 'yti-common-ui/utils/object';
+import { isDefined } from '@vrk-yti/yti-common-ui';
 import { Injectable } from '@angular/core';
 
 const selectionWidthKey = 'selectionWidth';

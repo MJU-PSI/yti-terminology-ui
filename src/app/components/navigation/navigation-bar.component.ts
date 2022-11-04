@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Language, LanguageService } from 'app/services/language.service';
-import { UserService } from 'yti-common-ui/services/user.service';
-import { LoginModalService } from 'yti-common-ui/components/login-modal.component';
+import { UserService, LoginModalService } from '@vrk-yti/yti-common-ui';
 import { TermedService } from '../../services/termed.service';
 import { ConfigurationService } from '../../services/configuration.service';
 import { Router } from '@angular/router';
@@ -41,7 +40,7 @@ import { Router } from '@angular/router';
 
         <li class="nav-item dropdown" placement="bottom-right" ngbDropdown>
           <a class="dropdown-toggle nav-link btn btn-language" id="language_dropdown_link" ngbDropdownToggle>{{language.toUpperCase()}}</a>
-          <div ngbDropdownMenu>
+          <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
             <a *ngFor="let availableLanguage of availableLanguages"
                id="{{availableLanguage.code + '_language_selection_link'}}"
                class="dropdown-item"
@@ -56,7 +55,7 @@ import { Router } from '@angular/router';
           <a class="nav-link btn-menu" id="nav_item_dropdown_link" ngbDropdownToggle>
             <app-menu></app-menu>
           </a>
-          <div ngbDropdownMenu>
+          <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" *ngIf="isLoggedIn()" id="navigation_log_out_link" (click)="logOut()">
               <i class="fas fa-sign-out-alt"></i>
               <span translate>LOG OUT</span>

@@ -1,15 +1,25 @@
-import { asLocalizable } from 'yti-common-ui/utils/localization';
-import { Localizable, Localization, Localizer } from 'yti-common-ui/types/localization';
-import { isDefined, requireDefined } from 'yti-common-ui/utils/object';
-import { firstMatching, flatten, normalizeAsArray, remove, requireSingle, allMatching } from 'yti-common-ui/utils/array';
+import {
+  asLocalizable,
+  Localizable,
+  Localization,
+  Localizer,
+  isDefined,
+  requireDefined,
+  firstMatching,
+  flatten,
+  normalizeAsArray,
+  remove,
+  requireSingle,
+  allMatching,
+  Status,
+  labelNameToResourceIdIdentifier
+ } from '@vrk-yti/yti-common-ui';
 import { Attribute, Identifier, NodeExternal, NodeInternal, NodeType, VocabularyNodeType } from './node-api';
 import { MetaModel, NodeMeta, PropertyMeta, ReferenceMeta } from './meta';
 import * as moment from 'moment';
 import { Moment } from 'moment';
 import { defaultLanguages } from 'app/utils/language';
 import { stripSemanticMarkup } from 'app/utils/semantic';
-import { Status } from 'yti-common-ui/entities/status';
-import { labelNameToResourceIdIdentifier } from 'yti-common-ui/utils/resource';
 
 
 const defaultStatus = 'DRAFT';

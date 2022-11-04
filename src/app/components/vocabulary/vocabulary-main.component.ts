@@ -2,20 +2,16 @@ import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { Location } from '@angular/common';
 import { ConceptViewModelService } from '../../services/concept.view.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { NgbTabChangeEvent, NgbTabset } from '@ng-bootstrap/ng-bootstrap';
+import { NgbNav, NgbNavChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 import { ConceptsComponent } from '../concept/concepts.component';
 import { VocabularyComponent } from './vocabulary.component';
-import { ConfirmationModalService } from 'yti-common-ui/components/confirmation-modal.component';
-import { ignoreModalClose } from 'yti-common-ui/utils/modal';
+import { ConfirmationModalService, ignoreModalClose, requireDefined, ErrorModalService, UserService } from '@vrk-yti/yti-common-ui';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../services/language.service';
-import { requireDefined } from 'yti-common-ui/utils/object';
 import { ImportVocabularyModalService } from './import-vocabulary-modal.component';
 import { AuthorizationManager } from '../../services/authorization-manager.sevice';
 import { MessagingService } from '../../services/messaging-service';
-import { ErrorModalService } from 'yti-common-ui/components/error-modal.component';
 import { ConfigurationService } from '../../services/configuration.service';
-import { UserService } from 'yti-common-ui/services/user.service';
 
 @Component({
   selector: 'app-vocabulary-main',
@@ -87,26 +83,27 @@ import { UserService } from 'yti-common-ui/services/user.service';
             </div>
           </div>
         </div>
-        <ngb-tabset #tabs (tabChange)="onTabChange($event)">
-          <ngb-tab id="conceptsTab" [title]="'Concepts' | translate">
-            <ng-template ngbTabContent>
+        <ul ngbNav #nav="ngbNav" (navChange)="onNavChange($event)">
+          <li ngbNavItem="conceptsTab" id="conceptsTab" [title]="'Concepts' | translate">
+            <ng-template ngbNavContent>
               <app-concepts #conceptsComponent></app-concepts>
             </ng-template>
-          </ngb-tab>
-          <ngb-tab id="terminologyTab" [title]="'Terminology details' | translate">
-            <ng-template ngbTabContent>
+          </li>
+          <li ngbNavItem="terminologyTab" id="terminologyTab" [title]="'Terminology details' | translate">
+            <ng-template ngbNavContent>
               <app-vocabulary #terminologyComponent></app-vocabulary>
               <div class="bottom-hack-border"></div>
               <div class="bottom-hack-padding"></div>
             </ng-template>
-          </ngb-tab>
-        </ngb-tabset>
+          </li>
+        </ul>
+        <div [ngbNavOutlet]="nav"></div>
       </div>
     </div>
   `
 })
 export class VocabularyMainComponent implements OnDestroy {
-  @ViewChild('tabs') tabs: NgbTabset;
+  @ViewChild('nav') tabs: NgbNav;
   @ViewChild('conceptsComponent') conceptsComponent: ConceptsComponent;
   @ViewChild('terminologyComponent') terminologyComponent: VocabularyComponent;
   private graphId: string;
@@ -210,7 +207,7 @@ export class VocabularyMainComponent implements OnDestroy {
       .then(() => this.viewModel.refreshConcepts(), ignoreModalClose)
   }
 
-  onTabChange(event: NgbTabChangeEvent) {
+  onNavChange(event: NgbNavChangeEvent) {
     if ((this.terminologyComponent && this.terminologyComponent.isEditing()) ||
       (this.conceptsComponent && this.conceptsComponent.isEditing())) {
       event.preventDefault();

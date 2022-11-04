@@ -1,6 +1,5 @@
-import { ietfLanguageTags } from 'yti-common-ui/index';
 import { FormControl } from '@angular/forms';
-import { allMatching, contains } from 'yti-common-ui/utils/array';
+import { allMatching, contains } from '@vrk-yti/yti-common-ui';
 import { PropertyMeta } from '../entities/meta';
 
 function match(regexpString: string, value: string) {

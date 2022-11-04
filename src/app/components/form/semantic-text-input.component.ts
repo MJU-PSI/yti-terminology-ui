@@ -13,9 +13,8 @@ import {
   previousOf,
   previousOfMatching,
   remove
-} from 'yti-common-ui/utils/array';
-import { wordAtOffset } from 'yti-common-ui/utils/string';
-import { isDefined, requireDefined } from 'yti-common-ui/utils/object';
+} from '@vrk-yti/yti-common-ui';
+import { wordAtOffset, isDefined, requireDefined } from '@vrk-yti/yti-common-ui';
 import { ConceptNode } from 'app/entities/node';
 import {
   SemanticTextDocument,
@@ -1254,17 +1253,17 @@ export class SemanticTextInputComponent implements OnInit, ControlValueAccessor 
     });
 
     element.addEventListener('copy', (event: ClipboardEvent) => {
-      event.clipboardData.setData('text/plain', this.model.copy());
+      event.clipboardData?.setData('text/plain', this.model.copy());
       event.preventDefault();
     });
 
     element.addEventListener('paste', (event: ClipboardEvent) => {
-      this.reportChange(() => this.model.paste(event.clipboardData.getData('Text')));
+      this.reportChange(() => event.clipboardData ? this.model.paste(event.clipboardData.getData('Text')) :  null);
       event.preventDefault();
     });
 
     element.addEventListener('cut', (event: ClipboardEvent) => {
-      this.reportChange(() => event.clipboardData.setData('text/plain', this.model.cut()));
+      this.reportChange(() => event.clipboardData?.setData('text/plain', this.model.cut()));
       event.preventDefault();
     });
   }

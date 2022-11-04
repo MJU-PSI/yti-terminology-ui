@@ -1,8 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { FilterOptions } from 'yti-common-ui/components/filter-dropdown.component';
+import { FilterOptions, allStatuses, Status } from '@vrk-yti/yti-common-ui';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { allStatuses, Status } from 'yti-common-ui/entities/status';
 
 @Component({
   selector: 'app-status-filter-dropdown',

@@ -7,10 +7,8 @@ import {
   SemanticTextParagraph,
   SemanticTextSerializer
 } from 'app/entities/semantic';
-import { assertNever, isDefined, requireDefined } from 'yti-common-ui/utils/object';
+import { assertNever, isDefined, requireDefined, allMatching, contains, escapeHtml } from '@vrk-yti/yti-common-ui';
 import { Node as MarkdownNode, Parser as MarkdownParser } from 'commonmark';
-import { allMatching, contains } from 'yti-common-ui/utils/array';
-import { escapeHtml } from 'yti-common-ui/utils/string';
 
 export function areNodesEqual(lhs: SemanticTextNode, rhs: SemanticTextNode) {
 
@@ -268,8 +266,9 @@ class XmlSerializer implements SemanticTextSerializer {
                 switch (node.nodeName) {
                   case 'a':
                     const text = getSingleTextChild(node).nodeValue || '';
-                    const destination = node.attributes.getNamedItem('href').value;
-                    const type_ = node.attributes.getNamedItem('data-type');
+                    const element = node as Element;
+                    const destination = element.attributes.getNamedItem('href')?.value || "";
+                    const type_ = element.attributes.getNamedItem('data-type');
                     if (type_ && type_.value) {
                       const type = type_.value;
                       switch (type) {

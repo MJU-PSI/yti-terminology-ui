@@ -1,5 +1,5 @@
 @import '~vis/dist/vis.css';
-@import '~yti-common-ui/theme/init';
+@import '~@vrk-yti/yti-common-ui/theme/init';
 @import '~bootstrap/scss/variables';
 
 $page-padding: 20px;
@@ -186,7 +186,7 @@ div.localized {
       width: calc(100% - #{$language-width + 32});
     }
 
-    /deep/ app-semantic-text-input {
+    ::ng-deep app-semantic-text-input {
       .action {
         top: -37px;
         right: 10px;

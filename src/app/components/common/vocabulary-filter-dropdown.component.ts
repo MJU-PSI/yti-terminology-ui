@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { VocabularyNode } from 'app/entities/node';
-import { FilterOptions } from 'yti-common-ui/components/filter-dropdown.component';
+import { FilterOptions, comparingLocalizable } from '@vrk-yti/yti-common-ui';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { comparingLocalizable } from 'yti-common-ui/utils/comparator';
 import { LanguageService } from 'app/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -36,7 +35,7 @@ export class VocabularyFilterDropdownComponent implements OnInit {
           name: () => this.translateService.instant('All vocabularies'),
           idIdentifier: () => 'all_selected'
         },
-        ...vocabs.map(voc => ({ 
+        ...vocabs.map(voc => ({
           value: voc,
           name: () => this.languageService.translate(voc.label, true),
           idIdentifier: () => voc.idIdentifier

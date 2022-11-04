@@ -1,10 +1,10 @@
-@import '~yti-common-ui/theme/variables';
+@import '~@vrk-yti/yti-common-ui/theme/variables';
 
 :host > p:last-child {
   margin-bottom: 0;
 }
 
-:host /deep/ .popover {
+:host ::ng-deep .popover {
   max-width: 500px !important;
 }
 

@@ -1,4 +1,4 @@
-@import '~yti-common-ui/theme/variables';
+@import '~@vrk-yti/yti-common-ui/theme/variables';
 @import '../../../mixins';
 
 $button-height: 40px;
@@ -21,7 +21,7 @@ $buttonless-height: 78px;
   }
 }
 
-:host /deep/ .selectable-concepts {
+:host ::ng-deep .selectable-concepts {
 
   ul {
 

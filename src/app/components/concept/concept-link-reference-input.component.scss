@@ -14,7 +14,7 @@ a {
   cursor: pointer;
 }
 
-:host /deep/ .popover {
+:host ::ng-deep .popover {
   max-width: 500px !important;
   width: 500px !important;
 }

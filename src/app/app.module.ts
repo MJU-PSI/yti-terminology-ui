@@ -84,9 +84,8 @@ import { UserDetailsComponent } from 'app/components/user-details/user-details.c
 import { OrganizationFilterDropdownComponent } from 'app/components/common/organization-filter-dropdown.component';
 import { VocabularyFilterDropdownComponent } from 'app/components/common/vocabulary-filter-dropdown.component';
 import { StatusFilterDropdownComponent } from 'app/components/common/status-filter-dropdown.component';
-import { AUTHENTICATED_USER_ENDPOINT, LOCALIZER, YtiCommonModule } from 'yti-common-ui';
+import { AUTHENTICATED_USER_ENDPOINT, LOCALIZER, YtiCommonModule, ModalService } from '@vrk-yti/yti-common-ui';
 import { InformationAboutServiceComponent } from 'app/components/information/information-about-service.component';
-import { ModalService } from 'yti-common-ui/services/modal.service';
 import { DragSortableDirective, DragSortableItemDirective } from './directives/drag-sortable.directive';
 import { apiUrl } from './config';
 import { LogoComponent } from './components/navigation/logo.component';
@@ -104,6 +103,12 @@ import { VocabularyMainComponent } from './components/vocabulary/vocabulary-main
 import { MessagingService } from './services/messaging-service';
 import { UserDetailsInformationComponent } from './components/user-details/user-details-information.component';
 import { UserDetailsSubscriptionsComponent } from './components/user-details/user-details-subscriptions.component';
+import enPo from 'raw-loader!po-loader?format=mf!../../po/en.po';
+import svPo from 'raw-loader!po-loader?format=mf!../../po/sv.po';
+import fiPo from 'raw-loader!po-loader?format=mf!../../po/fi.po';
+import fiCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@vrk-yti/yti-common-ui/po/fi.po';
+import svCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@vrk-yti/yti-common-ui/po/sv.po';
+import enCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@vrk-yti/yti-common-ui/po/en.po';
 
 function removeEmptyValues(obj: {}) {
 
@@ -120,16 +125,16 @@ function removeEmptyValues(obj: {}) {
 
 const localizations: { [lang: string]: any } = {
   fi: {
-    ...removeEmptyValues(JSON.parse(require(`raw-loader!po-loader?format=mf!../../po/fi.po`))),
-    ...removeEmptyValues(JSON.parse(require(`raw-loader!po-loader?format=mf!yti-common-ui/po/fi.po`)))
-  },
-  en: {
-    ...removeEmptyValues(JSON.parse(require(`raw-loader!po-loader?format=mf!../../po/en.po`))),
-    ...removeEmptyValues(JSON.parse(require(`raw-loader!po-loader?format=mf!yti-common-ui/po/en.po`)))
+    ...removeEmptyValues(JSON.parse(fiPo)),
+    ...removeEmptyValues(JSON.parse(fiCommonPo))
   },
   sv: {
-    ...removeEmptyValues(JSON.parse(require(`raw-loader!po-loader?format=mf!../../po/sv.po`))),
-    ...removeEmptyValues(JSON.parse(require(`raw-loader!po-loader?format=mf!yti-common-ui/po/sv.po`)))
+    ...removeEmptyValues(JSON.parse(svPo)),
+    ...removeEmptyValues(JSON.parse(svCommonPo))
+  },
+  en: {
+    ...removeEmptyValues(JSON.parse(enPo)),
+    ...removeEmptyValues(JSON.parse(enCommonPo))
   }
 };
 
@@ -274,8 +279,8 @@ export function initApp(configurationService: ConfigurationService) {
     ReactiveFormsModule,
     HttpClientModule,
     InfiniteScrollModule,
-    NgbModule.forRoot(),
-    RouterModule.forRoot(appRoutes),
+    NgbModule,
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

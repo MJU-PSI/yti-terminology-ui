@@ -5,9 +5,7 @@ import {
   SemanticTextDocument, SemanticTextParagraph, SemanticTextLiteral
 } from 'app/entities/semantic';
 import { removeWhiteSpaceNodes } from 'app/utils/dom';
-import { firstMatching } from 'yti-common-ui/utils/array';
-import { Localizable } from 'yti-common-ui/types/localization';
-import { asLocalizable } from 'yti-common-ui/utils/localization';
+import { firstMatching, Localizable, asLocalizable  } from '@vrk-yti/yti-common-ui';
 import { resolveSerializer } from 'app/utils/semantic';
 import { ConfigurationService } from '../../services/configuration.service';
 

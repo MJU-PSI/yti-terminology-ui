@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { EditableService, EditingComponent } from 'app/services/editable.service';
 import { ConceptViewModelService } from 'app/services/concept.view.service';
-import { requireDefined } from 'yti-common-ui/utils/object';
+import { requireDefined } from '@vrk-yti/yti-common-ui';
 import { DeleteConfirmationModalService } from 'app/components/common/delete-confirmation-modal.component';
 import { LanguageService } from 'app/services/language.service';
 import { vocabularyIdPrefix } from 'app/utils/id-prefix';

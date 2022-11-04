@@ -1,4 +1,4 @@
-@import '~yti-common-ui/theme/variables';
+@import '~@vrk-yti/yti-common-ui/theme/variables';
 
 $left-width: 400px;
 
@@ -58,7 +58,7 @@ $left-width: 400px;
   }
 }
 
-:host /deep/ {
+:host ::ng-deep {
 
   ul.nav-tabs {
 

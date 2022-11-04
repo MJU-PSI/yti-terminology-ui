@@ -6,11 +6,9 @@ import { TermedService } from 'app/services/termed.service';
 import { ConceptViewModelService } from 'app/services/concept.view.service';
 import { DataSet, Edge as VisEdge, EdgeOptions, IdType, Network as VisNetwork, Node as VisNode, Options as VisNetworkOptions } from 'vis';
 import { ReferenceMeta } from 'app/entities/meta';
-import { collectProperties } from 'yti-common-ui/utils/array';
-import { assertNever, requireDefined } from 'yti-common-ui/utils/object';
+import { collectProperties, assertNever, requireDefined, asLocalizable } from '@vrk-yti/yti-common-ui';
 import { TranslateService } from '@ngx-translate/core';
 import { MetaModelService } from 'app/services/meta-model.service';
-import { asLocalizable } from 'yti-common-ui/utils/localization';
 import { Subscription } from 'rxjs';
 import { ConfigurationService } from '../../services/configuration.service';
 

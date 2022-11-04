@@ -1,16 +1,13 @@
 import { Observable, ReplaySubject, of, forkJoin, zip } from 'rxjs';
 import { map, flatMap, publishReplay, refCount, tap } from 'rxjs/operators';
-import { groupBy, index, normalizeAsArray } from 'yti-common-ui/utils/array';
+import { groupBy, index, normalizeAsArray, asLocalizable, getOrCreate, requireDefined } from '@vrk-yti/yti-common-ui';
 import { Injectable } from '@angular/core';
 import { Graph } from 'app/entities/graph';
 import { GraphMeta, MetaModel, ReferenceMeta } from 'app/entities/meta';
 import { NodeMetaInternal } from 'app/entities/meta-api';
-import { asLocalizable } from 'yti-common-ui/utils/localization';
 import { KnownNode, Node, Referrer } from 'app/entities/node';
-import { getOrCreate } from 'yti-common-ui/utils/map';
 import { apiUrl } from 'app/config';
 import { HttpClient } from '@angular/common/http';
-import { requireDefined } from 'yti-common-ui/utils/object';
 
 @Injectable()
 export class MetaModelService {

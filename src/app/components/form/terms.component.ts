@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { EditableService } from 'app/services/editable.service';
 import { FormReferenceTerm, TermChild } from 'app/services/form-state';
 import { MetaModelService } from 'app/services/meta-model.service';
-import { contains, last } from 'yti-common-ui/utils/array';
+import { contains, last } from '@vrk-yti/yti-common-ui';
 
 @Component({
   selector: 'app-terms',

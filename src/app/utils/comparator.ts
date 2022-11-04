@@ -5,9 +5,7 @@
  */
 
 
-import { Optional, isDefined } from 'yti-common-ui/utils/object';
-import { Localizable } from 'yti-common-ui/types/localization';
-import { Localizer } from 'yti-common-ui/types/localization';
+import { Optional, isDefined, Localizable, Localizer } from '@vrk-yti/yti-common-ui';
 
 export type Comparator<T> = (lhs: T, rhs: T) => number;
 

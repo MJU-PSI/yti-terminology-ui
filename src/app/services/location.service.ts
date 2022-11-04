@@ -1,5 +1,5 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { Location } from 'yti-common-ui/types/location';
+import { Location } from '@vrk-yti/yti-common-ui';
 import { Subject, Subscription } from 'rxjs';
 import { CollectionNode, ConceptNode, VocabularyNode } from 'app/entities/node';
 import { TranslateService } from '@ngx-translate/core';

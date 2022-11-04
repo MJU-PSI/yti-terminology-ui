@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, Renderer, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild, Renderer2 } from '@angular/core';
 import { CollectionNode } from 'app/entities/node';
 import { CollectionListModel, ConceptViewModelService } from 'app/services/concept.view.service';
 import { Router } from '@angular/router';
 import { v4 as uuid } from 'uuid';
 import { AuthorizationManager } from 'app/services/authorization-manager.sevice';
 import { Subscription } from 'rxjs';
-import { makePrefixPostfixHighlightRegexp, makePrefixPostfixSearchRegexp, splitSearchString } from 'yti-common-ui/utils/search';
+import { makePrefixPostfixHighlightRegexp, makePrefixPostfixSearchRegexp, splitSearchString } from '@vrk-yti/yti-common-ui';
 
 @Component({
   selector: 'app-collection-list',
@@ -63,7 +63,7 @@ export class CollectionListComponent implements AfterViewInit, OnDestroy {
 
   constructor(private conceptViewModel: ConceptViewModelService,
               private authorizationManager: AuthorizationManager,
-              private renderer: Renderer,
+              private renderer: Renderer2,
               private router: Router) {
 
     this.model = conceptViewModel.collectionList;
@@ -92,7 +92,7 @@ export class CollectionListComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    this.renderer.invokeElementMethod(this.searchInput.nativeElement, 'focus');
+    this.searchInput.nativeElement.focus();
   }
 
   ngOnDestroy() {

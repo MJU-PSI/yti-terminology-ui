@@ -1,8 +1,8 @@
 import { Component, Input, Optional, Self } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ietfLanguageTags } from 'yti-common-ui';
+import { ietfLanguageTags } from '@vrk-yti/yti-common-ui';
 
 @Component({
   selector: 'app-language-input',
@@ -39,6 +39,7 @@ export class LanguageInputComponent implements ControlValueAccessor {
 
   languageProvider(text$: Observable<string>): Observable<string[]> {
     return text$.pipe(map(value => ietfLanguageTags.filter(language => language.toLowerCase().indexOf(value.toLowerCase()) !== -1)));
+    return of();
   }
 
   writeValue(obj: any): void {

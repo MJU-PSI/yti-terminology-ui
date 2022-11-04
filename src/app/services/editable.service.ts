@@ -1,8 +1,6 @@
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { Injectable, OnDestroy } from '@angular/core';
-import { ErrorModalService } from 'yti-common-ui/components/error-modal.component';
-import { UserService } from 'yti-common-ui/services/user.service';
-import { isModalClose } from 'yti-common-ui/utils/modal';
+import { ErrorModalService, UserService, isModalClose } from '@vrk-yti/yti-common-ui';
 
 export interface EditingComponent {
   isEditing(): boolean;
