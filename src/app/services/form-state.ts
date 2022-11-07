@@ -1,6 +1,6 @@
 import { AbstractControl, FormArray, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { assertNever, allMatching, anyMatching, firstMatching, flatten, normalizeAsArray, moveElement,
-  requiredList, validateLanguage, comparingPrimitive, Localizable } from '@vrk-yti/yti-common-ui';
+  requiredList, validateLanguage, comparingPrimitive, Localizable } from '@goraresult/yti-common-ui';
 import { ConceptNode, KnownNode, Node, Property, Reference, TermNode } from 'app/entities/node';
 import { Cardinality, Editor, MetaModel, NodeMeta, PropertyMeta, ReferenceMeta, ReferenceType } from 'app/entities/meta';
 import { NodeType } from 'app/entities/node-api';

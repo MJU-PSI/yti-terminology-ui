@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Localization, allMatching, contains, firstMatching, flatten, assertNever, requireDefined, allStatuses, Status, escapeHtml } from '@vrk-yti/yti-common-ui';
+import { Localization, allMatching, contains, firstMatching, flatten, assertNever, requireDefined, allStatuses, Status, escapeHtml } from '@goraresult/yti-common-ui';
 import { ConceptNode, Property, VocabularyNode } from 'app/entities/node';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { MetaModel, NodeMeta } from 'app/entities/meta';

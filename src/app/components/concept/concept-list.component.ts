@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConceptListModel, ConceptViewModelService } from 'app/services/concept.view.service';
-import { selectableStatuses } from '@vrk-yti/yti-common-ui';
+import { selectableStatuses } from '@goraresult/yti-common-ui';
 import { v4 as uuid } from 'uuid';
 import { IndexedConcept } from 'app/services/elasticsearch.service';
 import { AuthorizationManager } from 'app/services/authorization-manager.sevice';

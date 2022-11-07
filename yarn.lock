@@ -1292,6 +1292,15 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
+"@goraresult/yti-common-ui@0.0.1-alpha-20221107.gcaac578.gora-dev":
+  version "0.0.1-alpha-20221107.gcaac578.gora-dev"
+  resolved "https://npm.pkg.github.com/download/@goraresult/yti-common-ui/0.0.1-alpha-20221107.gcaac578.gora-dev/1767ba763d88db7ffd5fe9a4949a2ebd144235c1#1767ba763d88db7ffd5fe9a4949a2ebd144235c1"
+  integrity sha512-ID94VhXOuDgRejM5s8ebCG6+kDOkFiNcDfBodNoqk/0rEGJLFWOPd4atMFrHATlbfUddN6VKRb/ogjoiwHkbQA==
+  dependencies:
+    keycloak-angular "^8.1.0"
+    keycloak-js "^12.0.2"
+    tslib "^2.1.0"
+
 "@istanbuljs/schema@^0.1.2":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
@@ -1642,13 +1651,6 @@
     "@types/node" "*"
     "@types/source-list-map" "*"
     source-map "^0.6.1"
-
-"@vrk-yti/yti-common-ui@0.0.1-alpha-20210928.g2ff813c.feature-angular-library":
-  version "0.0.1-alpha-20210928.g2ff813c.feature-angular-library"
-  resolved "https://npm.pkg.github.com/download/@VRK-YTI/yti-common-ui/0.0.1-alpha-20210928.g2ff813c.feature-angular-library/29195032a1588a9c71779f6a08efde4d73bdc7d9#29195032a1588a9c71779f6a08efde4d73bdc7d9"
-  integrity sha512-3KAO88/+dDGzrFvI8C1E3DuXtPfzd4JDdDlStMYr9UuwAiawR1B5Nonz55IOJVReUEZjKeXu/Pr6d4lGgBVphA==
-  dependencies:
-    tslib "^2.1.0"
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -2211,6 +2213,11 @@ balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
+base64-js@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.1.tgz#58ece8cb75dd07e71ed08c736abc5fac4dbf8df1"
+  integrity sha512-mLQ4i2QO1ytvGWFWmcngKO//JXAQueZvwEKtjgQFM4jIK0kU+ytMfplL8j+n5mspOfjHwoAg+9yhb7BwAHm36g==
 
 base64-js@^1.2.0, base64-js@^1.3.1:
   version "1.5.1"
@@ -5374,6 +5381,11 @@ jest-worker@^27.0.2, jest-worker@^27.4.5:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
+js-sha256@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/js-sha256/-/js-sha256-0.9.0.tgz#0b89ac166583e91ef9123644bd3c5334ce9d0966"
+  integrity sha512-sga3MHh9sgQN2+pJ9VYZ+1LPwXOxuBJBA5nrR5/ofPfuiJBE2hnjsaN8se8JznOmGLN2p49Pe5U/ttafcs/apA==
+
 js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -5557,6 +5569,21 @@ keycharm@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/keycharm/-/keycharm-0.2.0.tgz#fa6ea2e43b90a68028843d27f2075d35a8c3e6f9"
   integrity sha1-+m6i5DuQpoAohD0n8gddNajD5vk=
+
+keycloak-angular@^8.1.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/keycloak-angular/-/keycloak-angular-8.4.0.tgz#405cb93cae8f01f3612d98caa5967e2c03372d04"
+  integrity sha512-3zBKzPf+ZG+16EfOdp1uxa/XTGElTOQSq5UkfFJzFcJe1D6p696hKIUJHNJECcYNUtt4XhYwUEolMIR+VySqgA==
+  dependencies:
+    tslib "^2.0.0"
+
+keycloak-js@^12.0.2:
+  version "12.0.4"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-12.0.4.tgz#fc60ccd8c32788e48302a543e6133e852a48abaf"
+  integrity sha512-O/BHtyiDrZrUnKBrVF8POojqd3gmhuiDw4FiI+FbnB14nu7G5jKFrKYZa9Q0JYKIZXHJOBzSaKQcMp2WUI+zmA==
+  dependencies:
+    base64-js "1.3.1"
+    js-sha256 "0.9.0"
 
 killable@^1.0.1:
   version "1.0.1"

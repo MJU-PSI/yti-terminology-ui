@@ -19,7 +19,7 @@ import {
   isSelect
 } from './action';
 import { ElasticSearchService, IndexedConcept } from './elasticsearch.service';
-import { assertNever, comparingLocalizable, contains, removeMatching, replaceMatching, filterByPrefixPostfixSearch, splitSearchString } from '@vrk-yti/yti-common-ui';
+import { assertNever, comparingLocalizable, contains, removeMatching, replaceMatching, filterByPrefixPostfixSearch, splitSearchString } from '@goraresult/yti-common-ui';
 import { FormNode } from './form-state';
 import { MetaModel } from 'app/entities/meta';
 import { TranslateService } from '@ngx-translate/core';

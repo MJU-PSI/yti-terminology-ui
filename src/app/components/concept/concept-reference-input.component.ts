@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConceptNode, VocabularyNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
 import { Restrict, SearchConceptModalService } from './search-concept-modal.component';
-import { ignoreModalClose, isDefined, requireDefined } from '@vrk-yti/yti-common-ui';
+import { ignoreModalClose, isDefined, requireDefined } from '@goraresult/yti-common-ui';
 import { FormReferenceLiteral } from 'app/services/form-state';
 
 @Component({

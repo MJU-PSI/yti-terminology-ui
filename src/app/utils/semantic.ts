@@ -7,7 +7,7 @@ import {
   SemanticTextParagraph,
   SemanticTextSerializer
 } from 'app/entities/semantic';
-import { assertNever, isDefined, requireDefined, allMatching, contains, escapeHtml } from '@vrk-yti/yti-common-ui';
+import { assertNever, isDefined, requireDefined, allMatching, contains, escapeHtml } from '@goraresult/yti-common-ui';
 import { Node as MarkdownNode, Parser as MarkdownParser } from 'commonmark';
 
 export function areNodesEqual(lhs: SemanticTextNode, rhs: SemanticTextNode) {

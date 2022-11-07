@@ -3,7 +3,7 @@ import {
   Output
 } from '@angular/core';
 import { ConceptNode } from 'app/entities/node';
-import { Localizable, asLocalizable  } from '@vrk-yti/yti-common-ui';
+import { Localizable, asLocalizable  } from '@goraresult/yti-common-ui';
 
 class PopoverPositionRefresher {
 

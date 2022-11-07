@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { UserService } from '@vrk-yti/yti-common-ui';
+import { UserService } from '@goraresult/yti-common-ui';
 import { Router } from '@angular/router';
 import { LocationService } from '../../services/location.service';
 import { MessagingResource } from '../../entities-messaging/messaging-resource';

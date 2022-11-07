@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Language, Localizable, Localizer, isDefined, getFromLocalStorage, setToLocalStorage } from '@vrk-yti/yti-common-ui';
+import { Language, Localizable, Localizer, isDefined, getFromLocalStorage, setToLocalStorage } from '@goraresult/yti-common-ui';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 
 export { Language, Localizer };

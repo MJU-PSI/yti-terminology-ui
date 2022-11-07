@@ -1,5 +1,5 @@
 import { OnDestroy, Pipe, PipeTransform } from '@angular/core';
-import { Localizable, isDefined } from '@vrk-yti/yti-common-ui';
+import { Localizable, isDefined } from '@goraresult/yti-common-ui';
 import { Language, LanguageService } from 'app/services/language.service';
 import { Subscription } from 'rxjs';
 

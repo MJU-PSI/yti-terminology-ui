@@ -22,7 +22,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/version.txt"
+              "src/version.txt",
+              {
+                "glob": "**/*",
+                "input": "node_modules/@goraresult/yti-common-ui/assets",
+                "output": "/assets"
+              }
             ],
             "styles": [
               "src/styles.scss",

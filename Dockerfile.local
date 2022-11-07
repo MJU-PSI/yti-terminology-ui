@@ -41,6 +41,7 @@ ADD nginx-docker-local.conf /etc/nginx/nginx.conf
 # when we change our application's dependencies:
 ADD package.json /tmp/package.json
 ADD yarn.lock /tmp/yarn.lock
+COPY .npmrc /tmp/.npmrc
 WORKDIR /tmp
 RUN ["yarn", "install"]
 

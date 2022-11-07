@@ -5,7 +5,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { NgbNav, NgbNavChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 import { ConceptsComponent } from '../concept/concepts.component';
 import { VocabularyComponent } from './vocabulary.component';
-import { ConfirmationModalService, ignoreModalClose, requireDefined, ErrorModalService, UserService } from '@vrk-yti/yti-common-ui';
+import { ConfirmationModalService, ignoreModalClose, requireDefined, ErrorModalService, UserService } from '@goraresult/yti-common-ui';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../services/language.service';
 import { ImportVocabularyModalService } from './import-vocabulary-modal.component';

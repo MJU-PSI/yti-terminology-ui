@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { OrganizationNode } from 'app/entities/node';
-import { FilterOptions, comparingLocalizable } from '@vrk-yti/yti-common-ui';
+import { FilterOptions, comparingLocalizable } from '@goraresult/yti-common-ui';
 import { Observable, BehaviorSubject, combineLatest } from 'rxjs';
 import { LanguageService } from 'app/services/language.service';
 import { TranslateService } from '@ngx-translate/core';

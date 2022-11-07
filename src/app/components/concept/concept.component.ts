@@ -4,7 +4,7 @@ import { EditableService, EditingComponent } from 'app/services/editable.service
 import { ConceptViewModelService } from 'app/services/concept.view.service';
 import { Subscription } from 'rxjs';
 import { DeleteConfirmationModalService } from 'app/components/common/delete-confirmation-modal.component';
-import { requireDefined, Localizable } from '@vrk-yti/yti-common-ui';
+import { requireDefined, Localizable } from '@goraresult/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 import { conceptIdPrefix } from 'app/utils/id-prefix';
 import { ReferenceLabels, RemoveLinkConfirmationModalService } from './remove-link-confirmation-modal.component';

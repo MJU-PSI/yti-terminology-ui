@@ -1,5 +1,5 @@
 import { ReferenceAttributeInternal, TextAttributeInternal, NodeMetaInternal } from './meta-api';
-import { comparingPrimitive, anyMatching, contains, firstMatching, index, normalizeAsArray, asLocalizable, Localizable, assertNever, requireDefined } from '@vrk-yti/yti-common-ui';
+import { comparingPrimitive, anyMatching, contains, firstMatching, index, normalizeAsArray, asLocalizable, Localizable, assertNever, requireDefined } from '@goraresult/yti-common-ui';
 import { NodeType, NodeExternal, VocabularyNodeType } from './node-api';
 import { CollectionNode, ConceptLinkNode, ConceptNode, Node, TermNode, VocabularyNode } from './node';
 import { v4 as uuid } from 'uuid';

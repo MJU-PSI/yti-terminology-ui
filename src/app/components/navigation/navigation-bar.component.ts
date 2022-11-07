@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Language, LanguageService } from 'app/services/language.service';
-import { UserService, LoginModalService } from '@vrk-yti/yti-common-ui';
+import { UserService, LoginModalService } from '@goraresult/yti-common-ui';
 import { TermedService } from '../../services/termed.service';
 import { ConfigurationService } from '../../services/configuration.service';
 import { Router } from '@angular/router';
@@ -146,7 +146,7 @@ export class NavigationBarComponent {
   }
 
   logIn() {
-    this.loginModal.open();
+    this.userService.login();
   }
 
   logOut() {

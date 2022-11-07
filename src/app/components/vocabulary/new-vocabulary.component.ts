@@ -11,7 +11,7 @@ import { LanguageService } from 'app/services/language.service';
 import { FormNode } from 'app/services/form-state';
 import { defaultLanguages } from 'app/utils/language';
 import { AbstractControl, AsyncValidatorFn, FormControl, Validators } from '@angular/forms';
-import { firstMatching } from '@vrk-yti/yti-common-ui';
+import { firstMatching } from '@goraresult/yti-common-ui';
 import { LocationService } from 'app/services/location.service';
 import { vocabularyIdPrefix } from 'app/utils/id-prefix';
 import { map } from 'rxjs/operators';

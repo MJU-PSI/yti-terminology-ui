@@ -2,7 +2,7 @@ import { Component, Input, Optional, Self } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ietfLanguageTags } from '@vrk-yti/yti-common-ui';
+import { ietfLanguageTags } from '@goraresult/yti-common-ui';
 
 @Component({
   selector: 'app-language-input',

@@ -13,7 +13,7 @@ import {
   allMatching,
   Status,
   labelNameToResourceIdIdentifier
- } from '@vrk-yti/yti-common-ui';
+ } from '@goraresult/yti-common-ui';
 import { Attribute, Identifier, NodeExternal, NodeInternal, NodeType, VocabularyNodeType } from './node-api';
 import { MetaModel, NodeMeta, PropertyMeta, ReferenceMeta } from './meta';
 import * as moment from 'moment';

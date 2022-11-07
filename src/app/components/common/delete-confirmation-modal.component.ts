@@ -2,7 +2,7 @@ import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Node } from 'app/entities/node';
 import { ReferenceMeta } from 'app/entities/meta';
-import { flatten, ModalService } from '@vrk-yti/yti-common-ui';
+import { flatten, ModalService } from '@goraresult/yti-common-ui';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { forkJoin } from 'rxjs';
 

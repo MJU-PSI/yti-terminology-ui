@@ -8,7 +8,7 @@ import { EditableService } from 'app/services/editable.service';
 import { ElasticSearchService, IndexedConcept } from 'app/services/elasticsearch.service';
 import { FormNode } from 'app/services/form-state';
 import { defaultLanguages } from 'app/utils/language';
-import { firstMatching, ModalService } from '@vrk-yti/yti-common-ui';
+import { firstMatching, ModalService } from '@goraresult/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { HttpErrorResponse } from '@angular/common/http';

@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { Role, UserService, index, combineSets, hasAny, labelNameToResourceIdIdentifier, Options } from '@vrk-yti/yti-common-ui';
+import { Role, UserService, index, combineSets, hasAny, labelNameToResourceIdIdentifier, Options } from '@goraresult/yti-common-ui';
 import { Router } from '@angular/router';
 import { combineLatest, Subscription } from 'rxjs';
 import { OrganizationNode } from '../../entities/node';

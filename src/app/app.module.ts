@@ -84,7 +84,7 @@ import { UserDetailsComponent } from 'app/components/user-details/user-details.c
 import { OrganizationFilterDropdownComponent } from 'app/components/common/organization-filter-dropdown.component';
 import { VocabularyFilterDropdownComponent } from 'app/components/common/vocabulary-filter-dropdown.component';
 import { StatusFilterDropdownComponent } from 'app/components/common/status-filter-dropdown.component';
-import { AUTHENTICATED_USER_ENDPOINT, LOCALIZER, YtiCommonModule, ModalService } from '@vrk-yti/yti-common-ui';
+import { AUTHENTICATED_USER_ENDPOINT, LOCALIZER, YtiCommonModule, ModalService } from '@goraresult/yti-common-ui';
 import { InformationAboutServiceComponent } from 'app/components/information/information-about-service.component';
 import { DragSortableDirective, DragSortableItemDirective } from './directives/drag-sortable.directive';
 import { apiUrl } from './config';
@@ -106,9 +106,10 @@ import { UserDetailsSubscriptionsComponent } from './components/user-details/use
 import enPo from 'raw-loader!po-loader?format=mf!../../po/en.po';
 import svPo from 'raw-loader!po-loader?format=mf!../../po/sv.po';
 import fiPo from 'raw-loader!po-loader?format=mf!../../po/fi.po';
-import fiCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@vrk-yti/yti-common-ui/po/fi.po';
-import svCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@vrk-yti/yti-common-ui/po/sv.po';
-import enCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@vrk-yti/yti-common-ui/po/en.po';
+import fiCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/fi.po';
+import svCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/sv.po';
+import enCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/en.po';
+import { environment } from '../environments/environment.dev';
 
 function removeEmptyValues(obj: {}) {
 
@@ -288,7 +289,11 @@ export function initApp(configurationService: ConfigurationService) {
       },
       missingTranslationHandler: { provide: MissingTranslationHandler, useFactory: createMissingTranslationHandler },
     }),
-    YtiCommonModule
+    YtiCommonModule.forRoot({
+      url: environment.url,
+      realm: environment.realm,
+      clientId: environment.clientId
+    })
   ],
   providers: [
     { provide: APP_INITIALIZER, useFactory: initApp, deps: [ConfigurationService], multi: true },
