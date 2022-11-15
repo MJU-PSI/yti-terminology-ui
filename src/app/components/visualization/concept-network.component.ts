@@ -205,8 +205,8 @@ interface UpdatableVisEdge extends CustomizedVisEdge {
 })
 export class ConceptNetworkComponent implements OnInit, OnDestroy {
 
-  @ViewChild('networkCanvas') networkCanvasRef: ElementRef;
-  @ViewChild('legendCanvas') legendCanvasRef: ElementRef;
+  @ViewChild('networkCanvas', { static: true }) networkCanvasRef: ElementRef;
+  @ViewChild('legendCanvas', { static: true }) legendCanvasRef: ElementRef;
   rootNode: Node<any> | null = null;
   private skipNextSelection = false;
   private clicks = 0;

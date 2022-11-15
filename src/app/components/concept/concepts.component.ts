@@ -68,7 +68,7 @@ import { ConceptComponent } from './concept.component';
 })
 export class ConceptsComponent {
 
-  @ViewChild('network') conceptNetwork: ConceptNetworkComponent;
+  @ViewChild('network', { static: true }) conceptNetwork: ConceptNetworkComponent;
   initialTabId?: string;
   private childComponent?: EditingComponent;
 
