@@ -29,7 +29,7 @@ import { contains, last } from '@goraresult/yti-common-ui';
                    [activeIds]="openTerms"
                    [appDragSortable]="reference"
                    [dragDisabled]="!canReorder()">
-      <ngb-panel [id]="node.id" *ngFor="let node of visibleChildren; let i = index">
+      <ngb-panel *ngFor="let node of visibleChildren; let i = index">
         <ng-template ngbPanelTitle>
           <div class="localized" [appDragSortableItem]="node" [index]="i">
             <div class="language">{{node.language | uppercase}}</div>

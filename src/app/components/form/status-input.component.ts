@@ -5,7 +5,7 @@ import { ControlValueAccessor, FormControl, NgControl } from '@angular/forms';
   selector: 'app-status-input',
   styleUrls: ['./status-input.component.scss'],
   template: `
-    <app-status-dropdown [formControl]="select" [id]="id + '_input_dropdown'"></app-status-dropdown>
+    <app-status-dropdown [formControl]="select" [id]="id + '_input_dropdown'" placement="top-left"></app-status-dropdown>
   `
 })
 export class StatusInputComponent implements ControlValueAccessor {
