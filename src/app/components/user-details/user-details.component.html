@@ -8,11 +8,11 @@
     <h2 translate>User details</h2>
   </div>
 
-  <ul ngbNav #nav="ngbNav" (navChange)="onNavChange($event)">
+  <ul ngbNav #nav="ngbNav" class="nav-tabs" (navChange)="onNavChange($event)">
     <li ngbNavItem="user_details_info_tab" id="user_details_info_tab">
-      <ng-template>
+      <a ngbNavLink>
         <span translate>INFORMATION</span>
-      </ng-template>
+      </a>
 
       <ng-template ngbNavContent>
         <app-user-details-information></app-user-details-information>
@@ -20,9 +20,9 @@
     </li>
 
     <li ngbNavItem="user_details_subscriptions_tab" *ngIf="messagingResources" id="user_details_subscriptions_tab">
-      <ng-template>
+      <a ngbNavLink>
         <span translate>SUBSCRIPTIONS</span>
-      </ng-template>
+      </a>
 
       <ng-template ngbNavContent>
         <app-user-details-subscriptions [nav]="nav"></app-user-details-subscriptions>

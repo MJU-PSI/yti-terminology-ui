@@ -83,13 +83,19 @@ import { ConfigurationService } from '../../services/configuration.service';
             </div>
           </div>
         </div>
-        <ul ngbNav #nav="ngbNav" (navChange)="onNavChange($event)">
-          <li ngbNavItem="conceptsTab" id="conceptsTab" [title]="'Concepts' | translate">
+        <ul ngbNav #nav="ngbNav" class="nav-tabs" (navChange)="onNavChange($event)">
+          <li ngbNavItem="conceptsTab" id="conceptsTab">
+            <a ngbNavLink>
+              <p>{{'Concepts' | translate}}</p>
+            </a>
             <ng-template ngbNavContent>
               <app-concepts #conceptsComponent></app-concepts>
             </ng-template>
           </li>
-          <li ngbNavItem="terminologyTab" id="terminologyTab" [title]="'Terminology details' | translate">
+          <li ngbNavItem="terminologyTab" id="terminologyTab">
+            <a ngbNavLink>
+              <p>{{'Terminology details' | translate}}</p>
+            </a>
             <ng-template ngbNavContent>
               <app-vocabulary #terminologyComponent></app-vocabulary>
               <div class="bottom-hack-border"></div>

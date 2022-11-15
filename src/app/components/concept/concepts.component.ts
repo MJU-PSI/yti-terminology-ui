@@ -17,7 +17,7 @@ import { ConceptComponent } from './concept.component';
 
         <div class="panel-left" appFloat>
           <div>
-            <ul ngbNav #nav="ngbNav" [activeId]="initialTabId">
+            <ul ngbNav #nav="ngbNav" class="nav-tabs" [activeId]="initialTabId">
               <li ngbNavItem="concepts_alphabetic_tab" id="concepts_alphabetic_tab">
                 <a ngbNavLink>
                   <p>{{'Alphabetic' | translate}}</p>
