@@ -109,7 +109,7 @@ import fiPo from 'raw-loader!po-loader?format=mf!../../po/fi.po';
 import fiCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/fi.po';
 import svCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/sv.po';
 import enCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/en.po';
-import { environment } from '../environments/environment.dev';
+import { environment } from '../environments/environment';
 
 function removeEmptyValues(obj: {}) {
 
