@@ -10,6 +10,9 @@ RUN apk add --update git
 # Install python make and g++. They are needed when building node-sass.
 RUN apk add python2 make g++
 
+# We need this to be able to overwrite config based on environment variables.
+RUN apk add jq gawk
+
 # Install tooling
 RUN apk add openssl curl ca-certificates
 
@@ -61,4 +64,6 @@ RUN ["npm", "run", "build", "--", "--prod",  "--output-hashing=all"]
 
 # Start web server and expose http
 EXPOSE 80
-CMD ["nginx"]
+
+ENTRYPOINT ["/app/entrypoint.sh"]
+
