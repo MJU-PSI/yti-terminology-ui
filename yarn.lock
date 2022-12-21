@@ -1292,13 +1292,13 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@goraresult/yti-common-ui@0.0.2-alpha-20221206.gd829b57.gora-dev":
-  version "0.0.2-alpha-20221206.gd829b57.gora-dev"
-  resolved "https://npm.pkg.github.com/download/@goraresult/yti-common-ui/0.0.2-alpha-20221206.gd829b57.gora-dev/56a3dcaa843def96fb86b896f8a0e2c57d7d233f#56a3dcaa843def96fb86b896f8a0e2c57d7d233f"
-  integrity sha512-fF91JMx9ALSahBreyz9NFGs5X50LNV+IO5kBXA6jbbwXYftofZPlo8aNv1pzTLI3V9fzWKrl/wJVAnlwmTMbog==
+"@goraresult/yti-common-ui@0.0.2":
+  version "0.0.2"
+  resolved "https://npm.pkg.github.com/download/@goraresult/yti-common-ui/0.0.2/cc15b613de341642d7b4f25e0f937e7c91a362ed#cc15b613de341642d7b4f25e0f937e7c91a362ed"
+  integrity sha512-7wOXYRbwQVCL2iH2NAGGDqq2K4WXeGKNJtQKDrMyaFL4F2h0pFNB/E1Q8EObJc93m8U70YE8duOqdpvbyBwxkw==
   dependencies:
-    keycloak-angular "^8.1.0"
-    keycloak-js "^12.0.2"
+    keycloak-angular "^8.4.0"
+    keycloak-js "^15.1.1"
     tslib "^2.1.0"
 
 "@istanbuljs/schema@^0.1.2":
@@ -5570,17 +5570,17 @@ keycharm@^0.2.0:
   resolved "https://registry.yarnpkg.com/keycharm/-/keycharm-0.2.0.tgz#fa6ea2e43b90a68028843d27f2075d35a8c3e6f9"
   integrity sha1-+m6i5DuQpoAohD0n8gddNajD5vk=
 
-keycloak-angular@^8.1.0:
+keycloak-angular@^8.4.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/keycloak-angular/-/keycloak-angular-8.4.0.tgz#405cb93cae8f01f3612d98caa5967e2c03372d04"
   integrity sha512-3zBKzPf+ZG+16EfOdp1uxa/XTGElTOQSq5UkfFJzFcJe1D6p696hKIUJHNJECcYNUtt4XhYwUEolMIR+VySqgA==
   dependencies:
     tslib "^2.0.0"
 
-keycloak-js@^12.0.2:
-  version "12.0.4"
-  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-12.0.4.tgz#fc60ccd8c32788e48302a543e6133e852a48abaf"
-  integrity sha512-O/BHtyiDrZrUnKBrVF8POojqd3gmhuiDw4FiI+FbnB14nu7G5jKFrKYZa9Q0JYKIZXHJOBzSaKQcMp2WUI+zmA==
+keycloak-js@^15.1.1:
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-15.1.1.tgz#4f3ef77fde377a506ec21e5e4790c0ba96ec97f6"
+  integrity sha512-PPu70WfSI2CWX7GoF5AQ4HkqYJLTAOV/25wDG//9S5SUOhqIDxKjAv6P54hy8nKt2+rIZF2kqpv7FNEmBN2W4g==
   dependencies:
     base64-js "1.3.1"
     js-sha256 "0.9.0"
