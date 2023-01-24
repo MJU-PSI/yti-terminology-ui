@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Language, LanguageService } from 'app/services/language.service';
-import { UserService, LoginModalService } from '@goraresult/yti-common-ui';
+import { UserService, LoginModalService, availableLanguages } from '@goraresult/yti-common-ui';
 import { TermedService } from '../../services/termed.service';
 import { ConfigurationService } from '../../services/configuration.service';
 import { Router } from '@angular/router';
@@ -93,11 +93,7 @@ import { Router } from '@angular/router';
 })
 export class NavigationBarComponent {
 
-  availableLanguages = [
-    { code: 'fi' as Language, name: 'Suomeksi (FI)' },
-    { code: 'sv' as Language, name: 'På svenska (SV)' },
-    { code: 'en' as Language, name: 'In English (EN)' }
-  ];
+  availableLanguages: any;
 
   fakeableUsers: { email: string, firstName: string, lastName: string }[] = [];
 
@@ -123,6 +119,7 @@ export class NavigationBarComponent {
     this.codeListUrl = this.configurationService.codeListUrl;
     this.dataModelUrl = this.configurationService.dataModelUrl;
     this.commentsUrl = this.configurationService.commentsUrl;
+    this.availableLanguages = availableLanguages;
   }
 
   get noMenuItemsAvailable() {

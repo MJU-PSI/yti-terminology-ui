@@ -9,9 +9,8 @@ import { GraphMeta } from 'app/entities/meta';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'app/services/language.service';
 import { FormNode } from 'app/services/form-state';
-import { defaultLanguages } from 'app/utils/language';
 import { AbstractControl, AsyncValidatorFn, FormControl, Validators } from '@angular/forms';
-import { firstMatching } from '@goraresult/yti-common-ui';
+import { firstMatching, availableLanguages } from '@goraresult/yti-common-ui';
 import { LocationService } from 'app/services/location.service';
 import { vocabularyIdPrefix } from 'app/utils/id-prefix';
 import { map } from 'rxjs/operators';
@@ -53,6 +52,7 @@ export class NewVocabularyComponent {
   formNode: FormNode;
   prefixFormControl: FormControl;
   idPrefix: string = vocabularyIdPrefix;
+  defaultLanguages: string[];
 
   constructor(private router: Router,
               private metaModelService: MetaModelService,
@@ -62,6 +62,8 @@ export class NewVocabularyComponent {
               public editableService: EditableService,
               locationService: LocationService) {
 
+
+    this.defaultLanguages = availableLanguages.map((lang: { code: any; }) => { return lang.code });
     editableService.edit();
     editableService.onSave = () => this.saveVocabulary();
     editableService.onCanceled = () => router.navigate(['/']);
@@ -88,12 +90,12 @@ export class NewVocabularyComponent {
 
       // TODO all meta models don't define language but they should
       if (this.vocabulary.hasLanguage()) {
-        this.vocabulary.languages = defaultLanguages.slice();
+        this.vocabulary.languages = this.defaultLanguages.slice();
       }
 
       const languageProvider = () => {
         const languageProperty = firstMatching(this.formNode.properties, property => property.name === 'language');
-        return languageProperty ? languageProperty.value.value.filter((v: string) => !!v) : defaultLanguages;
+        return languageProperty ? languageProperty.value.value.filter((v: string) => !!v) : this.defaultLanguages;
       };
 
       this.formNode = new FormNode(this.vocabulary, languageProvider, templateMetaModel);
