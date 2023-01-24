@@ -22,7 +22,7 @@ RUN echo "$NPMRC" > .npmrc && yarn install && rm -f .npmrc
 RUN echo "$VERSION" > src/version.txt
 
 # Build the dist dir containing the static files
-RUN ["npm", "run", "build", "--", "--prod",  "--output-hashing=all"]
+RUN ["npm", "run", "build"]
 
 FROM node:14.18.2-alpine3.12@sha256:60ebf5d469a72fe510cb197c4a251a92de87f01361d2d8589268b1c641a061ac
 
@@ -57,6 +57,7 @@ WORKDIR /app
 
 # Copy node_modules from builder to app dir
 COPY --from=builder /tmp/dist ./dist
+COPY --from=builder /tmp/entrypoint.sh .
 
 # Start web server and expose http
 EXPOSE 80

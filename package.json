@@ -7,7 +7,7 @@
     "ts-node": "node -- node_modules/ts-node/dist/bin.js -P scripts/tsconfig.script.json --skip-ignore",
     "start": "ng serve --proxy-config proxy.conf.json",
     "start-dev": "ng serve --proxy-config proxy-dev.conf.json --ssl true",
-    "build": "ng build",
+    "build": "ng build --configuration=production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

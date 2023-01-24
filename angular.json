@@ -53,7 +53,9 @@
               "optimization": true,
               "outputHashing": "all",
               "extractLicenses": true,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "aot": true,
+              "sourceMap": false
             }
           },
           "defaultConfiguration": ""
