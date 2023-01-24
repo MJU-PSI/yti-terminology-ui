@@ -12,13 +12,13 @@ import {
   requireSingle,
   allMatching,
   Status,
-  labelNameToResourceIdIdentifier
+  labelNameToResourceIdIdentifier,
+  availableLanguages
  } from '@goraresult/yti-common-ui';
 import { Attribute, Identifier, NodeExternal, NodeInternal, NodeType, VocabularyNodeType } from './node-api';
 import { MetaModel, NodeMeta, PropertyMeta, ReferenceMeta } from './meta';
 import * as moment from 'moment';
 import { Moment } from 'moment';
-import { defaultLanguages } from 'app/utils/language';
 import { stripSemanticMarkup } from 'app/utils/semantic';
 
 
@@ -427,8 +427,11 @@ export class Node<T extends NodeType> {
 
 export class VocabularyNode extends Node<VocabularyNodeType> {
 
+  defaultLanguages: string[];
+
   constructor(node: NodeExternal<VocabularyNodeType>, metaModel: MetaModel, persistent: boolean) {
     super(node, metaModel, persistent);
+    this.defaultLanguages = availableLanguages.map((lang: { code: any; }) => { return lang.code });
   }
 
   get label(): Localizable {
@@ -463,9 +466,9 @@ export class VocabularyNode extends Node<VocabularyNodeType> {
   get languages(): string[] {
     if (this.meta.hasProperty('language')) {
       const languages = this.getProperty('language').asValues();
-      return languages.length > 0 ? languages : defaultLanguages;
+      return languages.length > 0 ? languages : this.defaultLanguages;
     } else {
-      return defaultLanguages;
+      return this.defaultLanguages;
     }
   }
 

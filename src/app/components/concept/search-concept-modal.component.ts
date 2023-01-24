@@ -7,8 +7,7 @@ import { TermedService } from 'app/services/termed.service';
 import { EditableService } from 'app/services/editable.service';
 import { ElasticSearchService, IndexedConcept } from 'app/services/elasticsearch.service';
 import { FormNode } from 'app/services/form-state';
-import { defaultLanguages } from 'app/utils/language';
-import { firstMatching, ModalService } from '@goraresult/yti-common-ui';
+import { firstMatching, ModalService, availableLanguages } from '@goraresult/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -166,12 +165,16 @@ export class SearchConceptModalComponent implements OnInit, AfterViewInit {
   loaded = 0;
   canLoadMore = true;
 
+  defaultLanguages: string[];
+
   constructor(public modal: NgbActiveModal,
               private termedService: TermedService,
               private elasticSearchService: ElasticSearchService,
               private renderer: Renderer2,
               private languageService: LanguageService,
               private metaModelService: MetaModelService) {
+
+    this.defaultLanguages = availableLanguages.map((lang: { code: any; }) => { return lang.code });
   }
 
   get restrictionReasonForSelection(): string | null {
@@ -308,7 +311,7 @@ export class SearchConceptModalComponent implements OnInit, AfterViewInit {
     combineLatest(this.termedService.getConcept(graphId, indexedConcept.id), this.metaModelService.getMeta(graphId))
       .subscribe(([concept, metaModel]) => {
         this.selection = concept;
-        this.formNode = this.selection ? new FormNode(this.selection, () => defaultLanguages, metaModel) : null;
+        this.formNode = this.selection ? new FormNode(this.selection, () => this.defaultLanguages, metaModel) : null;
       });
   }
 

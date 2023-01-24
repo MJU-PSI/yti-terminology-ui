@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Language, Localizable, Localizer, isDefined, getFromLocalStorage, setToLocalStorage } from '@goraresult/yti-common-ui';
+import { Language, Localizable, Localizer, isDefined, getFromLocalStorage, setToLocalStorage, availableLanguages, defaultLanguage } from '@goraresult/yti-common-ui';
 import { BehaviorSubject, combineLatest } from 'rxjs';
 
 export { Language, Localizer };
@@ -10,14 +10,25 @@ export class LanguageService implements Localizer {
   private static readonly LANGUAGE_KEY: string = 'yti-terminology-ui.language-service.language';
   private static readonly FILTER_LANGUAGE_KEY: string = 'yti-terminology-ui.language-service.filter-language';
 
-  language$ = new BehaviorSubject<Language>(getFromLocalStorage(LanguageService.LANGUAGE_KEY, 'fi'));
-  filterLanguage$ = new BehaviorSubject<Language>(getFromLocalStorage(LanguageService.FILTER_LANGUAGE_KEY, ''));
-  translateLanguage$ = new BehaviorSubject<Language>(this.language);
+  availableLanguages: any;
+  defaultLanguage: any;
+
+  language$;
+  filterLanguage$;
+  translateLanguage$;
 
   constructor(private translateService: TranslateService) {
 
-    translateService.addLangs(['fi', 'en']);
-    translateService.setDefaultLang('en');
+    this.availableLanguages = availableLanguages;
+    this.defaultLanguage = defaultLanguage;
+
+    translateService.addLangs(this.availableLanguages.map((lang: { code: any; }) => { return lang.code }));
+    translateService.setDefaultLang(this.defaultLanguage);
+
+    this.language$ = new BehaviorSubject<Language>(getFromLocalStorage(LanguageService.LANGUAGE_KEY, this.defaultLanguage || 'en'));
+    this.filterLanguage$ = new BehaviorSubject<Language>(getFromLocalStorage(LanguageService.FILTER_LANGUAGE_KEY, ''));
+    this.translateLanguage$ = new BehaviorSubject<Language>(this.language);
+
     this.language$.subscribe(lang => this.translateService.use(lang));
 
     combineLatest(this.language$, this.filterLanguage$)

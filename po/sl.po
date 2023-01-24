@@ -1,0 +1,565 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2020-02-13 16:01+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Terminologies"
+msgstr "Sanastot"
+
+msgid "Search collection"
+msgstr "Hae käsitevalikoimaa"
+
+msgid "Add new collection"
+msgstr "Lisää uusi käsitevalikoima"
+
+msgid "Confirm remove"
+msgstr "Poistamisen hyväksyntä"
+
+msgid "Following items are referring to the deleted item"
+msgstr "Seuraavat asiat viittaavat poistettavaan asiaan"
+
+msgid "Are you sure that you want to remove?"
+msgstr "Oletko varma, että haluat poistaa?"
+
+msgid "Yes"
+msgstr "Kyllä"
+
+msgid "Cancel"
+msgstr "Peruuta"
+
+msgid "Created at"
+msgstr "Luotu"
+
+msgid "Created by"
+msgstr "Luoja"
+
+msgid "Modified at"
+msgstr "Muokattu"
+
+msgid "Modified by"
+msgstr "Muokkaaja"
+
+msgid "All organizations"
+msgstr "Kaikki organisaatiot"
+
+msgid "All vocabularies"
+msgstr "Kaikki sanastot"
+
+msgid "Add new concept"
+msgstr "Lisää uusi käsite"
+
+msgid "Add concept"
+msgstr "Lisää käsite"
+
+msgid "Search concept"
+msgstr "Hae käsitettä"
+
+msgid "Filter results"
+msgstr "Rajaa hakutuloksia"
+
+msgid "Order by modified date"
+msgstr "Järjestä muokkausajan mukaan"
+
+msgid "Status"
+msgstr "Tila"
+
+msgid "Alphabetic"
+msgstr "Aakkosellinen"
+
+msgid "Hierarchical"
+msgstr "Hierarkkinen"
+
+msgid "Collection"
+msgstr "Käsitevalikoima"
+
+msgid "Prefix"
+msgstr "Etuliite"
+
+msgid "Namespace"
+msgstr "Nimiavaruus"
+
+msgid "The following references are about to be completely removed"
+msgstr "Seuraavat viitteet poistuvat kokonaan tallennuksen yhteydessä"
+
+msgid "The following reference is about to be completely removed"
+msgstr "Seuraava viite poistuu kokonaan tallennuksen yhteydessä"
+
+msgid "Reference type"
+msgstr "Viitteen tyyppi"
+
+msgid "Target container"
+msgstr "Kohteen sijainti"
+
+msgid "Target"
+msgstr "Kohde"
+
+msgid "Are you sure that you want to continue?"
+msgstr "Oletko varma, että haluat jatkaa?"
+
+msgid "Select concept"
+msgstr "Valitse käsite"
+
+msgid "Choose concept"
+msgstr "Valitse käsite"
+
+msgid "Choose reference type"
+msgstr "Valitse viittauksen tyyppi"
+
+msgid ""
+"Selected concept is not yet formally referenced. Choose the reference type."
+msgstr ""
+"Valittuun käsitteeseen ei ole vielä formaalia viittausta. Valitse viitteen "
+"tyyppi."
+
+msgid "Select reference"
+msgstr "Valitse viite"
+
+msgid "Save"
+msgstr "Tallenna"
+
+msgid "Edit"
+msgstr "Muokkaa"
+
+msgid "Remove"
+msgstr "Poista"
+
+msgid "Content language"
+msgstr "Sisällön kieli"
+
+msgid "Content in"
+msgstr "Sisältö kielellä"
+
+msgid "Content in all languages"
+msgstr "Sisältö kaikilla kielillä"
+
+msgid "Add"
+msgstr "Lisää"
+
+msgid "No values yet"
+msgstr "Ei vielä yhtään arvoa"
+
+msgid "Add concept reference"
+msgstr "Lisää käsiteviite"
+
+msgid "Add link"
+msgstr "Lisää linkki"
+
+msgid "Unlinked selected text"
+msgstr "Linkittämätön teksti"
+
+msgid "No terms yet"
+msgstr "Ei vielä yhtään termiä"
+
+msgid "Remove term"
+msgstr "Poista termi"
+
+msgid "Enter link target"
+msgstr "Syötä linkin kohde"
+
+msgid "Enter the full HTTP or HTTPS address (URL) for the link:"
+msgstr "Syötä kokonainen HTTP- tai HTTPS-osoite (URL) linkille:"
+
+msgid "Impersonate user"
+msgstr "Esiinny käyttäjänä"
+
+msgid "LOG IN"
+msgstr "KIRJAUDU SISÄÄN"
+
+msgid "LOG OUT"
+msgstr "KIRJAUDU ULOS"
+
+msgid "User details"
+msgstr "Käyttäjätiedot"
+
+msgid "Suomi.fi Reference Data"
+msgstr "Suomi.fi-koodistot"
+
+msgid "Suomi.fi Data Vocabularies"
+msgstr "Suomi.fi-tietomallit"
+
+msgid "Suomi.fi Comments"
+msgstr "Suomi.fi-kommentit"
+
+msgid "User right management"
+msgstr "Oikeuksienhallinta"
+
+msgid "Choose organization"
+msgstr "Valitse organisaatio"
+
+msgid "Compositive"
+msgstr "Koostumus"
+
+msgid "Associative"
+msgstr "Assosiatiivinen"
+
+msgid "Add information domain"
+msgstr "Lisää tietoalue"
+
+msgid "Confirm import"
+msgstr "Tuonnin hyväksyntä"
+
+msgid "Importing"
+msgstr "Tuodaan"
+
+msgid "concepts"
+msgstr "käsitettä"
+
+msgid "{{error.translationKey}}"
+msgstr ""
+
+msgid "prefLabel"
+msgstr "Suositettava termi"
+
+msgid "synonym"
+msgstr "Synonyymi"
+
+msgid "Import failed"
+msgstr "Tuonti epäonnistui"
+
+msgid "Import concepts"
+msgstr "Tuo käsitteitä"
+
+msgid "File format"
+msgstr "Tiedoston muoto"
+
+msgid "File to be uploaded"
+msgstr "Tuotava tiedosto"
+
+msgid "Import"
+msgstr "Tuo"
+
+msgid "XML import"
+msgstr "XML-tuonti"
+
+msgid ""
+"Error while monitoring processing. Close the modal and try refreshing page "
+"later."
+msgstr ""
+"Käsittelyn seuranta epäonnistui. Sulje dialogi ja yritä päivittää sivua "
+"myöhemmin."
+
+msgid "Import success"
+msgstr "{{ created }} kohdetta luotu."
+
+msgid "Import success with errors"
+msgstr ""
+"{{ created }} kohdetta luotu. Virheitä: {{ errors }}. Varoituksia: "
+"{{ warnings }}."
+
+msgid "Close"
+msgstr "Sulje"
+
+msgid "New vocabulary"
+msgstr "uusi sanasto"
+
+msgid "Add organization"
+msgstr "Lisää organisaatio"
+
+msgid "Search information domain"
+msgstr "Hae tietoaluetta"
+
+msgid "Choose information domain"
+msgstr "Valitse tietoalue"
+
+msgid "Search organization"
+msgstr "Hae organisaatiota"
+
+msgid "Search term"
+msgstr "Hakusana"
+
+msgid "TerminologicalVocabularyType"
+msgstr "Terminologinen sanasto"
+
+msgid "See all results"
+msgstr "Katso kaikki {{count}} osumaa"
+
+msgid "Add vocabulary"
+msgstr "Lisää sanasto"
+
+msgid "ToolInfo"
+msgstr ""
+"Sanastot-työkalulla kerätään ja ylläpidetään julkishallinnon yhteisiä "
+"terminologisia sanastoja ja käsitteitä. Esimerkiksi sanastotyöntekijät ja "
+"tietomallintajat voivat määritellä Sanastoissa käsitteitä ja käsitteiden "
+"suhteita toisiinsa, minkä lisäksi käsitteiden väliset suhteet saa myös "
+"visualisoitua kuvaksi. Kansalainen puolestaan voi selata ja tarkistaa "
+"käsitteitä ja niiden määrityksiä."
+
+msgid "Search vocabularies"
+msgstr "Hae sanastoja"
+
+msgid "Extend search"
+msgstr "Kohdista haku myös"
+
+msgid "to concepts"
+msgstr "käsitteisiin"
+
+msgid "Filter with information domain"
+msgstr "Rajaa tietoalueella"
+
+msgid "result"
+msgstr "hakutulos"
+
+msgid "results"
+msgstr "hakutulosta"
+
+msgid "Search results"
+msgstr "Hakutulokset"
+
+msgid "Deep {{deepHitList.type}} hit"
+msgstr ""
+
+msgid "Vocabulary type"
+msgstr "Sanastotyyppi"
+
+msgid "You will receive an email notification when this resource changes."
+msgstr "Sinulle lähetetään sähköpostia, kun tähän aineistoon tulee muutoksia."
+
+msgid "Concepts"
+msgstr "Käsitteet"
+
+msgid "Terminology details"
+msgstr "Sanaston tiedot"
+
+msgid "Choose action"
+msgstr "Valitse toiminto"
+
+msgid "Add email subscription"
+msgstr "Tilaa sähköposti-ilmoitukset"
+
+msgid "Remove email subscription"
+msgstr "Poista sähköposti-ilmoitukset"
+
+msgid "Export terminology Excel"
+msgstr "Lataa sanasto Excel"
+
+msgid "Information domain"
+msgstr "Tietoalue"
+
+msgid "Organization"
+msgstr "Organisaatio"
+
+msgid "New concept"
+msgstr "uusi käsite"
+
+msgid "New collection"
+msgstr "uusi käsitevalikoima"
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "Email"
+msgstr "Sähköposti"
+
+msgid "Organizations and roles"
+msgstr "Organisaatiot ja roolit"
+
+msgid "Unknown organization"
+msgstr "Tuntematon organisaatio"
+
+msgid "Waiting for approval"
+msgstr "Odottaa hyväksymistä"
+
+msgid "Send access request"
+msgstr "Lähetä käyttöoikeuspyyntö"
+
+msgid "Send"
+msgstr "Lähetä"
+
+msgid ""
+"You have subscribed to be notified via email when the following resources "
+"change. To remove the subscription, click the icon next to the resource."
+msgstr ""
+"Olet tilannut seuraavien aineistojen muutoksista ilmoitukset sähköpostiisi. "
+"Poistaaksesi ilmoituksen paina aineiston vieressä olevaa ikonia."
+
+msgid "Email notifications"
+msgstr "Sähköposti-ilmoitukset"
+
+msgid "Daily"
+msgstr "Päivittäin"
+
+msgid "Code list resources"
+msgstr "Koodistoaineistot"
+
+msgid "Terminology resources"
+msgstr "Sanastoaineistot"
+
+msgid "Datamodel resources"
+msgstr "Tietomalliaineistot"
+
+msgid "Comments resources"
+msgstr "Kommenttien aineistot"
+
+msgid "INFORMATION"
+msgstr "TIEDOT"
+
+msgid "SUBSCRIPTIONS"
+msgstr "TILAUKSET"
+
+msgid "Front page"
+msgstr "Etusivu"
+
+msgid "All statuses"
+msgstr "Kaikki tilat"
+
+msgid "Vocabulary"
+msgstr "Sanasto"
+
+msgid "Group"
+msgstr "Toimiala / Ryhmä"
+
+msgid "Submit error"
+msgstr "Toiminnossa tapahtui virhe"
+
+msgid "Unexpected error"
+msgstr "Tapahtui odottamaton virhe"
+
+msgid "Edit in progress"
+msgstr "Muokkaaminen on kesken"
+
+msgid ""
+"Are you sure that you want to continue? By continuing unsaved changes will "
+"be lost."
+msgstr ""
+"Oletko varma, että haluat jatkaa? Jatkaessasi tallentamattomat muutokset "
+"katoavat."
+
+msgid "Link"
+msgstr "Linkitä"
+
+msgid "Unlink"
+msgstr "Poista linkitys"
+
+msgid "Concept not in references"
+msgstr "Käsite ei löydy viitteistä"
+
+msgid "self reference error"
+msgstr "Valinta ei voi viitata itseensä"
+
+msgid "already added error"
+msgstr "Valinta on jo lisätty"
+
+msgid "ADMIN"
+msgstr "Ylläpitäjä"
+
+msgid "DATA_MODEL_EDITOR"
+msgstr "Tietomallintaja"
+
+msgid "TERMINOLOGY_EDITOR"
+msgstr "Sanastotyöntekijä"
+
+msgid "CODE_LIST_EDITOR"
+msgstr "Koodistotyöntekijä"
+
+msgid "MEMBER"
+msgstr "Jäsen"
+
+msgid "All vocabulary types"
+msgstr "Kaikki sanastotyypit"
+
+msgid "VocabularyType"
+msgstr "Asiasanasto"
+
+msgid "File upload"
+msgstr "Tiedoston lataus"
+
+msgid "Processing"
+msgstr "Käsittely"
+
+msgid "Show messages"
+msgstr "Näytä viestit"
+
+msgid "Hide messages"
+msgstr "Piilota viestit"
+
+msgid "External link"
+msgstr "Ulkoinen linkki"
+
+msgid "Deep CONCEPT hit"
+msgstr "Käsitteet"
+
+msgid "Comma delimited"
+msgstr "Pilkulla eroteltu"
+
+msgid "Semicolon delimited"
+msgstr "Puolipisteellä eroteltu"
+
+msgid "ADD EMAIL SUBSCRIPTION TO RESOURCE REGARDING CHANGES?"
+msgstr "TILAA SÄHKÖPOSTI-ILMOITUKSET AINEISTON MUUTOKSISTA?"
+
+msgid "REMOVE EMAIL SUBSCRIPTION TO RESOURCE?"
+msgstr "POISTETAANKO SÄHKÖPOSTITILAUS AINEISTOSTA?"
+
+msgid "ARE YOU SURE YOU WANT TO ENABLE THE NOTIFICATION EMAIL SUBSCRIPTION?"
+msgstr ""
+"OLETKO VARMA, ETTÄ HALUAT KYTKEÄ SÄHKÖPOSTIEN VASTAANOTTOON LIITTYVÄN "
+"ASETUKSEN PÄÄLLE?"
+
+msgid "ARE YOU SURE YOU WANT TO DISABLE THE NOTIFICATION EMAIL SUBSCRIPTION?"
+msgstr ""
+"OLETKO VARMA, ETTÄ HALUAT KYTKEÄ SÄHKÖPOSTIEN VASTAANOTTOON LIITTYVÄN "
+"ASETUKSEN POIS PÄÄLTÄ?"
+
+msgid "Adding subscription failed."
+msgstr "Ilmoitusten tilaus epäonnistui."
+
+msgid "Subscription deletion failed."
+msgstr "Ilmoitusten poisto epäonnistui."
+
+msgid "INFO_TEXT_EMAIL_SUBSCRIPTIONS"
+msgstr ""
+"Tällä toiminnolla valitaan, onko ilmoitustoiminto aktiivinen. Ottamalla "
+"rastin pois kohdasta “Päivittäin” voit kytkeä kaikki ilmoitukset pois päältä "
+"kerralla. Palauttamalla rastin ilmoitukset aktivoituvat jälleen."
+
+msgid "validateMeta"
+msgstr "Epävalidi syöte"
+
+msgid "required"
+msgstr "Pakollinen syöte"
+
+msgid "validateLanguage"
+msgstr "Epävalidi kieli"
+
+msgid "prefixInUse"
+msgstr "Etuliite on jo käytössä"
+
+msgid "prefixFormat"
+msgstr "Etuliitteen sallitut merkit ovat a-z, 0-9, alaviiva ja väliviiva"
+
+msgid "pattern"
+msgstr "Syöte ei ole vaaditussa muodossa"
+
+msgid "Property is not a literal type."
+msgstr "Ominaisuus “{{ name }}” ei ole literaali"
+
+msgid "Property must include a language."
+msgstr "Ominaisuus “{{ name }}” täytyy olla määritelty kielen kanssa"
+
+msgid "No property or reference found with a name."
+msgstr "Sanaston tyyppi ei tue saraketta “{{ name }}”"
+
+msgid "Invalid status."
+msgstr "{{ lineNumber }}: Virheellinen tila “{{ value }}”"
+
+msgid "prefLabel must be set."
+msgstr "{{ lineNumber }}: prefLabel täytyy olla asetettu"
+
+msgid "Reference must include a language."
+msgstr "Viittaus “{{ name }}” täytyy määritellä kielen kanssa"
+
+msgid "Reference does not match any concepts."
+msgstr ""
+"{{ lineNumber }}: Viittauksella “{{ name }}” ei löydy käsitettä arvolle "
+"“{{ value }}”"
