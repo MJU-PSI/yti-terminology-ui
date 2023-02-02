@@ -7,7 +7,7 @@ import { TermedService } from 'app/services/termed.service';
 import { EditableService } from 'app/services/editable.service';
 import { ElasticSearchService, IndexedConcept } from 'app/services/elasticsearch.service';
 import { FormNode } from 'app/services/form-state';
-import { firstMatching, ModalService, availableLanguages } from '@goraresult/yti-common-ui';
+import { firstMatching, ModalService, availableLanguages } from '@mju-psi/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { HttpErrorResponse } from '@angular/common/http';

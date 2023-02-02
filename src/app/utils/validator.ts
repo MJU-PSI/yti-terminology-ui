@@ -1,5 +1,5 @@
 import { FormControl } from '@angular/forms';
-import { allMatching, contains } from '@goraresult/yti-common-ui';
+import { allMatching, contains } from '@mju-psi/yti-common-ui';
 import { PropertyMeta } from '../entities/meta';
 
 function match(regexpString: string, value: string) {

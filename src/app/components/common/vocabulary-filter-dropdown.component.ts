@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { VocabularyNode } from 'app/entities/node';
-import { FilterOptions, comparingLocalizable } from '@goraresult/yti-common-ui';
+import { FilterOptions, comparingLocalizable } from '@mju-psi/yti-common-ui';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { LanguageService } from 'app/services/language.service';
 import { TranslateService } from '@ngx-translate/core';

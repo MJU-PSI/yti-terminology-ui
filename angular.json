@@ -26,7 +26,7 @@
               "src/configuration",
               {
                 "glob": "**/*",
-                "input": "node_modules/@goraresult/yti-common-ui/assets",
+                "input": "node_modules/@mju-psi/yti-common-ui/assets",
                 "output": "/assets"
               }
             ],

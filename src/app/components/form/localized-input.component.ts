@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { ConceptNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
 import { FormPropertyLocalizable } from 'app/services/form-state';
-import { contains } from '@goraresult/yti-common-ui';
+import { contains } from '@mju-psi/yti-common-ui';
 
 @Component({
   selector: 'app-localized-input',

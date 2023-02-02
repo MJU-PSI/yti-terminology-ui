@@ -1,4 +1,4 @@
-import { Localization } from '@goraresult/yti-common-ui';
+import { Localization } from '@mju-psi/yti-common-ui';
 
 export interface Graph {
 

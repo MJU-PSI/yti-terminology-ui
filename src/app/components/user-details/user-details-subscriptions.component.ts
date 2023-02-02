@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { MessagingResource } from '../../entities-messaging/messaging-resource';
-import { ignoreModalClose, ConfirmationModalService, ErrorModalService, UserService } from '@goraresult/yti-common-ui';
+import { ignoreModalClose, ConfirmationModalService, ErrorModalService, UserService } from '@mju-psi/yti-common-ui';
 import { NgbNav } from '@ng-bootstrap/ng-bootstrap';
 import { ConfigurationService } from '../../services/configuration.service';
 import { BehaviorSubject } from 'rxjs';

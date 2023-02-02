@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserService, UUID } from '@goraresult/yti-common-ui';
+import { UserService, UUID } from '@mju-psi/yti-common-ui';
 import { VocabularyNode } from 'app/entities/node';
 
 @Injectable()

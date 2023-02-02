@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { GroupNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
 import { FormReferenceLiteral } from 'app/services/form-state';
-import { ignoreModalClose } from '@goraresult/yti-common-ui';
+import { ignoreModalClose } from '@mju-psi/yti-common-ui';
 import { SearchGroupModalService } from './search-group-modal.component';
 
 @Component({

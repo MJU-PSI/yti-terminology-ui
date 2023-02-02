@@ -14,7 +14,7 @@ import {
   Status,
   labelNameToResourceIdIdentifier,
   availableLanguages
- } from '@goraresult/yti-common-ui';
+ } from '@mju-psi/yti-common-ui';
 import { Attribute, Identifier, NodeExternal, NodeInternal, NodeType, VocabularyNodeType } from './node-api';
 import { MetaModel, NodeMeta, PropertyMeta, ReferenceMeta } from './meta';
 import * as moment from 'moment';

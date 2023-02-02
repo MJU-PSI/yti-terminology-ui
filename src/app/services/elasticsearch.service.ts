@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as moment from 'moment';
 import { Moment } from 'moment';
-import { Localizable, LocalizableArray } from '@goraresult/yti-common-ui';
+import { Localizable, LocalizableArray } from '@mju-psi/yti-common-ui';
 import { apiUrl } from 'app/config';
 import { HttpClient } from '@angular/common/http';
 import {

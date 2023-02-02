@@ -13,8 +13,8 @@ import {
   previousOf,
   previousOfMatching,
   remove
-} from '@goraresult/yti-common-ui';
-import { wordAtOffset, isDefined, requireDefined } from '@goraresult/yti-common-ui';
+} from '@mju-psi/yti-common-ui';
+import { wordAtOffset, isDefined, requireDefined } from '@mju-psi/yti-common-ui';
 import { ConceptNode } from 'app/entities/node';
 import {
   SemanticTextDocument,

@@ -10,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'app/services/language.service';
 import { FormNode } from 'app/services/form-state';
 import { AbstractControl, AsyncValidatorFn, FormControl, Validators } from '@angular/forms';
-import { firstMatching, availableLanguages } from '@goraresult/yti-common-ui';
+import { firstMatching, availableLanguages } from '@mju-psi/yti-common-ui';
 import { LocationService } from 'app/services/location.service';
 import { vocabularyIdPrefix } from 'app/utils/id-prefix';
 import { map } from 'rxjs/operators';

@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { FilterOptions, allStatuses, Status } from '@goraresult/yti-common-ui';
+import { FilterOptions, allStatuses, Status } from '@mju-psi/yti-common-ui';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 

@@ -1,6 +1,6 @@
 import { Observable, ReplaySubject, of, forkJoin, zip } from 'rxjs';
 import { map, flatMap, publishReplay, refCount, tap } from 'rxjs/operators';
-import { groupBy, index, normalizeAsArray, asLocalizable, getOrCreate, requireDefined } from '@goraresult/yti-common-ui';
+import { groupBy, index, normalizeAsArray, asLocalizable, getOrCreate, requireDefined } from '@mju-psi/yti-common-ui';
 import { Injectable } from '@angular/core';
 import { Graph } from 'app/entities/graph';
 import { GraphMeta, MetaModel, ReferenceMeta } from 'app/entities/meta';

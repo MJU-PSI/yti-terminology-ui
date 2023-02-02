@@ -1,6 +1,6 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalService, Localizable } from '@goraresult/yti-common-ui';
+import { ModalService, Localizable } from '@mju-psi/yti-common-ui';
 import { LanguageService } from '../../services/language.service';
 
 export interface ReferenceLabels { referenceLabel: Localizable, containerLabel: { titleLabel: Localizable, label: Localizable } | undefined, targetLabel: Localizable };

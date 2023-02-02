@@ -1,6 +1,6 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { YtiCommonUiConfig, YTI_COMMON_UI_CONFIG } from '@goraresult/yti-common-ui';
+import { YtiCommonUiConfig, YTI_COMMON_UI_CONFIG } from '@mju-psi/yti-common-ui';
 import { AppModule } from './app/app.module';
 import { Configuration } from './configuration/configuration';
 

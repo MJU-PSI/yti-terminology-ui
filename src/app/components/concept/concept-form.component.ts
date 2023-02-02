@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ConceptNode, VocabularyNode } from 'app/entities/node';
 import { SearchConceptModalService } from './search-concept-modal.component';
 import { SelectConceptReferenceModalService } from './select-concept-reference-modal.component';
-import { ignoreModalClose, anyMatching, requireDefined,  } from '@goraresult/yti-common-ui';
+import { ignoreModalClose, anyMatching, requireDefined,  } from '@mju-psi/yti-common-ui';
 import { FormField, FormNode, FormProperty } from 'app/services/form-state';
 import { EditableService } from 'app/services/editable.service';
 import { conceptIdPrefix } from 'app/utils/id-prefix';

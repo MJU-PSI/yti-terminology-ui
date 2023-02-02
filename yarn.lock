@@ -1292,15 +1292,6 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
-"@goraresult/yti-common-ui@0.0.3":
-  version "0.0.3"
-  resolved "https://npm.pkg.github.com/download/@goraresult/yti-common-ui/0.0.3/3cd14eb30a42a396523aa0974d4322839646422b#3cd14eb30a42a396523aa0974d4322839646422b"
-  integrity sha512-olGA16qOmZ1CyedYNNMVi/49/A5LM4r5EpJgRj9SrG1TI7qi38Icx6GlwtfkOtgWFv88sl+blDWay8p8Vzt3hw==
-  dependencies:
-    keycloak-angular "^8.4.0"
-    keycloak-js "^15.1.1"
-    tslib "^2.1.0"
-
 "@istanbuljs/schema@^0.1.2":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@istanbuljs/schema/-/schema-0.1.3.tgz#e45e384e4b8ec16bce2fd903af78450f6bf7ec98"
@@ -1369,6 +1360,15 @@
     loader-utils "^2.0.0"
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
+
+"@mju-psi/yti-common-ui@0.0.3":
+  version "0.0.3"
+  resolved "https://npm.pkg.github.com/download/@mju-psi/yti-common-ui/0.0.3/e2b51ec9cc6a34a252f3f4ef0f9d830a7571af11#e2b51ec9cc6a34a252f3f4ef0f9d830a7571af11"
+  integrity sha512-6xOp64uWLl/jN0LuDLhH/FJeeMQoDmVp0XjlCqA8FGB/DXPp2MxKnC9ESk6DGhHW3lmVNNJnUPaKJHqrtHi1Gw==
+  dependencies:
+    keycloak-angular "^8.4.0"
+    keycloak-js "^15.1.1"
+    tslib "^2.1.0"
 
 "@ng-bootstrap/ng-bootstrap@10.0.0":
   version "10.0.0"

@@ -1,4 +1,4 @@
-import { Role } from '@goraresult/yti-common-ui';
+import { Role } from '@mju-psi/yti-common-ui';
 
 export interface UserRequest {
   organizationId: string;

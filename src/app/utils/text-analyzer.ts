@@ -1,5 +1,5 @@
 import * as levenshtein from 'fast-levenshtein';
-import { Localizable, isDefined, allMatching } from '@goraresult/yti-common-ui';
+import { Localizable, isDefined, allMatching } from '@mju-psi/yti-common-ui';
 // NOTE TODO: Using "local" copy of common-ui comparator.ts due to optimizer breaking things. FIX THIS.
 import { Comparator, comparingPrimitive, comparingLocalizable } from 'app/utils/comparator';
 import { Localizer } from 'app/services/language.service';

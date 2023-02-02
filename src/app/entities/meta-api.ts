@@ -1,4 +1,4 @@
-import { Localization } from '@goraresult/yti-common-ui';
+import { Localization } from '@mju-psi/yti-common-ui';
 import { Attribute, NodeType } from './node-api';
 
 export interface NodeMetaInternal {

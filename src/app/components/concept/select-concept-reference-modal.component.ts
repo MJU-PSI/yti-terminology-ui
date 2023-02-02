@@ -2,7 +2,7 @@ import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ConceptNode } from 'app/entities/node';
 import { FormNode, FormReferenceLiteral } from 'app/services/form-state';
-import { Options, ModalService, labelNameToResourceIdIdentifier } from '@goraresult/yti-common-ui';
+import { Options, ModalService, labelNameToResourceIdIdentifier } from '@mju-psi/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 
 @Component({

@@ -84,7 +84,7 @@ import { UserDetailsComponent } from 'app/components/user-details/user-details.c
 import { OrganizationFilterDropdownComponent } from 'app/components/common/organization-filter-dropdown.component';
 import { VocabularyFilterDropdownComponent } from 'app/components/common/vocabulary-filter-dropdown.component';
 import { StatusFilterDropdownComponent } from 'app/components/common/status-filter-dropdown.component';
-import { AUTHENTICATED_USER_ENDPOINT, LOCALIZER, YtiCommonModule, ModalService } from '@goraresult/yti-common-ui';
+import { AUTHENTICATED_USER_ENDPOINT, LOCALIZER, YtiCommonModule, ModalService } from '@mju-psi/yti-common-ui';
 import { InformationAboutServiceComponent } from 'app/components/information/information-about-service.component';
 import { DragSortableDirective, DragSortableItemDirective } from './directives/drag-sortable.directive';
 import { apiUrl } from './config';
@@ -107,10 +107,10 @@ import enPo from 'raw-loader!po-loader?format=mf!../../po/en.po';
 import svPo from 'raw-loader!po-loader?format=mf!../../po/sv.po';
 import fiPo from 'raw-loader!po-loader?format=mf!../../po/fi.po';
 import slPo from 'raw-loader!po-loader?format=mf!../../po/sl.po';
-import fiCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/fi.po';
-import svCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/sv.po';
-import enCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/en.po';
-import slCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@goraresult/yti-common-ui/po/sl.po';
+import fiCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-psi/yti-common-ui/po/fi.po';
+import svCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-psi/yti-common-ui/po/sv.po';
+import enCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-psi/yti-common-ui/po/en.po';
+import slCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-psi/yti-common-ui/po/sl.po';
 
 function removeEmptyValues(obj: {}) {
 

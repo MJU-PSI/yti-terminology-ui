@@ -1,5 +1,5 @@
 import { MessagingResourceType } from '../services/messaging-api-schema';
-import { Localizable } from '@goraresult/yti-common-ui';
+import { Localizable } from '@mju-psi/yti-common-ui';
 import { Localizer } from '../services/language.service';
 
 export class MessagingResource {

@@ -5,7 +5,7 @@ import { AuthorizationManager } from 'app/services/authorization-manager.sevice'
 import { BehaviorSubject, combineLatest, concat, Observable, Subscription } from 'rxjs';
 import { debounceTime, publishReplay, refCount, skip, take } from 'rxjs/operators';
 import { TermedService } from 'app/services/termed.service';
-import { anyMatching, comparingLocalizable, getInformationDomainSvgIcon, getVocabularyTypeMaterialIcon, selectableStatuses, Status, Localizable, User, UserService } from '@goraresult/yti-common-ui';
+import { anyMatching, comparingLocalizable, getInformationDomainSvgIcon, getVocabularyTypeMaterialIcon, selectableStatuses, Status, Localizable, User, UserService } from '@mju-psi/yti-common-ui';
 import { LanguageService } from 'app/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { ConfigurationService } from '../../services/configuration.service';

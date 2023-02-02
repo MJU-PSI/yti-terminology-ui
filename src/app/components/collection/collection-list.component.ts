@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { v4 as uuid } from 'uuid';
 import { AuthorizationManager } from 'app/services/authorization-manager.sevice';
 import { Subscription } from 'rxjs';
-import { makePrefixPostfixHighlightRegexp, makePrefixPostfixSearchRegexp, splitSearchString } from '@goraresult/yti-common-ui';
+import { makePrefixPostfixHighlightRegexp, makePrefixPostfixSearchRegexp, splitSearchString } from '@mju-psi/yti-common-ui';
 
 @Component({
   selector: 'app-collection-list',

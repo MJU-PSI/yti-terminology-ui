@@ -1,6 +1,6 @@
 import { MessagingUserType } from '../services/messaging-api-schema';
 import { MessagingResource } from './messaging-resource';
-import { Localizable } from '@goraresult/yti-common-ui';
+import { Localizable } from '@mju-psi/yti-common-ui';
 
 export class MessagingUser {
 

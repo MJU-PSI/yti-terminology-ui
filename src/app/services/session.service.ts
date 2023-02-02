@@ -1,4 +1,4 @@
-import { isDefined } from '@goraresult/yti-common-ui';
+import { isDefined } from '@mju-psi/yti-common-ui';
 import { Injectable } from '@angular/core';
 
 const selectionWidthKey = 'selectionWidth';

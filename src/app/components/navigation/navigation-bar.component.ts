@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Language, LanguageService } from 'app/services/language.service';
-import { UserService, LoginModalService, availableLanguages } from '@goraresult/yti-common-ui';
+import { UserService, LoginModalService, availableLanguages } from '@mju-psi/yti-common-ui';
 import { TermedService } from '../../services/termed.service';
 import { ConfigurationService } from '../../services/configuration.service';
 import { Router } from '@angular/router';

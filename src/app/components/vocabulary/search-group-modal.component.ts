@@ -5,7 +5,7 @@ import { BehaviorSubject, combineLatest, concat, Observable } from 'rxjs';
 import { debounceTime, map, skip, take, tap } from 'rxjs/operators';
 import { TermedService } from 'app/services/termed.service';
 import { LanguageService } from 'app/services/language.service';
-import { contains, ModalService, comparingLocalizable } from '@goraresult/yti-common-ui';
+import { contains, ModalService, comparingLocalizable } from '@mju-psi/yti-common-ui';
 
 @Component({
   selector: 'app-search-group-modal',

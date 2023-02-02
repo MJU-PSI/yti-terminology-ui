@@ -3,7 +3,7 @@ import { OrganizationNode, VocabularyNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
 import { FormReferenceLiteral } from 'app/services/form-state';
 import { SearchOrganizationModalService } from './search-organization-modal.component';
-import { ignoreModalClose } from '@goraresult/yti-common-ui';
+import { ignoreModalClose } from '@mju-psi/yti-common-ui';
 import { AuthorizationManager } from 'app/services/authorization-manager.sevice';
 import { LanguageService } from 'app/services/language.service';
 
