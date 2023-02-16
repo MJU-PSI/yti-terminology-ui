@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { forkJoin, Observable, of, zip } from 'rxjs';
 import { catchError, flatMap, map } from 'rxjs/operators';
-import { contains, flatten, normalizeAsArray } from '@mju-psi/yti-common-ui';
+import { contains, flatten, normalizeAsArray, availableLanguages } from '@mju-psi/yti-common-ui';
 import { MetaModelService } from './meta-model.service';
 import { Identifier, NodeExternal, NodeInternal, NodeType, VocabularyNodeType } from 'app/entities/node-api';
 import { CollectionNode, ConceptNode, GroupNode, Node, OrganizationNode, VocabularyNode } from 'app/entities/node';
@@ -11,12 +11,14 @@ import { PrefixAndNamespace } from 'app/entities/prefix-and-namespace';
 import { UserRequest } from 'app/entities/user-request';
 import { apiUrl } from 'app/config';
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { LanguageService } from './language.service';
 
 @Injectable()
 export class TermedService {
 
   constructor(private http: HttpClient,
-              private metaModelService: MetaModelService) {
+              private metaModelService: MetaModelService,
+              private languageService: LanguageService) {
   }
 
   getVocabulary(graphId: string): Observable<VocabularyNode> {
@@ -305,7 +307,11 @@ export class TermedService {
   }
 
   private getOrganizationListNodes(): Observable<NodeExternal<'Organization'>[]> {
-    return this.http.get(`${apiUrl}/organizations`)
+    const params = {
+      'language': this.languageService.language,
+      'validLanguages': availableLanguages.map((lang: { code: any; }) => { return lang.code })
+    }
+    return this.http.get(`${apiUrl}/v2/organizations`, { params })
       .pipe(map(normalizeAsArray),
         catchError(notFoundAsDefault([]))
       );
