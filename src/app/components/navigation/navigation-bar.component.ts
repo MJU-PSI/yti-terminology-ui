@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   template: `
     <nav class="navbar navbar-expand-md navbar-light">
 
-      <a id="main_page_link" class="navbar-brand" href="/" (click)="goToFrontPage($event)">
+      <a id="main_page_link" class="navbar-brand" [routerLink]="['/']" (click)="goToFrontPage($event)">
         <!-- <app-logo></app-logo> -->
         <span translate>Terminologies</span>
         <span>{{environmentIdentifier}}</span>
