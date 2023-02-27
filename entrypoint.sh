@@ -14,8 +14,13 @@ vars=$(set | awk -F '=' '
     # Go from .app_setting.value to .appSetting.value (convert from snake case to camelcase)
     # In our example the four matched groups will be: .ap, p, s, etting.value
     # The third match should be uppsercased
-    while ( match($1, /(.*)(\w)_(\w)(.*)/, cap))
+    while ( match($1, /(.*)(\w)_(\w)(.*)/)) {
+      cap[1] = gensub(/(.*)(\w)_(\w)(.*)/, "\\1", "1", $1);
+      cap[2] = gensub(/(.*)(\w)_(\w)(.*)/, "\\2", "1", $1);
+      cap[3] = gensub(/(.*)(\w)_(\w)(.*)/, "\\3", "1", $1);
+      cap[4] = gensub(/(.*)(\w)_(\w)(.*)/, "\\4", "1", $1);
       $1 = cap[1] cap[2] toupper(cap[3]) cap[4];
+    }
     # Replace single quotes with double quotes
     gsub("\x27", "\"", $2)
     # Concatenate variable name with value.
