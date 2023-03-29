@@ -27,7 +27,6 @@
     "@angular/platform-browser-dynamic": "^12.2.16",
     "@angular/router": "^12.2.16",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-    "@mju-psi/yti-common-ui": "^0.0.3",
     "@ng-bootstrap/ng-bootstrap": "10.0.0",
     "@ngx-translate/core": "13.0.0",
     "bootstrap": "4.5.0",
@@ -46,6 +45,7 @@
     "tslib": "^2.0.0",
     "uuid": "3.0.1",
     "vis": "^4.19.1",
+    "yti-common-ui": "file:../yti-common-ui/dist/yti-common-ui-0.0.3.tgz",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
