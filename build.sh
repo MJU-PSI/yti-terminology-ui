@@ -1,4 +1,6 @@
 #!/bin/bash
 #
 #
-docker build -f Dockerfile.local -t yti-terminology-ui . --build-arg NPMRC
+mkdir -p tmp
+cp -r ../yti-common-ui/dist/* tmp
+docker build -f Dockerfile -t yti-terminology-ui .
