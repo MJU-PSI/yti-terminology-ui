@@ -1,0 +1,6 @@
+{
+  "production": "${ANGULAR_PRODUCTION}",
+  "url": "${ANGULAR_KEYCLOAK_URL}",
+  "realm": "${ANGULAR_KEYCLOAK_REALM}",
+  "clientId": "${ANGULAR_KEYCLOAK_CLIENT_ID}"
+}
