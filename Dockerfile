@@ -26,6 +26,9 @@ FROM nginx:stable-alpine
 # copy artifact build from the 'build environment'
 COPY --from=builder /app/dist /usr/share/nginx/html
 
+# copy nginx conf template
+COPY nginx.conf /etc/nginx/conf.d/nginx.template
+
 WORKDIR /app
 
 # Copy node_modules from builder to app dir

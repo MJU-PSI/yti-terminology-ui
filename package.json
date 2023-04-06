@@ -6,7 +6,6 @@
     "ng": "node -- node_modules/@angular/cli/bin/ng",
     "ts-node": "node -- node_modules/ts-node/dist/bin.js -P scripts/tsconfig.script.json --skip-ignore",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "start-dev": "ng serve --proxy-config proxy-dev.conf.json --ssl true",
     "build": "ng build --configuration=production",
     "build:traefik": "ng build --configuration=production --base-href /terminology-app/",
     "test": "ng test",
