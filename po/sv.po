@@ -179,14 +179,14 @@ msgstr "LOGGA UT"
 msgid "User details"
 msgstr "Användaruppgifter"
 
-msgid "Suomi.fi Reference Data"
-msgstr "Suomi.fi-kodlistor"
+msgid "Reference Data"
+msgstr "Kodlistor"
 
-msgid "Suomi.fi Data Vocabularies"
-msgstr "Suomi.fi-informationsmodeller"
+msgid "Data Vocabularies"
+msgstr "Informationsmodeller"
 
-msgid "Suomi.fi Comments"
-msgstr "Suomi.fi-kommentarer"
+msgid "Comments"
+msgstr "Kommentarer"
 
 msgid "User right management"
 msgstr "Administrering av behörigheter"

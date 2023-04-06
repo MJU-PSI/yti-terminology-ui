@@ -169,13 +169,13 @@ msgstr ""
 msgid "User details"
 msgstr ""
 
-msgid "Suomi.fi Reference Data"
+msgid "Reference Data"
 msgstr ""
 
-msgid "Suomi.fi Data Vocabularies"
+msgid "Data Vocabularies"
 msgstr ""
 
-msgid "Suomi.fi Comments"
+msgid "Comments"
 msgstr ""
 
 msgid "User right management"

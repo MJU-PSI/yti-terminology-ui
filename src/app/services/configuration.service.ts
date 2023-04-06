@@ -55,8 +55,7 @@ export class ConfigurationService {
   }
 
   get namespaceRoot(): string {
-    // TODO: Remove fallback when server is guaranteed to return value.
-    return this.configuration.namespaceRoot || 'http://uri.suomi.fi/terminology/';
+    return this.configuration.namespaceRoot;
   }
 
   get restrictFilterOptions(): boolean {

@@ -181,14 +181,14 @@ msgstr "KIRJAUDU ULOS"
 msgid "User details"
 msgstr "Käyttäjätiedot"
 
-msgid "Suomi.fi Reference Data"
-msgstr "Suomi.fi-koodistot"
+msgid "Reference Data"
+msgstr "Koodistot"
 
-msgid "Suomi.fi Data Vocabularies"
-msgstr "Suomi.fi-tietomallit"
+msgid "Data Vocabularies"
+msgstr "Tietomallit"
 
-msgid "Suomi.fi Comments"
-msgstr "Suomi.fi-kommentit"
+msgid "Comments"
+msgstr "Kommentit"
 
 msgid "User right management"
 msgstr "Oikeuksienhallinta"
