@@ -16,13 +16,13 @@ fetch(configurationPath)
     }
 
     const COMMON_UI_CONFIG: YtiCommonUiConfig = {
-      url: configuration.url,
-      realm: configuration.realm,
-      clientId: configuration.clientId
+      keycloakUrl: configuration.keycloakUrl,
+      keycloakRealm: configuration.keycloakRealm,
+      keycloakClientId: configuration.keycloakClientId
     };
 
     return platformBrowserDynamic([
-      { provide: YTI_COMMON_UI_CONFIG, useValue: COMMON_UI_CONFIG },
+      { provide: YTI_COMMON_UI_CONFIG, useValue: COMMON_UI_CONFIG }
     ]).bootstrapModule(AppModule);
   })
   .catch(error => console.error(error));
