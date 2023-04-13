@@ -9,6 +9,7 @@ WORKDIR /app
 # install and cache app dependencies
 COPY tmp/yti-common-ui /yti-common-ui/dist/yti-common-ui
 COPY package.json /app/package.json
+COPY yarn.lock /app/yarn.lock
 RUN yarn install
 
 # Fetch dependencies
