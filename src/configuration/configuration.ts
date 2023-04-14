@@ -4,7 +4,8 @@ export interface Configuration {
   production: boolean
   keycloakUrl: string,
   keycloakRealm: string,
-  keycloakClientId: string
+  keycloakClientId: string,
+  appBaseHref: string
 }
 
 // We use a dependency injection token to access the configuration in our application.

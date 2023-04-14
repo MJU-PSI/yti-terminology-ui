@@ -7,7 +7,6 @@
     "ts-node": "node -- node_modules/ts-node/dist/bin.js -P scripts/tsconfig.script.json --skip-ignore",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build --configuration=production",
-    "build:traefik": "ng build --configuration=production --base-href /terminology-app/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
