@@ -3,5 +3,5 @@
   "keycloakUrl": "${ANGULAR_KEYCLOAK_URL}",
   "keycloakRealm": "${ANGULAR_KEYCLOAK_REALM}",
   "keycloakClientId": "${ANGULAR_KEYCLOAK_CLIENT_ID}",
-  "appBaseHref": "${ANGULAR_TERMINOLOGY_BASE_HREF}"
+  "appBaseHref": "${ANGULAR_BASE_HREF}"
 }
