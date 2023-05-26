@@ -5,7 +5,7 @@ msgstr ""
 "PO-Revision-Date: 2020-02-13 16:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fi\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,552 +14,520 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Terminologies"
-msgstr "Sanastot"
+msgstr "Terminologije"
 
 msgid "Search collection"
-msgstr "Hae käsitevalikoimaa"
+msgstr "Iskanje zbirke"
 
 msgid "Add new collection"
-msgstr "Lisää uusi käsitevalikoima"
+msgstr "Dodajte novo zbirko"
 
 msgid "Confirm remove"
-msgstr "Poistamisen hyväksyntä"
+msgstr "Potrdite odstranitev"
 
 msgid "Following items are referring to the deleted item"
-msgstr "Seuraavat asiat viittaavat poistettavaan asiaan"
+msgstr "Naslednje postavke se nanašajo na izbrisano postavko"
 
 msgid "Are you sure that you want to remove?"
-msgstr "Oletko varma, että haluat poistaa?"
+msgstr "Ali ste prepričani, da želite odstraniti?"
 
 msgid "Yes"
-msgstr "Kyllä"
+msgstr "Da"
 
 msgid "Cancel"
-msgstr "Peruuta"
+msgstr "Prekliči"
 
 msgid "Created at"
-msgstr "Luotu"
+msgstr "Ustvarjeno ob"
 
 msgid "Created by"
-msgstr "Luoja"
+msgstr "Ustvaril"
 
 msgid "Modified at"
-msgstr "Muokattu"
+msgstr "Spremenjeno ob"
 
 msgid "Modified by"
-msgstr "Muokkaaja"
+msgstr "Spremenil"
 
 msgid "All organizations"
-msgstr "Kaikki organisaatiot"
+msgstr "Vse organizacije"
 
 msgid "All vocabularies"
-msgstr "Kaikki sanastot"
+msgstr "Vse terminologije"
 
 msgid "Add new concept"
-msgstr "Lisää uusi käsite"
+msgstr "Dodajte nov koncept"
 
 msgid "Add concept"
-msgstr "Lisää käsite"
+msgstr "Dodajte koncept"
 
 msgid "Search concept"
-msgstr "Hae käsitettä"
+msgstr "Koncept iskanja"
 
 msgid "Filter results"
-msgstr "Rajaa hakutuloksia"
+msgstr "Filtriraj rezultate"
 
 msgid "Order by modified date"
-msgstr "Järjestä muokkausajan mukaan"
+msgstr "Naroči po spremenjenem datumu"
 
 msgid "Status"
-msgstr "Tila"
+msgstr "Stanje"
 
 msgid "Alphabetic"
-msgstr "Aakkosellinen"
+msgstr "Abecedno"
 
 msgid "Hierarchical"
-msgstr "Hierarkkinen"
+msgstr "Hierarhično"
 
 msgid "Collection"
-msgstr "Käsitevalikoima"
+msgstr "Zbirka"
 
 msgid "Prefix"
-msgstr "Etuliite"
+msgstr "Predpona"
 
 msgid "Namespace"
-msgstr "Nimiavaruus"
+msgstr "Imenski prostor"
 
 msgid "The following references are about to be completely removed"
-msgstr "Seuraavat viitteet poistuvat kokonaan tallennuksen yhteydessä"
+msgstr "Naslednje reference bodo kmalu v celoti odstranjene"
 
 msgid "The following reference is about to be completely removed"
-msgstr "Seuraava viite poistuu kokonaan tallennuksen yhteydessä"
+msgstr "Naslednja referenca bo kmalu popolnoma odstranjena"
 
 msgid "Reference type"
-msgstr "Viitteen tyyppi"
+msgstr "Vrsta reference"
 
 msgid "Target container"
-msgstr "Kohteen sijainti"
+msgstr "Ciljna posoda"
 
 msgid "Target"
-msgstr "Kohde"
+msgstr "Tarča"
 
 msgid "Are you sure that you want to continue?"
-msgstr "Oletko varma, että haluat jatkaa?"
+msgstr "Ste prepričani, da želite nadaljevati?"
 
 msgid "Select concept"
-msgstr "Valitse käsite"
+msgstr "Izberite koncept"
 
 msgid "Choose concept"
-msgstr "Valitse käsite"
+msgstr "Izberite koncept"
 
 msgid "Choose reference type"
-msgstr "Valitse viittauksen tyyppi"
+msgstr "Izberite vrsto reference"
 
-msgid ""
-"Selected concept is not yet formally referenced. Choose the reference type."
-msgstr ""
-"Valittuun käsitteeseen ei ole vielä formaalia viittausta. Valitse viitteen "
-"tyyppi."
+msgid "Selected concept is not yet formally referenced. Choose the reference type."
+msgstr "Izbrani koncept še ni formalno referenciran. Izberite vrsto reference."
 
 msgid "Select reference"
-msgstr "Valitse viite"
+msgstr "Izberite referenco"
 
 msgid "Save"
-msgstr "Tallenna"
+msgstr "Shrani"
 
 msgid "Edit"
-msgstr "Muokkaa"
+msgstr "Uredi"
 
 msgid "Remove"
-msgstr "Poista"
+msgstr "Odstrani"
 
 msgid "Content language"
-msgstr "Sisällön kieli"
+msgstr "Jezik vsebine"
 
 msgid "Content in"
-msgstr "Sisältö kielellä"
+msgstr "Vsebina v"
 
 msgid "Content in all languages"
-msgstr "Sisältö kaikilla kielillä"
+msgstr "Vsebina v vseh jezikih"
 
 msgid "Add"
-msgstr "Lisää"
+msgstr "Dodaj"
 
 msgid "No values yet"
-msgstr "Ei vielä yhtään arvoa"
+msgstr "Ni še vrednosti"
 
 msgid "Add concept reference"
-msgstr "Lisää käsiteviite"
+msgstr "Dodajte sklic na koncept"
 
 msgid "Add link"
-msgstr "Lisää linkki"
+msgstr "Dodaj povezavo"
 
 msgid "Unlinked selected text"
-msgstr "Linkittämätön teksti"
+msgstr "Izbrano besedilo ni povezano"
 
 msgid "No terms yet"
-msgstr "Ei vielä yhtään termiä"
+msgstr "Pogojev še ni"
 
 msgid "Remove term"
-msgstr "Poista termi"
+msgstr "Odstrani izraz"
 
 msgid "Enter link target"
-msgstr "Syötä linkin kohde"
+msgstr "Vnesite cilj povezave"
 
 msgid "Enter the full HTTP or HTTPS address (URL) for the link:"
-msgstr "Syötä kokonainen HTTP- tai HTTPS-osoite (URL) linkille:"
+msgstr "Vnesite celoten naslov HTTP ali HTTPS (URL) za povezavo:"
 
 msgid "Impersonate user"
-msgstr "Esiinny käyttäjänä"
+msgstr "Lažno predstavljanje uporabnika"
 
 msgid "LOG IN"
-msgstr "KIRJAUDU SISÄÄN"
+msgstr "VPIŠI SE"
 
 msgid "LOG OUT"
-msgstr "KIRJAUDU ULOS"
+msgstr "ODJAVA"
 
 msgid "User details"
-msgstr "Käyttäjätiedot"
+msgstr "Podrobnosti o uporabniku"
 
 msgid "Reference Data"
-msgstr "Koodistot"
+msgstr "Referenčni podatki"
 
-msgid "SData Vocabularies"
-msgstr "Tietomallit"
+msgid "Data Vocabularies"
+msgstr "Podatkovni besednjaki"
 
 msgid "Comments"
-msgstr "Kommentit"
+msgstr "Komentarji"
 
 msgid "User right management"
-msgstr "Oikeuksienhallinta"
+msgstr "Upravljanje uporabniških pravic"
 
 msgid "Choose organization"
-msgstr "Valitse organisaatio"
+msgstr "Izberite organizacijo"
 
 msgid "Compositive"
-msgstr "Koostumus"
+msgstr "Sestavljiv"
 
 msgid "Associative"
-msgstr "Assosiatiivinen"
+msgstr "Asociativno"
 
 msgid "Add information domain"
-msgstr "Lisää tietoalue"
+msgstr "Dodajte informacijsko domeno"
 
 msgid "Confirm import"
-msgstr "Tuonnin hyväksyntä"
+msgstr "Potrdite uvoz"
 
 msgid "Importing"
-msgstr "Tuodaan"
+msgstr "Uvažanje"
 
 msgid "concepts"
-msgstr "käsitettä"
+msgstr "koncepti"
 
 msgid "{{error.translationKey}}"
 msgstr ""
 
 msgid "prefLabel"
-msgstr "Suositettava termi"
+msgstr "Prednostni termin"
 
 msgid "synonym"
-msgstr "Synonyymi"
+msgstr "Sinonim"
 
 msgid "Import failed"
-msgstr "Tuonti epäonnistui"
+msgstr "Uvoz ni uspel"
 
 msgid "Import concepts"
-msgstr "Tuo käsitteitä"
+msgstr "Uvoz konceptov"
 
 msgid "File format"
-msgstr "Tiedoston muoto"
+msgstr "Format datoteke"
 
 msgid "File to be uploaded"
-msgstr "Tuotava tiedosto"
+msgstr "Datoteka za nalaganje"
 
 msgid "Import"
-msgstr "Tuo"
+msgstr "Uvozi"
 
 msgid "XML import"
-msgstr "XML-tuonti"
+msgstr "Uvoz XML"
 
-msgid ""
-"Error while monitoring processing. Close the modal and try refreshing page "
-"later."
-msgstr ""
-"Käsittelyn seuranta epäonnistui. Sulje dialogi ja yritä päivittää sivua "
-"myöhemmin."
+msgid "Error while monitoring processing. Close the modal and try refreshing page later."
+msgstr "Napaka med spremljanjem obdelave. Zaprite modal in poskusite osvežiti stran pozneje."
 
 msgid "Import success"
-msgstr "{{ created }} kohdetta luotu."
+msgstr "Ustvarjenih predmetov: {{ created }}."
 
 msgid "Import success with errors"
-msgstr ""
-"{{ created }} kohdetta luotu. Virheitä: {{ errors }}. Varoituksia: "
-"{{ warnings }}."
+msgstr "Ustvarjenih predmetov: {{ created }}. Napake: {{ errors }}. Opozorila: {{ opozorila }}."
 
 msgid "Close"
-msgstr "Sulje"
+msgstr "Zapri"
 
 msgid "New vocabulary"
-msgstr "uusi sanasto"
+msgstr "Nova terminologija"
 
 msgid "Add organization"
-msgstr "Lisää organisaatio"
+msgstr "Dodajte organizacijo"
 
 msgid "Search information domain"
-msgstr "Hae tietoaluetta"
+msgstr "Domena iskanja informacij"
 
 msgid "Choose information domain"
-msgstr "Valitse tietoalue"
+msgstr "Izberite informacijsko domeno"
 
 msgid "Search organization"
-msgstr "Hae organisaatiota"
+msgstr "Organizacija iskanja"
 
 msgid "Search term"
-msgstr "Hakusana"
+msgstr "Iskalni izraz"
 
 msgid "TerminologicalVocabularyType"
-msgstr "Terminologinen sanasto"
+msgstr "Terminologija"
 
 msgid "See all results"
-msgstr "Katso kaikki {{count}} osumaa"
+msgstr "Oglejte si vse {{count}} rezultatov"
 
 msgid "Add vocabulary"
-msgstr "Lisää sanasto"
+msgstr "Dodajte terminologijo"
 
 msgid "ToolInfo"
-msgstr ""
-"Sanastot-työkalulla kerätään ja ylläpidetään julkishallinnon yhteisiä "
-"terminologisia sanastoja ja käsitteitä. Esimerkiksi sanastotyöntekijät ja "
-"tietomallintajat voivat määritellä Sanastoissa käsitteitä ja käsitteiden "
-"suhteita toisiinsa, minkä lisäksi käsitteiden väliset suhteet saa myös "
-"visualisoitua kuvaksi. Kansalainen puolestaan voi selata ja tarkistaa "
-"käsitteitä ja niiden määrityksiä."
+msgstr "Orodje za terminologije se uporablja za zbiranje, vzdrževanje in objavo skupnih terminologij javne uprave. Oblikovalci podatkov lahko uporabljajo orodje za definiranje izrazov in odnosov. Izrazi, njihove definicije in celo vizualizacija odnosov med pojmi so javno dostopni vsem zainteresiranim."
 
 msgid "Search vocabularies"
-msgstr "Hae sanastoja"
+msgstr "Iskanje terminologije"
 
 msgid "Extend search"
-msgstr "Kohdista haku myös"
+msgstr "Razširi iskanje na"
 
 msgid "to concepts"
-msgstr "käsitteisiin"
+msgstr "koncepti"
 
 msgid "Filter with information domain"
-msgstr "Rajaa tietoalueella"
+msgstr "Filter z informacijsko domeno"
 
 msgid "result"
-msgstr "hakutulos"
+msgstr "rezultat"
 
 msgid "results"
-msgstr "hakutulosta"
+msgstr "rezultate"
 
 msgid "Search results"
-msgstr "Hakutulokset"
+msgstr "Rezultati iskanja"
 
 msgid "Deep {{deepHitList.type}} hit"
-msgstr ""
+msgstr "Globok {{deepHitList.type}} zadetek"
 
 msgid "Vocabulary type"
-msgstr "Sanastotyyppi"
+msgstr "Vrsta besedišča"
 
 msgid "You will receive an email notification when this resource changes."
-msgstr "Sinulle lähetetään sähköpostia, kun tähän aineistoon tulee muutoksia."
+msgstr "Ko se ta vir spremeni, boste prejeli e-poštno obvestilo."
 
 msgid "Concepts"
-msgstr "Käsitteet"
+msgstr "Koncepti"
 
 msgid "Terminology details"
-msgstr "Sanaston tiedot"
+msgstr "Terminologija"
 
 msgid "Choose action"
-msgstr "Valitse toiminto"
+msgstr "Izberite akcijo"
 
 msgid "Add email subscription"
-msgstr "Tilaa sähköposti-ilmoitukset"
+msgstr "Dodajte e-poštno naročnino"
 
 msgid "Remove email subscription"
-msgstr "Poista sähköposti-ilmoitukset"
+msgstr "Odstrani e-poštno naročnino"
 
 msgid "Export terminology Excel"
-msgstr "Lataa sanasto Excel"
+msgstr "Izvoz terminologije Excel"
 
 msgid "Information domain"
-msgstr "Tietoalue"
+msgstr "Informacijska domena"
 
 msgid "Organization"
-msgstr "Organisaatio"
+msgstr "Organizacija"
 
 msgid "New concept"
-msgstr "uusi käsite"
+msgstr "Nov koncept"
 
 msgid "New collection"
-msgstr "uusi käsitevalikoima"
+msgstr "Nova zbirka"
 
 msgid "Name"
-msgstr "Nimi"
+msgstr "Ime"
 
 msgid "Email"
-msgstr "Sähköposti"
+msgstr "E-naslov"
 
 msgid "Organizations and roles"
-msgstr "Organisaatiot ja roolit"
+msgstr "Organizacije in vloge"
 
 msgid "Unknown organization"
-msgstr "Tuntematon organisaatio"
+msgstr "Neznana organizacija"
 
 msgid "Waiting for approval"
-msgstr "Odottaa hyväksymistä"
+msgstr "Čakam na odobritev"
 
 msgid "Send access request"
-msgstr "Lähetä käyttöoikeuspyyntö"
+msgstr "Pošlji zahtevo za dostop"
 
 msgid "Send"
-msgstr "Lähetä"
+msgstr "Pošlji"
 
-msgid ""
-"You have subscribed to be notified via email when the following resources "
-"change. To remove the subscription, click the icon next to the resource."
-msgstr ""
-"Olet tilannut seuraavien aineistojen muutoksista ilmoitukset sähköpostiisi. "
-"Poistaaksesi ilmoituksen paina aineiston vieressä olevaa ikonia."
+msgid "You have subscribed to be notified via email when the following resources change. To remove the subscription, click the icon next to the resource."
+msgstr "Naročili ste se na prejemanje obvestil po e-pošti, ko se spremenijo naslednji viri. Če želite odstraniti naročnino, kliknite ikono poleg vira."
 
 msgid "Email notifications"
-msgstr "Sähköposti-ilmoitukset"
+msgstr "E-poštna obvestila"
 
 msgid "Daily"
-msgstr "Päivittäin"
+msgstr "Dnevno"
 
 msgid "Code list resources"
-msgstr "Koodistoaineistot"
+msgstr "Viri kodnega seznama"
 
 msgid "Terminology resources"
-msgstr "Sanastoaineistot"
+msgstr "Terminološki viri"
 
 msgid "Datamodel resources"
-msgstr "Tietomalliaineistot"
+msgstr "Viri podatkovnega modela"
 
 msgid "Comments resources"
-msgstr "Kommenttien aineistot"
+msgstr "Viri komentarjev"
 
 msgid "INFORMATION"
-msgstr "TIEDOT"
+msgstr "INFORMACIJE"
 
 msgid "SUBSCRIPTIONS"
-msgstr "TILAUKSET"
+msgstr "NAROČNINE"
 
 msgid "Front page"
-msgstr "Etusivu"
+msgstr "Prednja stran"
 
 msgid "All statuses"
-msgstr "Kaikki tilat"
+msgstr "Vsi statusi"
 
 msgid "Vocabulary"
-msgstr "Sanasto"
+msgstr "Terminologija"
 
 msgid "Group"
-msgstr "Toimiala / Ryhmä"
+msgstr "Skupina"
 
 msgid "Submit error"
-msgstr "Toiminnossa tapahtui virhe"
+msgstr "Napaka pri pošiljanju"
 
 msgid "Unexpected error"
-msgstr "Tapahtui odottamaton virhe"
+msgstr "Nepričakovana napaka"
 
 msgid "Edit in progress"
-msgstr "Muokkaaminen on kesken"
+msgstr "Urejanje v teku"
 
-msgid ""
-"Are you sure that you want to continue? By continuing unsaved changes will "
-"be lost."
-msgstr ""
-"Oletko varma, että haluat jatkaa? Jatkaessasi tallentamattomat muutokset "
-"katoavat."
+msgid "Are you sure that you want to continue? By continuing unsaved changes will be lost."
+msgstr "Ste prepričani, da želite nadaljevati? Če nadaljujete, bodo neshranjene spremembe izgubljene."
 
 msgid "Link"
-msgstr "Linkitä"
+msgstr "Povezava"
 
 msgid "Unlink"
-msgstr "Poista linkitys"
+msgstr "Prekini povezavo"
 
 msgid "Concept not in references"
-msgstr "Käsite ei löydy viitteistä"
+msgstr "Koncept ni v referencah"
 
 msgid "self reference error"
-msgstr "Valinta ei voi viitata itseensä"
+msgstr "Izbor se sklicuje na samega sebe"
 
 msgid "already added error"
-msgstr "Valinta on jo lisätty"
+msgstr "Izbor je že dodan"
 
 msgid "ADMIN"
-msgstr "Ylläpitäjä"
+msgstr "Skrbnik"
 
 msgid "DATA_MODEL_EDITOR"
-msgstr "Tietomallintaja"
+msgstr "Urejevalnik podatkovnih modelov"
 
 msgid "TERMINOLOGY_EDITOR"
-msgstr "Sanastotyöntekijä"
+msgstr "Terminološki urednik"
 
 msgid "CODE_LIST_EDITOR"
-msgstr "Koodistotyöntekijä"
+msgstr "Urejevalnik šifrantov"
 
 msgid "MEMBER"
-msgstr "Jäsen"
+msgstr "Član"
 
 msgid "All vocabulary types"
-msgstr "Kaikki sanastotyypit"
+msgstr "Vse vrste besedišča"
 
 msgid "VocabularyType"
-msgstr "Asiasanasto"
+msgstr "Besednjak"
 
 msgid "File upload"
-msgstr "Tiedoston lataus"
+msgstr "Nalaganje datoteke"
 
 msgid "Processing"
-msgstr "Käsittely"
+msgstr "Obravnavati"
 
 msgid "Show messages"
-msgstr "Näytä viestit"
+msgstr "Prikaži sporočila"
 
 msgid "Hide messages"
-msgstr "Piilota viestit"
+msgstr "Skrij sporočila"
 
 msgid "External link"
-msgstr "Ulkoinen linkki"
+msgstr "Zunanja povezava"
 
 msgid "Deep CONCEPT hit"
-msgstr "Käsitteet"
+msgstr "Koncepti"
 
 msgid "Comma delimited"
-msgstr "Pilkulla eroteltu"
+msgstr "Ločeno z vejicami"
 
 msgid "Semicolon delimited"
-msgstr "Puolipisteellä eroteltu"
+msgstr "Ločeno s podpičjem"
 
 msgid "ADD EMAIL SUBSCRIPTION TO RESOURCE REGARDING CHANGES?"
-msgstr "TILAA SÄHKÖPOSTI-ILMOITUKSET AINEISTON MUUTOKSISTA?"
+msgstr "DODATI E-POŠTNO NAROČNINO NA VIR GLEDE SPREMEMB?"
 
 msgid "REMOVE EMAIL SUBSCRIPTION TO RESOURCE?"
-msgstr "POISTETAANKO SÄHKÖPOSTITILAUS AINEISTOSTA?"
+msgstr "ODSTRANITE E-POŠTNO NAROČNINO NA VIR?"
 
 msgid "ARE YOU SURE YOU WANT TO ENABLE THE NOTIFICATION EMAIL SUBSCRIPTION?"
-msgstr ""
-"OLETKO VARMA, ETTÄ HALUAT KYTKEÄ SÄHKÖPOSTIEN VASTAANOTTOON LIITTYVÄN "
-"ASETUKSEN PÄÄLLE?"
+msgstr "STE PREPRIČANI, DA ŽELITE OMOGOČITI NAROČANJE NA E-POŠTO OBVESTILA?"
 
 msgid "ARE YOU SURE YOU WANT TO DISABLE THE NOTIFICATION EMAIL SUBSCRIPTION?"
-msgstr ""
-"OLETKO VARMA, ETTÄ HALUAT KYTKEÄ SÄHKÖPOSTIEN VASTAANOTTOON LIITTYVÄN "
-"ASETUKSEN POIS PÄÄLTÄ?"
+msgstr "ALI STE PREPRIČANI, DA ŽELITE ONEMOGOČITI NAROČANJE NA ELEKTRONSKO OBVESTILO?"
 
 msgid "Adding subscription failed."
-msgstr "Ilmoitusten tilaus epäonnistui."
+msgstr "Dodajanje naročnine ni uspelo."
 
 msgid "Subscription deletion failed."
-msgstr "Ilmoitusten poisto epäonnistui."
+msgstr "Brisanje naročnine ni uspelo."
 
 msgid "INFO_TEXT_EMAIL_SUBSCRIPTIONS"
-msgstr ""
-"Tällä toiminnolla valitaan, onko ilmoitustoiminto aktiivinen. Ottamalla "
-"rastin pois kohdasta “Päivittäin” voit kytkeä kaikki ilmoitukset pois päältä "
-"kerralla. Palauttamalla rastin ilmoitukset aktivoituvat jälleen."
+msgstr "Ta funkcija izbere, ali so naročnine aktivne ali ne. Če počistite polje »Dnevno«, lahko onemogočite vse naročnine hkrati. Če ga označite, se naročnine znova aktivirajo."
 
 msgid "validateMeta"
-msgstr "Epävalidi syöte"
+msgstr "Neveljavno"
 
 msgid "required"
-msgstr "Pakollinen syöte"
+msgstr "Obvezno"
 
 msgid "validateLanguage"
-msgstr "Epävalidi kieli"
+msgstr "Neveljaven jezik"
 
 msgid "prefixInUse"
-msgstr "Etuliite on jo käytössä"
+msgstr "Predpona je že v uporabi"
 
 msgid "prefixFormat"
-msgstr "Etuliitteen sallitut merkit ovat a-z, 0-9, alaviiva ja väliviiva"
+msgstr "Dovoljeni znaki za predpono so az, 0-9, podčrtaj in pomišljaj"
 
 msgid "pattern"
-msgstr "Syöte ei ole vaaditussa muodossa"
+msgstr "Vnos ni v zahtevani obliki"
 
 msgid "Property is not a literal type."
-msgstr "Ominaisuus “{{ name }}” ei ole literaali"
+msgstr "Lastnost »{{ name }}« ni dobesedna vrsta."
 
 msgid "Property must include a language."
-msgstr "Ominaisuus “{{ name }}” täytyy olla määritelty kielen kanssa"
+msgstr "Lastnost “{{ name }}” mora vključevati jezik."
 
 msgid "No property or reference found with a name."
-msgstr "Sanaston tyyppi ei tue saraketta “{{ name }}”"
+msgstr "Vrsta besedišča ne podpira stolpca »{{ name }}«"
 
 msgid "Invalid status."
-msgstr "{{ lineNumber }}: Virheellinen tila “{{ value }}”"
+msgstr "{{ lineNumber }}: Neveljavno stanje “{{ value }}”"
 
 msgid "prefLabel must be set."
-msgstr "{{ lineNumber }}: prefLabel täytyy olla asetettu"
+msgstr "{{ lineNumber }}: prefLabel mora biti nastavljen."
 
 msgid "Reference must include a language."
-msgstr "Viittaus “{{ name }}” täytyy määritellä kielen kanssa"
+msgstr "Sklic “{{ name }}” mora vsebovati jezik."
 
 msgid "Reference does not match any concepts."
-msgstr ""
-"{{ lineNumber }}: Viittauksella “{{ name }}” ei löydy käsitettä arvolle "
-"“{{ value }}”"
+msgstr "{{ lineNumber: }}: Referenca “{{ name }}” se ne ujema z nobenim konceptom z vrednostjo “{{ value }}”."
