@@ -9,7 +9,7 @@ envsubst '${TERMINOLOGY_API_URL},${MESSAGING_API_URL}' < /etc/nginx/conf.d/nginx
 if [[ $ANGULAR_BASE_HREF != */ ]] # * is used for pattern matching
 then
   ANGULAR_BASE_HREF="${ANGULAR_BASE_HREF}/";
-  sed -i 's#<base href="./">#<base href="'"${ANGULAR_BASE_HREF}"'">#' /usr/share/nginx/html/index.html
+  sed -i 's#<base href="/">#<base href="'"${ANGULAR_BASE_HREF}"'">#' /usr/share/nginx/html/index.html
 fi
 
 # Start nginx
