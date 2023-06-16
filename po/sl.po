@@ -1,17 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-02-13 16:01+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
-"X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: yti-terminology-ui\n"
+"Language: sl\n"
 
 msgid "Terminologies"
 msgstr "Terminologije"
@@ -35,7 +29,7 @@ msgid "Yes"
 msgstr "Da"
 
 msgid "Cancel"
-msgstr "Prekliči"
+msgstr "Prekličite"
 
 msgid "Created at"
 msgstr "Ustvarjeno ob"
@@ -65,10 +59,10 @@ msgid "Search concept"
 msgstr "Koncept iskanja"
 
 msgid "Filter results"
-msgstr "Filtriraj rezultate"
+msgstr "Filtrirajte rezultate"
 
 msgid "Order by modified date"
-msgstr "Naroči po spremenjenem datumu"
+msgstr "Razvrstite po spremenjenem datumu"
 
 msgid "Status"
 msgstr "Stanje"
@@ -89,19 +83,19 @@ msgid "Namespace"
 msgstr "Imenski prostor"
 
 msgid "The following references are about to be completely removed"
-msgstr "Naslednje reference bodo kmalu v celoti odstranjene"
+msgstr "Naslednje reference bodo v celoti odstranjene"
 
 msgid "The following reference is about to be completely removed"
-msgstr "Naslednja referenca bo kmalu popolnoma odstranjena"
+msgstr "Naslednja referenca bo popolnoma odstranjena"
 
 msgid "Reference type"
 msgstr "Vrsta reference"
 
 msgid "Target container"
-msgstr "Ciljna posoda"
+msgstr "Ciljni vsebnik"
 
 msgid "Target"
-msgstr "Tarča"
+msgstr "Cilj"
 
 msgid "Are you sure that you want to continue?"
 msgstr "Ste prepričani, da želite nadaljevati?"
@@ -122,13 +116,13 @@ msgid "Select reference"
 msgstr "Izberite referenco"
 
 msgid "Save"
-msgstr "Shrani"
+msgstr "Shranite"
 
 msgid "Edit"
-msgstr "Uredi"
+msgstr "Uredite"
 
 msgid "Remove"
-msgstr "Odstrani"
+msgstr "Odstranite"
 
 msgid "Content language"
 msgstr "Jezik vsebine"
@@ -140,7 +134,7 @@ msgid "Content in all languages"
 msgstr "Vsebina v vseh jezikih"
 
 msgid "Add"
-msgstr "Dodaj"
+msgstr "Dodajte"
 
 msgid "No values yet"
 msgstr "Ni še vrednosti"
@@ -149,16 +143,16 @@ msgid "Add concept reference"
 msgstr "Dodajte sklic na koncept"
 
 msgid "Add link"
-msgstr "Dodaj povezavo"
+msgstr "Dodajte povezavo"
 
 msgid "Unlinked selected text"
-msgstr "Izbrano besedilo ni povezano"
+msgstr "Nepovezano izbrano besedilo"
 
 msgid "No terms yet"
-msgstr "Pogojev še ni"
+msgstr "Ni še pogojev"
 
 msgid "Remove term"
-msgstr "Odstrani izraz"
+msgstr "Odstranite izraz"
 
 msgid "Enter link target"
 msgstr "Vnesite cilj povezave"
@@ -167,10 +161,10 @@ msgid "Enter the full HTTP or HTTPS address (URL) for the link:"
 msgstr "Vnesite celoten naslov HTTP ali HTTPS (URL) za povezavo:"
 
 msgid "Impersonate user"
-msgstr "Lažno predstavljanje uporabnika"
+msgstr "Imitiranje uporabnika"
 
 msgid "LOG IN"
-msgstr "VPIŠI SE"
+msgstr "VPIS"
 
 msgid "LOG OUT"
 msgstr "ODJAVA"
@@ -182,7 +176,7 @@ msgid "Reference Data"
 msgstr "Referenčni podatki"
 
 msgid "Data Vocabularies"
-msgstr "Podatkovni besednjaki"
+msgstr "Podatkovna besedišča"
 
 msgid "Comments"
 msgstr "Komentarji"
@@ -194,7 +188,7 @@ msgid "Choose organization"
 msgstr "Izberite organizacijo"
 
 msgid "Compositive"
-msgstr "Sestavljiv"
+msgstr "Sestavljivo"
 
 msgid "Associative"
 msgstr "Asociativno"
@@ -212,13 +206,13 @@ msgid "concepts"
 msgstr "koncepti"
 
 msgid "{{error.translationKey}}"
-msgstr ""
+msgstr "{{error.translationKey}}"
 
 msgid "prefLabel"
-msgstr "Prednostni termin"
+msgstr "Vse terminologije"
 
 msgid "synonym"
-msgstr "Sinonim"
+msgstr "sinonim"
 
 msgid "Import failed"
 msgstr "Uvoz ni uspel"
@@ -233,22 +227,22 @@ msgid "File to be uploaded"
 msgstr "Datoteka za nalaganje"
 
 msgid "Import"
-msgstr "Uvozi"
+msgstr "Uvozite"
 
 msgid "XML import"
-msgstr "Uvoz XML"
+msgstr "Uvozite XML"
 
 msgid "Error while monitoring processing. Close the modal and try refreshing page later."
-msgstr "Napaka med spremljanjem obdelave. Zaprite modal in poskusite osvežiti stran pozneje."
+msgstr "Napaka med spremljanjem obdelave. Zaprite modal in poskusite osvežiti stran."
 
 msgid "Import success"
 msgstr "Ustvarjenih predmetov: {{ created }}."
 
 msgid "Import success with errors"
-msgstr "Ustvarjenih predmetov: {{ created }}. Napake: {{ errors }}. Opozorila: {{ opozorila }}."
+msgstr "Ustvarjenih predmetov: {{ created }}. Napake: {{ errors }}. Opozorila: {{ warnings }}."
 
 msgid "Close"
-msgstr "Zapri"
+msgstr "Zaprite"
 
 msgid "New vocabulary"
 msgstr "Nova terminologija"
@@ -263,7 +257,7 @@ msgid "Choose information domain"
 msgstr "Izberite informacijsko domeno"
 
 msgid "Search organization"
-msgstr "Organizacija iskanja"
+msgstr "Iščite organizacijo"
 
 msgid "Search term"
 msgstr "Iskalni izraz"
@@ -272,19 +266,19 @@ msgid "TerminologicalVocabularyType"
 msgstr "Terminologija"
 
 msgid "See all results"
-msgstr "Oglejte si vse {{count}} rezultatov"
+msgstr "Oglejte si vse {{count}} rezultate"
 
 msgid "Add vocabulary"
 msgstr "Dodajte terminologijo"
 
 msgid "ToolInfo"
-msgstr "Orodje za terminologije se uporablja za zbiranje, vzdrževanje in objavo skupnih terminologij javne uprave. Oblikovalci podatkov lahko uporabljajo orodje za definiranje izrazov in odnosov. Izrazi, njihove definicije in celo vizualizacija odnosov med pojmi so javno dostopni vsem zainteresiranim."
+msgstr "Orodje za terminologije se uporablja za zbiranje, vzdrževanje in objavo skupnih terminologij javne uprave. Oblikovalci podatkov lahko uporabljajo orodje za definiranje izrazov in odnosov. Izrazi, njihove definicije ter tudi vizualizacija odnosov med pojmi so javno dostopni vsem zainteresiranim."
 
 msgid "Search vocabularies"
-msgstr "Iskanje terminologije"
+msgstr "Iščite terminologijo"
 
 msgid "Extend search"
-msgstr "Razširi iskanje na"
+msgstr "Razširite iskanje na"
 
 msgid "to concepts"
 msgstr "koncepti"
@@ -296,16 +290,16 @@ msgid "result"
 msgstr "rezultat"
 
 msgid "results"
-msgstr "rezultate"
+msgstr "rezultati"
 
 msgid "Search results"
 msgstr "Rezultati iskanja"
 
 msgid "Deep {{deepHitList.type}} hit"
-msgstr "Globok {{deepHitList.type}} zadetek"
+msgstr "Deep {{deepHitList.type}} hit"
 
 msgid "Vocabulary type"
-msgstr "Vrsta besedišča"
+msgstr "Tip besedišča"
 
 msgid "You will receive an email notification when this resource changes."
 msgstr "Ko se ta vir spremeni, boste prejeli e-poštno obvestilo."
@@ -320,13 +314,13 @@ msgid "Choose action"
 msgstr "Izberite akcijo"
 
 msgid "Add email subscription"
-msgstr "Dodajte e-poštno naročnino"
+msgstr "Dodajte naročnino na e-poštna obvestila"
 
 msgid "Remove email subscription"
-msgstr "Odstrani e-poštno naročnino"
+msgstr "Odstranite naročnino na e-poštna obvestila"
 
 msgid "Export terminology Excel"
-msgstr "Izvoz terminologije Excel"
+msgstr "Izvoz terminologije v Excel"
 
 msgid "Information domain"
 msgstr "Informacijska domena"
@@ -335,10 +329,10 @@ msgid "Organization"
 msgstr "Organizacija"
 
 msgid "New concept"
-msgstr "Nov koncept"
+msgstr "nov koncept"
 
 msgid "New collection"
-msgstr "Nova zbirka"
+msgstr "nova zbirka"
 
 msgid "Name"
 msgstr "Ime"
@@ -353,13 +347,13 @@ msgid "Unknown organization"
 msgstr "Neznana organizacija"
 
 msgid "Waiting for approval"
-msgstr "Čakam na odobritev"
+msgstr "Čakanje na odobritev"
 
 msgid "Send access request"
-msgstr "Pošlji zahtevo za dostop"
+msgstr "Pošljite zahtevo za dostop"
 
 msgid "Send"
-msgstr "Pošlji"
+msgstr "Pošljite"
 
 msgid "You have subscribed to be notified via email when the following resources change. To remove the subscription, click the icon next to the resource."
 msgstr "Naročili ste se na prejemanje obvestil po e-pošti, ko se spremenijo naslednji viri. Če želite odstraniti naročnino, kliknite ikono poleg vira."
@@ -389,7 +383,7 @@ msgid "SUBSCRIPTIONS"
 msgstr "NAROČNINE"
 
 msgid "Front page"
-msgstr "Prednja stran"
+msgstr "Naslovna stran"
 
 msgid "All statuses"
 msgstr "Vsi statusi"
@@ -416,10 +410,10 @@ msgid "Link"
 msgstr "Povezava"
 
 msgid "Unlink"
-msgstr "Prekini povezavo"
+msgstr "Prekinite povezavo"
 
 msgid "Concept not in references"
-msgstr "Koncept ni v referencah"
+msgstr "Koncepta ni v referencah"
 
 msgid "self reference error"
 msgstr "Izbor se sklicuje na samega sebe"
@@ -428,16 +422,16 @@ msgid "already added error"
 msgstr "Izbor je že dodan"
 
 msgid "ADMIN"
-msgstr "Skrbnik"
+msgstr "Administrator"
 
 msgid "DATA_MODEL_EDITOR"
-msgstr "Urejevalnik podatkovnih modelov"
+msgstr "Urejevalec podatkovnih modelov"
 
 msgid "TERMINOLOGY_EDITOR"
-msgstr "Terminološki urednik"
+msgstr "Urejevalec terminologije"
 
 msgid "CODE_LIST_EDITOR"
-msgstr "Urejevalnik šifrantov"
+msgstr "Urejevalec šifrantov"
 
 msgid "MEMBER"
 msgstr "Član"
@@ -446,19 +440,19 @@ msgid "All vocabulary types"
 msgstr "Vse vrste besedišča"
 
 msgid "VocabularyType"
-msgstr "Besednjak"
+msgstr "Besedišče"
 
 msgid "File upload"
 msgstr "Nalaganje datoteke"
 
 msgid "Processing"
-msgstr "Obravnavati"
+msgstr "Obdelava"
 
 msgid "Show messages"
-msgstr "Prikaži sporočila"
+msgstr "Prikažite sporočila"
 
 msgid "Hide messages"
-msgstr "Skrij sporočila"
+msgstr "Skrijte sporočila"
 
 msgid "External link"
 msgstr "Zunanja povezava"
@@ -473,16 +467,16 @@ msgid "Semicolon delimited"
 msgstr "Ločeno s podpičjem"
 
 msgid "ADD EMAIL SUBSCRIPTION TO RESOURCE REGARDING CHANGES?"
-msgstr "DODATI E-POŠTNO NAROČNINO NA VIR GLEDE SPREMEMB?"
+msgstr "DODAJANJE NAROČNINE NA E-POŠTNA OBVESTILA NA VIR GLEDE SPREMEMB?"
 
 msgid "REMOVE EMAIL SUBSCRIPTION TO RESOURCE?"
-msgstr "ODSTRANITE E-POŠTNO NAROČNINO NA VIR?"
+msgstr "ODSTRANITE NAROČNINO NA E-POŠTNA OBVESTILA NA VIR?"
 
 msgid "ARE YOU SURE YOU WANT TO ENABLE THE NOTIFICATION EMAIL SUBSCRIPTION?"
-msgstr "STE PREPRIČANI, DA ŽELITE OMOGOČITI NAROČANJE NA E-POŠTO OBVESTILA?"
+msgstr "STE PREPRIČANI, DA ŽELITE OMOGOČITI NAROČNINO NA E-POŠTNA OBVESTILA?"
 
 msgid "ARE YOU SURE YOU WANT TO DISABLE THE NOTIFICATION EMAIL SUBSCRIPTION?"
-msgstr "ALI STE PREPRIČANI, DA ŽELITE ONEMOGOČITI NAROČANJE NA ELEKTRONSKO OBVESTILO?"
+msgstr "ALI STE PREPRIČANI, DA ŽELITE ONEMOGOČITI NAROČNINO NA E-POŠTNA OBVESTILA?"
 
 msgid "Adding subscription failed."
 msgstr "Dodajanje naročnine ni uspelo."
@@ -491,7 +485,7 @@ msgid "Subscription deletion failed."
 msgstr "Brisanje naročnine ni uspelo."
 
 msgid "INFO_TEXT_EMAIL_SUBSCRIPTIONS"
-msgstr "Ta funkcija izbere, ali so naročnine aktivne ali ne. Če počistite polje »Dnevno«, lahko onemogočite vse naročnine hkrati. Če ga označite, se naročnine znova aktivirajo."
+msgstr "Ta funkcija izbere, ali so naročnine aktivne ali ne. Če odkljukate polje »Dnevno«, lahko onemogočite vse naročnine hkrati. Če ga označite, se naročnine znova aktivirajo."
 
 msgid "validateMeta"
 msgstr "Neveljavno"
@@ -506,28 +500,28 @@ msgid "prefixInUse"
 msgstr "Predpona je že v uporabi"
 
 msgid "prefixFormat"
-msgstr "Dovoljeni znaki za predpono so az, 0-9, podčrtaj in pomišljaj"
+msgstr "Dovoljeni znaki za predpono so a-z, 0-9, podčrtaj in pomišljaj"
 
 msgid "pattern"
 msgstr "Vnos ni v zahtevani obliki"
 
 msgid "Property is not a literal type."
-msgstr "Lastnost »{{ name }}« ni dobesedna vrsta."
+msgstr "Lastnost ni spremenljivka."
 
 msgid "Property must include a language."
-msgstr "Lastnost “{{ name }}” mora vključevati jezik."
+msgstr "Lastnost mora vključevati jezik."
 
 msgid "No property or reference found with a name."
-msgstr "Vrsta besedišča ne podpira stolpca »{{ name }}«"
+msgstr "Lastnost ali referenca ne obstaja"
 
 msgid "Invalid status."
-msgstr "{{ lineNumber }}: Neveljavno stanje “{{ value }}”"
+msgstr "Neveljavno stanje"
 
 msgid "prefLabel must be set."
-msgstr "{{ lineNumber }}: prefLabel mora biti nastavljen."
+msgstr "prefLabel mora biti nastavljen."
 
 msgid "Reference must include a language."
-msgstr "Sklic “{{ name }}” mora vsebovati jezik."
+msgstr "Sklic mora vsebovati jezik."
 
 msgid "Reference does not match any concepts."
-msgstr "{{ lineNumber: }}: Referenca “{{ name }}” se ne ujema z nobenim konceptom z vrednostjo “{{ value }}”."
+msgstr "Referenca se ne ujema z nobenim konceptom."
