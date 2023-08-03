@@ -269,16 +269,6 @@ export function initApp(configurationService: ConfigurationService) {
     ProgressComponent,
     UrlInputModalComponent
   ],
-  entryComponents: [
-    SearchConceptModalComponent,
-    SearchOrganizationModalComponent,
-    SearchGroupModalComponent,
-    DeleteConfirmationModalComponent,
-    RemoveLinkConfirmationModalComponent,
-    SelectConceptReferenceModalComponent,
-    ImportVocabularyModalComponent,
-    UrlInputModalComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
