@@ -50,13 +50,13 @@ msgid "All vocabularies"
 msgstr "Vse terminologije"
 
 msgid "Add new concept"
-msgstr "Dodajte nov koncept"
+msgstr "Dodajte nov pojem"
 
 msgid "Add concept"
-msgstr "Dodajte koncept"
+msgstr "Dodajte pojem"
 
 msgid "Search concept"
-msgstr "Koncept iskanja"
+msgstr "Iščite pojem"
 
 msgid "Filter results"
 msgstr "Filtrirajte rezultate"
@@ -101,16 +101,16 @@ msgid "Are you sure that you want to continue?"
 msgstr "Ste prepričani, da želite nadaljevati?"
 
 msgid "Select concept"
-msgstr "Izberite koncept"
+msgstr "Izberite pojem"
 
 msgid "Choose concept"
-msgstr "Izberite koncept"
+msgstr "Izberite pojem"
 
 msgid "Choose reference type"
 msgstr "Izberite vrsto reference"
 
 msgid "Selected concept is not yet formally referenced. Choose the reference type."
-msgstr "Izbrani koncept še ni formalno referenciran. Izberite vrsto reference."
+msgstr "Izbrani pojem še ni formalno referenciran. Izberite vrsto reference."
 
 msgid "Select reference"
 msgstr "Izberite referenco"
@@ -140,7 +140,7 @@ msgid "No values yet"
 msgstr "Ni še vrednosti"
 
 msgid "Add concept reference"
-msgstr "Dodajte sklic na koncept"
+msgstr "Dodajte sklic na pojem"
 
 msgid "Add link"
 msgstr "Dodajte povezavo"
@@ -173,7 +173,7 @@ msgid "User details"
 msgstr "Podrobnosti o uporabniku"
 
 msgid "Reference Data"
-msgstr "Referenčni podatki"
+msgstr "Šifranti"
 
 msgid "Data Vocabularies"
 msgstr "Podatkovna besedišča"
@@ -203,7 +203,7 @@ msgid "Importing"
 msgstr "Uvažanje"
 
 msgid "concepts"
-msgstr "koncepti"
+msgstr "pojmi"
 
 msgid "{{error.translationKey}}"
 msgstr "{{error.translationKey}}"
@@ -218,7 +218,7 @@ msgid "Import failed"
 msgstr "Uvoz ni uspel"
 
 msgid "Import concepts"
-msgstr "Uvoz konceptov"
+msgstr "Uvoz pojmov"
 
 msgid "File format"
 msgstr "Format datoteke"
@@ -281,7 +281,7 @@ msgid "Extend search"
 msgstr "Razširite iskanje na"
 
 msgid "to concepts"
-msgstr "koncepti"
+msgstr "pojmi"
 
 msgid "Filter with information domain"
 msgstr "Filter z informacijsko domeno"
@@ -305,7 +305,7 @@ msgid "You will receive an email notification when this resource changes."
 msgstr "Ko se ta vir spremeni, boste prejeli e-poštno obvestilo."
 
 msgid "Concepts"
-msgstr "Koncepti"
+msgstr "Pojmi"
 
 msgid "Terminology details"
 msgstr "Terminologija"
@@ -329,7 +329,7 @@ msgid "Organization"
 msgstr "Organizacija"
 
 msgid "New concept"
-msgstr "nov koncept"
+msgstr "nov pojem"
 
 msgid "New collection"
 msgstr "nova zbirka"
@@ -413,7 +413,7 @@ msgid "Unlink"
 msgstr "Prekinite povezavo"
 
 msgid "Concept not in references"
-msgstr "Koncepta ni v referencah"
+msgstr "Pojma ni v referencah"
 
 msgid "self reference error"
 msgstr "Izbor se sklicuje na samega sebe"
@@ -458,7 +458,7 @@ msgid "External link"
 msgstr "Zunanja povezava"
 
 msgid "Deep CONCEPT hit"
-msgstr "Koncepti"
+msgstr "Pojmi"
 
 msgid "Comma delimited"
 msgstr "Ločeno z vejicami"
@@ -524,4 +524,4 @@ msgid "Reference must include a language."
 msgstr "Sklic mora vsebovati jezik."
 
 msgid "Reference does not match any concepts."
-msgstr "Referenca se ne ujema z nobenim konceptom."
+msgstr "Referenca se ne ujema z nobenim pojmom."
