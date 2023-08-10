@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   template: `<img [src]="logo" />`
 })
 export class LogoComponent {
-  logo = '../../../assets/logo.svg';
+  logo = 'assets/logo.svg';
 }
