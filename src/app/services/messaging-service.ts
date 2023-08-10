@@ -16,7 +16,7 @@ const user = 'user';
 const subscriptions = 'subscriptions';
 const subscriptiontype = 'subscriptiontype';
 const messagingApiContext = 'messaging-api';
-const messagingBaseApiPath = `/${messagingApiContext}/${api}/${version}`;
+const messagingBaseApiPath = `${messagingApiContext}/${api}/${version}`;
 const messagingApiBasePath = `${messagingBaseApiPath}`;
 
 @Injectable({

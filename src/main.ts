@@ -8,7 +8,7 @@ import { APP_BASE_HREF } from '@angular/common';
 
 // Platform creation and bootstrapping of the application is delayed until we have loaded the configuration file.
 // The contents of the configuration file will be replaced (in Dockerfile) based on environment
-let configurationPath = `/configuration/configuration.json`;
+let configurationPath = `configuration/configuration.json`;
 fetch(configurationPath)
   .then(response => response.json())
   .then((configuration: Configuration) => {

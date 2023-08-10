@@ -54,7 +54,7 @@ import { ConfigurationService } from '../../services/configuration.service';
                   <a id="vocabulary_excel_export_button"
                      *ngIf="canExport"
                      class="dropdown-item"
-                     href='/terminology-api/api/v1/export/{{graphId}}?format=xlsx'
+                     href='terminology-api/api/v1/export/{{graphId}}?format=xlsx'
                      translate>Export terminology Excel</a>
                 </div>
               </div>
