@@ -8,7 +8,7 @@ msgstr ""
 "Language: sl\n"
 
 msgid "Terminologies"
-msgstr "Terminologije"
+msgstr "Terminologija"
 
 msgid "Search collection"
 msgstr "Iskanje zbirke"
