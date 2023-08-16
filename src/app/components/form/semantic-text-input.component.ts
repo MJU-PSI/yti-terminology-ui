@@ -1134,7 +1134,7 @@ export class SemanticTextInputComponent implements OnInit, ControlValueAccessor 
   @Input() relatedConcepts: ConceptNode[];
   @Input() format: SemanticTextFormat;
 
-  @ViewChild('editable') editableElement: ElementRef;
+  @ViewChild('editable', {static: true}) editableElement: ElementRef;
   linkingInProgress = false;
   invalidData: boolean = false;
   private model: Model;
