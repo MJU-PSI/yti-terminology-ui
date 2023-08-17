@@ -1,3 +1,6 @@
+# Dependency images
+FROM yti-common-ui:latest as yti-common-ui
+
 # alpine version should match the version in .nvmrc as closely as possible
 FROM node:14.18-alpine3.15 as builder
 
@@ -6,13 +9,15 @@ ARG VERSION
 # set working directory
 WORKDIR /app
 
-# install and cache app dependencies
-COPY tmp/yti-common-ui /yti-common-ui/dist/yti-common-ui
+# Copy yti-common-ui dependency from image
+COPY --from=yti-common-ui /app/dist/yti-common-ui /yti-common-ui/dist/yti-common-ui
+
+# Install and cache app dependencies
 COPY package.json /app/package.json
 COPY yarn.lock /app/yarn.lock
 RUN yarn install
 
-# Fetch dependencies
+# Copy sources
 COPY . .
 
 # Create version.txt
@@ -32,7 +37,7 @@ COPY nginx.conf /etc/nginx/conf.d/nginx.template
 
 WORKDIR /app
 
-# Copy node_modules from builder to app dir
+# Copy files from builder to app dir
 COPY --from=builder /app/entrypoint.sh .
 
 # Start web server and expose http
