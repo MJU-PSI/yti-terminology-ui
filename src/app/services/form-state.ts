@@ -1,19 +1,22 @@
 import { AbstractControl, FormArray, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { assertNever, allMatching, anyMatching, firstMatching, flatten, normalizeAsArray, moveElement,
   requiredList, validateLanguage, comparingPrimitive, Localizable } from '@mju-psi/yti-common-ui';
-import { ConceptNode, KnownNode, Node, Property, Reference, TermNode } from 'app/entities/node';
+import { AnnotationNode, ConceptNode, KnownNode, Node, Property, Reference, TermNode } from 'app/entities/node';
 import { Cardinality, Editor, MetaModel, NodeMeta, PropertyMeta, ReferenceMeta, ReferenceType } from 'app/entities/meta';
 import { NodeType } from 'app/entities/node-api';
 import { validateMeta } from 'app/utils/validator';
 import { removeMatchingLinks } from 'app/utils/semantic';
 import { Sortable } from 'app/directives/drag-sortable.directive';
+import { EditableService } from './editable.service';
 
 export type FormReference = FormReferenceLiteral<any>
-                          | FormReferenceTerm;
+                          | FormReferenceTerm
+                          | FormReferenceAnnotation;
 
 export type FormProperty = FormPropertyLiteral
                          | FormPropertyLiteralList
-                         | FormPropertyLocalizable;
+                         | FormPropertyLocalizable
+                         | FormPropertyPrimary
 
 export type FormField = FormProperty
                       | FormReference;
@@ -28,6 +31,8 @@ export class FormNode {
     const createFormReference = (name: string, reference: Reference<any>) => {
       if (reference.term) {
         return new FormReferenceTerm(reference, languagesProvider, metaModel);
+      } else if (reference.annotation) {
+        return new FormReferenceAnnotation(reference, languagesProvider, metaModel);
       } else {
         return new FormReferenceLiteral(reference);
       }
@@ -37,8 +42,16 @@ export class FormNode {
 
       switch (property.meta.type.type) {
         case 'localizable':
-          const fixed = node.type === 'Term' && property.meta.id === 'prefLabel';
+          const fixed = node.type === 'Term'  && property.meta.id === 'prefLabel';
           return new FormPropertyLocalizable(property, languagesProvider, fixed);
+        case 'primary':
+          switch (property.meta.type.cardinality) {
+            case 'single':
+            case 'multiple':
+              return new FormPropertyPrimary(property);
+            default:
+              return assertNever(property.meta.type.cardinality);
+          }
         case 'string':
           switch (property.meta.type.cardinality) {
             case 'single':
@@ -454,6 +467,79 @@ export class FormPropertyLiteral {
   }
 }
 
+export class FormPropertyPrimary {
+
+  fieldType: 'property' = 'property';
+  type: 'primary' = 'primary';
+  control: FormControl;
+  private meta: PropertyMeta;
+
+  constructor(property: Property) {
+    this.meta = property.meta;
+    this.control = this.createControl(property.literalValue);
+  }
+
+  get required(): boolean {
+    return this.meta.type.required;
+  }
+
+  private createControl(initial: string) {
+
+    const validators: ValidatorFn[] = [(control: FormControl) => validateMeta(control, this.meta)];
+
+    if (this.required) {
+      validators.push(Validators.required);
+    }
+
+    if (this.editor.type === 'language') {
+      validators.push(validateLanguage);
+    }
+
+    return new FormControl({value: initial, disabled: true}, validators);
+  }
+
+  get label(): Localizable {
+    return this.meta.label;
+  }
+
+  get description(): Localizable {
+    return this.meta.description;
+  }
+
+  get editor(): Editor {
+    return this.meta.type.editor;
+  }
+
+  get value() {
+    return this.control.value;
+  }
+
+  get multiColumn() {
+    return this.meta.multiColumn;
+  }
+
+  get valueEmpty() {
+    return this.value.trim() === '';
+  }
+
+  removeSemanticReferencesTo(concept: ConceptNode, namespaceRoot: string) {
+    if (this.editor.type === 'semantic') {
+      const shouldRemoveDestination = (dest: string) => concept.isTargetOfLink(dest);
+      this.control.setValue(removeMatchingLinks(this.value, this.editor.format, shouldRemoveDestination, namespaceRoot));
+    }
+  }
+
+  assignChanges(property: Property) {
+
+    const regex = this.meta.regex;
+    property.attributes = [{ lang: '', value: this.value, regex }];
+  }
+
+  hasContentForLanguage(language: string) {
+    return !this.valueEmpty;
+  }
+}
+
 export class FormPropertyLiteralList implements Sortable<AbstractControl> {
 
   fieldType: 'property' = 'property';
@@ -686,5 +772,126 @@ export class FormPropertyLocalizable implements Sortable<LocalizedControl> {
   hasContentForLanguage(language: string) {
     const isNotEmpty = (value: string) => value.trim() !== '';
     return anyMatching(this.value, v => v.lang === language && isNotEmpty(v.value));
+  }
+}
+
+export interface AnnotationChild {
+  formNode: FormNode;
+  id: string;
+  idIdentifier: string;
+}
+
+export class FormReferenceAnnotation implements Sortable<AnnotationChild> {
+
+  fieldType: 'reference' = 'reference';
+  type: 'annotation' = 'annotation';
+  control: FormArray;
+  children: AnnotationChild[];
+  private meta: ReferenceMeta;
+  private targetMeta: NodeMeta;
+
+  constructor(reference: Reference<AnnotationNode>, public languagesProvider: () => string[], private metaModel: MetaModel) {
+
+    this.meta = reference.meta;
+    this.targetMeta = reference.targetMeta;
+
+    this.children = reference.values
+      .map(annotation => ({
+        formNode: new FormNode(annotation, languagesProvider, metaModel),
+        id: annotation.id,
+        idIdentifier: annotation.idIdentifier,
+        addMode: false
+      }));
+
+    const childControls = this.children.map(c => c.formNode.control);
+    this.control = new FormArray(childControls, this.required ? requiredList : null);
+  }
+
+  get sortableValues(): AnnotationChild[] {
+    return this.children;
+  }
+
+  set sortableValues(values: AnnotationChild[]) {
+    values.forEach((c, i) => this.control.setControl(i, c.formNode.control));
+    this.children = values;
+  }
+
+  moveItem(fromIndex: number, toIndex: number): void {
+    const copy = this.children.slice();
+    moveElement(copy, fromIndex, toIndex);
+    this.sortableValues = copy;
+  }
+
+  get label(): Localizable {
+    return this.meta.label;
+  }
+
+  get description(): Localizable {
+    return this.meta.description;
+  }
+
+  get referenceType(): ReferenceType {
+    return this.meta.referenceType;
+  }
+
+  get targetType(): NodeType {
+    return this.meta.targetType;
+  }
+
+  get required(): boolean {
+    return this.meta.required;
+  }
+
+  get cardinality() {
+    return this.meta.cardinality;
+  }
+
+  get graphId() {
+    return this.meta.graphId;
+  }
+
+  get value(): AnnotationNode[] {
+    return this.children.map(child => child.formNode.value as AnnotationNode);
+  }
+
+  addAnnotation(metaModel: MetaModel) {
+
+    const newAnnotation = this.metaModel.createEmptyAnnotation(this.graphId);
+
+    const newChild = {
+      formNode: new FormNode(newAnnotation, this.languagesProvider, this.metaModel),
+      id: newAnnotation.id,
+      idIdentifier: newAnnotation.idIdentifier,
+    };
+    newChild.formNode.control.enable();
+
+    this.children.push(newChild);
+    this.control.push(newChild.formNode.control);
+  }
+
+  remove(child: AnnotationChild) {
+    const index = this.children.indexOf(child);
+    this.children.splice(index, 1);
+    this.control.removeAt(index);
+  }
+
+  get term() {
+    return true;
+  }
+
+  get annotation() {
+    return true;
+  }
+
+  get valueEmpty(): boolean {
+    return this.value.length === 0;
+  }
+
+  assignChanges(reference: Reference<any>) {
+    reference.values = this.value;
+  }
+
+  hasContentForLanguage(language: string) {
+    return !this.valueEmpty;
   }
 }

@@ -41,6 +41,10 @@
     margin-left: 22px;
   }
 
+  div.localized.annotation .language {
+    background: none;
+    color: black;
+  }
   div.localization {
     line-height: $language-height;
     padding-right: 0 !important;

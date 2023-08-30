@@ -8,7 +8,8 @@ export type NodeType = VocabularyNodeType
                      | 'ConceptLink'
                      | 'Collection'
                      | 'Group'
-                     | 'Organization';
+                     | 'Organization'
+                     | 'Annotation';
 
 export interface Identifier<T extends NodeType> {
 

@@ -111,6 +111,9 @@ import fiCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-p
 import svCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-psi/yti-common-ui/po/sv.po';
 import enCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-psi/yti-common-ui/po/en.po';
 import slCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-psi/yti-common-ui/po/sl.po';
+import { AnnotationsComponent } from './components/form/anotations.component';
+import { AnnotationComponent } from './components/form/annotation.component';
+import { InputAnnotationIdComponent } from './components/form/input-annotation-id.component';
 
 function removeEmptyValues(obj: {}) {
 
@@ -267,7 +270,10 @@ export function initApp(configurationService: ConfigurationService) {
     DragSortableDirective,
     DragSortableItemDirective,
     ProgressComponent,
-    UrlInputModalComponent
+    UrlInputModalComponent,
+    AnnotationsComponent,
+    AnnotationComponent,
+    InputAnnotationIdComponent
   ],
   imports: [
     BrowserModule,

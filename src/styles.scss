@@ -5,7 +5,8 @@
 $page-padding: 20px;
 
 // XXX: reset .btn.link styles because new ng-bootstrap wanted to add button there
-app-terms ngb-accordion .card-header button {
+app-terms ngb-accordion .card-header button,
+app-annotations ngb-accordion .card-header button  {
   padding: 0;
   color: $body-color;
   width: 100%;

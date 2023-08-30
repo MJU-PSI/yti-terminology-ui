@@ -1,7 +1,7 @@
 import { ReferenceAttributeInternal, TextAttributeInternal, NodeMetaInternal } from './meta-api';
 import { comparingPrimitive, anyMatching, contains, firstMatching, index, normalizeAsArray, asLocalizable, Localizable, assertNever, requireDefined } from '@mju-psi/yti-common-ui';
 import { NodeType, NodeExternal, VocabularyNodeType } from './node-api';
-import { CollectionNode, ConceptLinkNode, ConceptNode, Node, TermNode, VocabularyNode } from './node';
+import { AnnotationNode, CollectionNode, ConceptLinkNode, ConceptNode, Node, TermNode, VocabularyNode } from './node';
 import { v4 as uuid } from 'uuid';
 import * as moment from 'moment';
 import { SemanticTextFormat } from './semantic';
@@ -13,17 +13,20 @@ export type Cardinality = 'single'
 export type TypeName = 'string'
                      | 'localizable'
                      | 'status'
-                     | 'language';
+                     | 'language'
+                     | 'primary';
 
 export type ReferenceType = 'Term'
                           | 'Concept'
                           | 'ConceptLink'
                           | 'Organization'
                           | 'Group'
+                          | 'Annotation'
                           | 'Other';
 
 export type PropertyType = StringProperty
-                         | LocalizableProperty;
+                         | LocalizableProperty
+                         | PrimaryProperty;
 
 export interface InputEditor {
   type: 'input';
@@ -66,12 +69,23 @@ export interface LocalizableProperty {
   editor: Editor;
 }
 
+export interface PrimaryProperty {
+  type: 'primary';
+  cardinality: Cardinality;
+  required: boolean;
+  editor: Editor;
+}
+
 function createString(multiple: boolean, required: boolean, editor: Editor): StringProperty {
   return { type: 'string', cardinality: (multiple ? 'multiple' : 'single'), required, editor };
 }
 
 function createLocalizable(single: boolean, required: boolean, editor: Editor): LocalizableProperty {
   return { type: 'localizable', cardinality: (single ? 'single' : 'multiple'), required, editor };
+}
+
+function createPrimary(multiple: boolean, required: boolean, editor: Editor): PrimaryProperty {
+  return { type: 'primary', cardinality: (multiple ? 'multiple' : 'single'), required, editor };
 }
 
 function createPropertyType(name: TypeName, attributes: Set<string>): PropertyType {
@@ -99,6 +113,8 @@ function createPropertyType(name: TypeName, attributes: Set<string>): PropertyTy
       return createString(false, true, { type: 'status' });
     case 'language':
       return createString(attributes.has('multiple'), attributes.has('required'), { type: 'language' });
+    case 'primary':
+      return createPrimary(attributes.has('multiple'), attributes.has('required'), resolveStringOrLocalizableEditor());
     default:
       return assertNever(name, 'Unsupported type: ' + name);
   }
@@ -187,6 +203,10 @@ export class PropertyMeta {
   isLabel() {
     return this.id === 'prefLabel' || this.id === 'altLabel';
   }
+
+  isPrimary() {
+    return this.type.type === 'primary';
+  }
 }
 
 export class ReferenceMeta {
@@ -220,6 +240,8 @@ export class ReferenceMeta {
         return 'Organization';
       case 'Group':
         return 'Group';
+      case 'Annotation':
+        return 'Annotation';
       default:
         return 'Other';
     }
@@ -239,6 +261,10 @@ export class ReferenceMeta {
 
   get conceptLink(): boolean {
     return this.referenceType === 'ConceptLink';
+  }
+
+  get annotation(): boolean {
+    return this.referenceType === 'Annotation';
   }
 
   get cardinality(): Cardinality {
@@ -334,6 +360,17 @@ export class MetaModel {
 
     return newConceptLink;
   }
+
+  createEmptyAnnotation(graphId: string, nodeId: string = uuid()): AnnotationNode {
+
+    const newAnnotation = this.createEmptyNode<AnnotationNode, 'Annotation'>(graphId, nodeId, 'Annotation');
+
+    if (newAnnotation.hasStatus()) {
+      newAnnotation.status = 'DRAFT';
+    }
+
+    return newAnnotation;
+  }
 }
 
 export class NodeMeta {
@@ -367,6 +404,10 @@ export class NodeMeta {
 
   get concept(): boolean {
     return this.type === 'Concept';
+  }
+
+  get annotation(): boolean {
+    return this.type === 'Annotation';
   }
 
   createEmptyNode(id = uuid()): NodeExternal<any> {

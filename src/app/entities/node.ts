@@ -29,7 +29,8 @@ export type KnownNode = VocabularyNode
                       | TermNode
                       | CollectionNode
                       | GroupNode
-                      | OrganizationNode;
+                      | OrganizationNode
+                      | AnnotationNode;
 
 export class Property {
 
@@ -154,8 +155,12 @@ export class Reference<N extends KnownNode | Node<any>> {
     return this.meta.concept;
   }
 
+  get annotation(): boolean {
+    return this.meta.annotation;
+  }
+
   get inline(): boolean {
-    return this.term || this.conceptLink;
+    return this.term || this.conceptLink || this.annotation;
   }
 
   toIdentifiers(): Identifier<any>[] {
@@ -170,6 +175,12 @@ export class Reference<N extends KnownNode | Node<any>> {
 export class Referrer {
 
   constructor(public referenceId: string, public values: NodeExternal<any>[]) {
+  }
+}
+
+export class Annotation {
+
+  constructor(public annotationId: string, public values: NodeExternal<any>[]) {
   }
 }
 
@@ -219,6 +230,8 @@ export class Node<T extends NodeType> {
         return new GroupNode(node, metaModel, persistent);
       case 'Organization':
         return new OrganizationNode(node, metaModel, persistent);
+      case 'Annotation':
+        return new AnnotationNode(node, metaModel, persistent);
       default:
         return new Node<any>(node, metaModel, persistent);
     }
@@ -373,6 +386,10 @@ export class Node<T extends NodeType> {
 
   get term(): boolean {
     return this.meta.term;
+  }
+
+  get annotation(): boolean {
+    return this.meta.annotation;
   }
 
   get typeLabel(): Localizable {
@@ -783,5 +800,27 @@ export class OrganizationNode extends Node<'Organization'> {
 
   getIdIdentifier(localizer: Localizer, useUILanguage: boolean = false): string {
     return labelNameToResourceIdIdentifier(localizer.translate(this.label, useUILanguage));
+  }
+}
+
+export class AnnotationNode extends Node<'Annotation'> {
+
+  constructor(node: NodeExternal<'Annotation'>, metaModel: MetaModel, persistent: boolean) {
+    super(node, metaModel, persistent);
+  }
+
+  get language(): string {
+
+    const attribute = this.getProperty('prefLabel').getSingle();
+
+    if (attribute.lang.trim() === '') {
+      throw new Error('Cannot determine language');
+    }
+
+    return attribute.lang;
+  }
+
+  get label(): string {
+    return this.getProperty('annotationId').attributes[0].value;
   }
 }

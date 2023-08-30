@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ConceptNode, VocabularyNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
-import { FormReferenceLiteral, FormReferenceTerm } from 'app/services/form-state';
+import { FormReferenceAnnotation, FormReferenceLiteral, FormReferenceTerm } from 'app/services/form-state';
 
 export type FormReference = FormReferenceLiteral<any>
-                          | FormReferenceTerm;
+                          | FormReferenceTerm
+                          | FormReferenceAnnotation;
 
 @Component({
   selector: 'app-reference',
@@ -40,7 +41,7 @@ export type FormReference = FormReferenceLiteral<any>
                                             [id]="id"
                                             [reference]="reference"
                                             [vocabulary]="vocabulary"></app-concept-link-reference-input>
-          
+
           <app-group-input *ngSwitchCase="'Group'"
                            [id]="id"
                            [reference]="reference"></app-group-input>
@@ -49,6 +50,12 @@ export type FormReference = FormReferenceLiteral<any>
                                   [id]="id"
                                   [reference]="reference"
                                   [vocabulary]="vocabulary"></app-organization-input>
+
+          <app-annotations *ngSwitchCase="'Annotation'"
+                     [id]="id"
+                     [reference]="reference"
+                     [unsaved]="unsaved"
+                     [filterLanguage]="filterLanguage"></app-annotations>
 
           <div *ngSwitchDefault>
             <span *ngFor="let referenceNode of reference.value; let last = last">

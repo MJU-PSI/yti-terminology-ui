@@ -4,7 +4,7 @@ import { catchError, flatMap, map } from 'rxjs/operators';
 import { contains, flatten, normalizeAsArray, availableLanguages } from '@mju-psi/yti-common-ui';
 import { MetaModelService } from './meta-model.service';
 import { Identifier, NodeExternal, NodeInternal, NodeType, VocabularyNodeType } from 'app/entities/node-api';
-import { CollectionNode, ConceptNode, GroupNode, Node, OrganizationNode, VocabularyNode } from 'app/entities/node';
+import { AnnotationNode, CollectionNode, ConceptNode, GroupNode, Node, OrganizationNode, VocabularyNode } from 'app/entities/node';
 import * as moment from 'moment';
 import { Graph } from 'app/entities/graph';
 import { PrefixAndNamespace } from 'app/entities/prefix-and-namespace';
@@ -85,6 +85,16 @@ export class TermedService {
         forkJoin(groups.map(group =>
           this.metaModelService.getMeta(group.type.graph.id)
             .pipe(map(metaModel => Node.create(group, metaModel, true) as GroupNode))
+        ))
+      ));
+  }
+
+  getAnnotationList(): Observable<AnnotationNode[]> {
+    return this.getAnnotationListNodes()
+      .pipe(flatMap(annotations =>
+        forkJoin(annotations.map(annotation =>
+          this.metaModelService.getMeta(annotation.type.graph.id)
+            .pipe(map(metaModel => Node.create(annotation, metaModel, true) as AnnotationNode))
         ))
       ));
   }
@@ -300,6 +310,14 @@ export class TermedService {
 
   private getGroupListNodes(): Observable<NodeExternal<'Group'>[]> {
     return this.http.get(`${apiUrl}/groups`)
+      .pipe(
+        map(normalizeAsArray),
+        catchError(notFoundAsDefault([]))
+      );
+  }
+
+  private getAnnotationListNodes(): Observable<NodeExternal<'Annotation'>[]> {
+    return this.http.get(`${apiUrl}/annotations`)
       .pipe(
         map(normalizeAsArray),
         catchError(notFoundAsDefault([]))

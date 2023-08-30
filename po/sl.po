@@ -525,3 +525,9 @@ msgstr "Sklic mora vsebovati jezik."
 
 msgid "Reference does not match any concepts."
 msgstr "Referenca se ne ujema z nobenim pojmom."
+
+msgid "No annotations yet"
+msgstr "Brez anotacij"
+
+msgid "Remove annotation"
+msgstr "Odstranite anotacijo"
