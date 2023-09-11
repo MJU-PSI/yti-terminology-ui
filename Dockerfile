@@ -39,6 +39,7 @@ WORKDIR /app
 
 # Copy files from builder to app dir
 COPY --from=builder /app/entrypoint.sh .
+RUN chmod +x /app/entrypoint.sh
 
 # Start web server and expose http
 EXPOSE 80
