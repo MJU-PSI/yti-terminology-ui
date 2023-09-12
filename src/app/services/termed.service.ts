@@ -106,7 +106,20 @@ export class TermedService {
       'prefix': prefix
     };
 
-    return this.http.post<string>(`${apiUrl}/vocabulary`, vocabulary.toInternalNode(), { params });
+    function inlineNodes(node: Node<any>) {
+      return flatten(node.getAllReferences()
+        .filter(ref => ref.inline)
+        .map(ref => ref.values.map(n => n.toInternalNode()))
+      );
+    }
+
+    const createdInlineNodes = inlineNodes(vocabulary);
+
+    const body = {
+      'save': [...createdInlineNodes, vocabulary.toInternalNode()]
+    };
+
+    return this.http.post<any>(`${apiUrl}/vocabulary`, body, { params });
   }
 
   removeVocabulary(graphId: string): Observable<any> {

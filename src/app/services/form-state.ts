@@ -876,7 +876,7 @@ export class FormReferenceAnnotation implements Sortable<AnnotationChild> {
   }
 
   get term() {
-    return true;
+    return false;
   }
 
   get annotation() {
