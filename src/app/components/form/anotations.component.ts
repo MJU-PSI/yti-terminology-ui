@@ -3,6 +3,8 @@ import { EditableService } from 'app/services/editable.service';
 import { AnnotationChild, FormReferenceAnnotation } from 'app/services/form-state';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { last } from '@mju-psi/yti-common-ui';
+import { LanguageService } from '../../services/language.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-annotations',
@@ -14,7 +16,7 @@ import { last } from '@mju-psi/yti-common-ui';
         <button class="btn btn-link"
                 [id]="id + '_add_annotation_button'"
                 (click)="addAnnotation()">
-          <span>{{'Add' | translate}} {{reference.label | translateValue:true | lowercase}}</span>
+          <span>{{referenceAddLabel}}</span>
         </button>
       </div>
     </div>
@@ -69,7 +71,9 @@ export class AnnotationsComponent implements OnChanges {
   openAnnotations: string[] = [];
 
   constructor(private editableService: EditableService,
-              private metaModelModel: MetaModelService) {
+              private metaModelModel: MetaModelService,
+              public languageService: LanguageService,
+              public translateService: TranslateService) {
   }
 
   ngOnChanges() {
@@ -121,5 +125,14 @@ export class AnnotationsComponent implements OnChanges {
 
   canReorder() {
     return this.editing && !this.filterLanguage && this.visibleChildren.length > 1;
+  }
+
+  get referenceAddLabel() {
+    let referenceAdd = this.translateService.instant('Add ' + this.reference.id);
+    if (referenceAdd && !referenceAdd.startsWith('[MISSING]')) {
+      return referenceAdd;
+    } else {
+      return this.translateService.instant('Add') + ' ' + this.languageService.translate(this.reference.label, true).toLowerCase();
+    }
   }
 }
