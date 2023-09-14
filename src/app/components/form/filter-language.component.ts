@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
   }],
   template: `
     <div ngbDropdown [placement]="'bottom-right'">
-      <button class="btn btn-language" id="filter_language_dropdown_button" ngbDropdownToggle>{{selectionName}}</button>
+      <button class="btn btn-language" id="filter_language_dropdown_button" (click)="updateOptions()" ngbDropdownToggle>{{selectionName}}</button>
       <div ngbDropdownMenu aria-labelledby="filter_language_dropdown_button">
         <button class="dropdown-item"
                 [class.active]="option.lang === selection"
@@ -51,7 +51,7 @@ export class FilterLanguageComponent implements ControlValueAccessor, OnInit, On
     this.subscriptions.forEach(s => s.unsubscribe());
   }
 
-  private updateOptions(): void {
+  updateOptions(): void {
     this.options = ['', ...this.languages].map(lang => ({
       lang: lang,
       name: this.languageToOptionName(lang)
@@ -65,7 +65,7 @@ export class FilterLanguageComponent implements ControlValueAccessor, OnInit, On
   get selectionName() {
     return this.languageToSelectionName(this.selection);
   }
-  
+
   getLangSelectionId(lang: string) {
     return lang ? lang + '_lang_selection_button' : 'all_lang_selection_button';
   }
