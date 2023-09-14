@@ -4,6 +4,8 @@ import { ConceptNode } from 'app/entities/node';
 import { EditableService } from 'app/services/editable.service';
 import { FormPropertyLocalizable } from 'app/services/form-state';
 import { contains } from '@mju-psi/yti-common-ui';
+import { LanguageService } from '../../services/language.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-localized-input',
@@ -13,7 +15,7 @@ import { contains } from '@mju-psi/yti-common-ui';
     <div *ngIf="canAdd()" class="clearfix">
       <div ngbDropdown class="add-button" placement="bottom-right">
         <button class="btn btn-link" id="{{id + '_add_button'}}" ngbDropdownToggle>
-          <span>{{'Add' | translate}} {{property.label | translateValue:true | lowercase}}</span>
+          <span>{{propertyAddLabel}}</span>
         </button>
         <div ngbDropdownMenu>
           <button class="dropdown-item"
@@ -105,7 +107,9 @@ export class LocalizedInputComponent {
   @Input() relatedConcepts: ConceptNode[];
   @Input() filterLanguage: string;
 
-  constructor(private editingService: EditableService) {
+  constructor(private editingService: EditableService,
+    public languageService: LanguageService,
+    public translateService: TranslateService) {
   }
 
   get languages() {
@@ -151,5 +155,14 @@ export class LocalizedInputComponent {
 
   canReorder() {
     return this.editing && !this.filterLanguage && this.visibleLocalizations.length > 1;
+  }
+
+  get propertyAddLabel() {
+    let propertyAdd = this.translateService.instant('Add ' + this.property.id);
+    if (propertyAdd && !propertyAdd.startsWith('[MISSING]')) {
+      return propertyAdd;
+    } else {
+      return this.translateService.instant('Add') + ' ' + this.languageService.translate(this.property.label, true).toLowerCase();
+    }
   }
 }

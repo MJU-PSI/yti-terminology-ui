@@ -531,3 +531,36 @@ msgstr "Brez anotacij"
 
 msgid "Remove annotation"
 msgstr "Odstranite anotacijo"
+
+msgid "Definicija"
+msgstr "{declension, select, second{Definicijo} other{Definicija}}"
+
+msgid "Add definition"
+msgstr "Dodajte definicijo"
+
+msgid "Add note"
+msgstr "Dodajte opombo"
+
+msgid "Add historyNote"
+msgstr "Dodajte opombo o zgodovini"
+
+msgid "Add changeNote"
+msgstr "Dodajte opombo spremembe"
+
+msgid "Add editorialNote"
+msgstr "Dodajte opombo uredništva"
+
+msgid "Add externalLink"
+msgstr "Dodajte zunanjo povezavo"
+
+msgid "Add annotation"
+msgstr "Dodajte anotacijo"
+
+msgid "Add member"
+msgstr "Dodajte člana"
+
+msgid "Add contributor"
+msgstr "Dodajte sodelavca"
+
+msgid "Add broader"
+msgstr "Dodajte širšo zbirko"

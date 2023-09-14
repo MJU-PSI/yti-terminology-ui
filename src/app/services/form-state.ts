@@ -323,6 +323,10 @@ export class FormReferenceTerm implements Sortable<TermChild> {
     return Array.from(new Set(this.children.map(c => c.language)));
   }
 
+  get id(): String {
+    return this.meta.id;
+  }
+
   get label(): Localizable {
     return this.meta.label;
   }
@@ -710,6 +714,10 @@ export class FormPropertyLocalizable implements Sortable<LocalizedControl> {
     return Array.from(new Set(this.value.map(v => v.lang)));
   }
 
+  get id(): String {
+    return this.meta.id;
+  }
+
   get label(): Localizable {
     return this.meta.label;
   }
@@ -820,6 +828,10 @@ export class FormReferenceAnnotation implements Sortable<AnnotationChild> {
     const copy = this.children.slice();
     moveElement(copy, fromIndex, toIndex);
     this.sortableValues = copy;
+  }
+
+  get id(): String {
+    return this.meta.id;
   }
 
   get label(): Localizable {
