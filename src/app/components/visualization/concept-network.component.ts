@@ -353,8 +353,11 @@ export class ConceptNetworkComponent implements OnInit, OnDestroy {
 
     this.zone.runOutsideAngular(() => {
       this.network = new VisNetwork(this.networkCanvasRef.nativeElement, this.networkData, options);
-      this.network.on('dragStart', this.onDragStart.bind(this));
-      this.network.on('click', this.onClick.bind(this));
+      setTimeout(() => {
+        this.network = new VisNetwork(this.networkCanvasRef.nativeElement, this.networkData, options);
+        this.network.on('dragStart', this.onDragStart.bind(this));
+        this.network.on('click', this.onClick.bind(this));
+      }, 500 );
     });
 
     this.resourceActionSubscription = this.conceptViewModel.resourceAction$.subscribe(action => {
