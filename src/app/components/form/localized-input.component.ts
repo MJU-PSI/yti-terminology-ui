@@ -13,7 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
   template: `
 
     <div *ngIf="canAdd()" class="clearfix">
-      <div ngbDropdown class="add-button" placement="bottom-right">
+      <div ngbDropdown class="add-button" placement="bottom-right" container="body">
         <button class="btn btn-link" id="{{id + '_add_button'}}" ngbDropdownToggle>
           <span>{{propertyAddLabel}}</span>
         </button>
