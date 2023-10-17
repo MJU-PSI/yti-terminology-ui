@@ -11,6 +11,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { MetaModelService } from 'app/services/meta-model.service';
 import { Subscription } from 'rxjs';
 import { ConfigurationService } from '../../services/configuration.service';
+import { DomSanitizer } from "@angular/platform-browser";
+import * as DOMPurify from "dompurify";
 
 interface ConceptNetworkData {
   nodes: DataSet<UpdatableVisNode>;
@@ -228,7 +230,8 @@ export class ConceptNetworkComponent implements OnInit, OnDestroy {
               private router: Router,
               private renderer: Renderer2,
               private conceptViewModel: ConceptViewModelService,
-              private configurationService: ConfigurationService) {
+              private configurationService: ConfigurationService,
+              private sanitizer: DomSanitizer) {
 
     const updateNetworkData = () => {
 
@@ -343,6 +346,12 @@ export class ConceptNetworkComponent implements OnInit, OnDestroy {
     }
   }
 
+  private sanitize(content: string) {
+    const sanitizedContent = DOMPurify.sanitize(content);
+    const value: any = this.sanitizer.bypassSecurityTrustHtml(sanitizedContent);
+    return value['changingThisBreaksApplicationSecurity'];
+  }
+
   public ngOnInit(): void {
 
     this.drawLegend();
@@ -433,7 +442,7 @@ export class ConceptNetworkComponent implements OnInit, OnDestroy {
         id: concept.id,
         label: this.languageService.translate(concept.label),
         // FIXME: how to handle multiple definitions?
-        title: this.languageService.translate(asLocalizable(concept.getDefinitionWithoutSemantics(this.configurationService.namespaceRoot), true))
+        title: this.sanitize(this.languageService.translate(asLocalizable(concept.getDefinitionWithoutSemantics(this.configurationService.namespaceRoot), true)))
       };
 
       return Object.assign(node, { update: createNode })
@@ -465,7 +474,7 @@ export class ConceptNetworkComponent implements OnInit, OnDestroy {
         id: collection.id,
         label: this.languageService.translate(collection.label),
         // FIXME: how to handle multiple definitions?
-        title: this.languageService.translate(asLocalizable(collection.getDefinitionWithoutSemantics(this.configurationService.namespaceRoot), true)),
+        title: this.sanitize(this.languageService.translate(asLocalizable(collection.getDefinitionWithoutSemantics(this.configurationService.namespaceRoot), true))),
         group: 'rootCollectionGroup',
         physics: false,
         fixed: false
@@ -505,7 +514,7 @@ export class ConceptNetworkComponent implements OnInit, OnDestroy {
         from: from.id,
         to: to.id,
         id: from.id + to.id,
-        title: createTitle(),
+        title: this.sanitize(createTitle()),
         type: type
       };
 
