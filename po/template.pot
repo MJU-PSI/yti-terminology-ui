@@ -4,7 +4,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Terminologies"
+msgid "Terminology"
 msgstr ""
 
 msgid "Search collection"
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Reference Data"
 msgstr ""
 
-msgid "Data Vocabularies"
+msgid "Data models"
 msgstr ""
 
 msgid "Comments"

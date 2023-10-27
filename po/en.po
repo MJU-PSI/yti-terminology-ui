@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Terminologies"
+msgid "Terminology"
 msgstr ""
 
 msgid "Search collection"
@@ -182,7 +182,7 @@ msgstr ""
 msgid "Reference Data"
 msgstr ""
 
-msgid "Data Vocabularies"
+msgid "Data models"
 msgstr ""
 
 msgid "Comments"
@@ -291,7 +291,7 @@ msgstr ""
 "interested."
 
 msgid "Search vocabularies"
-msgstr "Search terminologies"
+msgstr "Search terminology"
 
 msgid "Extend search"
 msgstr "Extend search to"

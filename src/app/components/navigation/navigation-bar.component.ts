@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 
       <a id="main_page_link" class="navbar-brand" [routerLink]="['/']" (click)="goToFrontPage($event)">
         <!-- <app-logo></app-logo> -->
-        <span translate>Terminologies</span>
+        <span translate>Terminology</span>
         <span>{{environmentIdentifier}}</span>
       </a>
 
@@ -74,7 +74,7 @@ import { Router } from '@angular/router';
                [href]="codeListUrl" target="_blank" rel="noopener noreferrer" translate>Reference Data</a>
             <a id="navigation_data_vocabularies_link"
                class="dropdown-item"
-               [href]="dataModelUrl" target="_blank" rel="noopener noreferrer" translate>Data Vocabularies</a>
+               [href]="dataModelUrl" target="_blank" rel="noopener noreferrer" translate>Data models</a>
             <a id="navigation_comments_link"
                class="dropdown-item"
                [href]="commentsUrl" target="_blank" rel="noopener noreferrer" translate>Comments</a>

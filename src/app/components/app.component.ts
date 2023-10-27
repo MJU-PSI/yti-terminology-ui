@@ -14,7 +14,7 @@ const versionInfo = require('!raw-loader!../../version.txt');
       <app-breadcrumb [location]="location" [linkActive]="true" [refreshPath]="['re']"></app-breadcrumb>
       <router-outlet></router-outlet>
     </div>
-    <app-footer [title]="'Terminologies' | translate"
+    <app-footer [title]="'Terminology' | translate"
                 id="app_navigate_to_info"
                 [showLicenseIcon]="true"
                 [version]="version"

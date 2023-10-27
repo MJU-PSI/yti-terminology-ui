@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: yti-terminology-ui\n"
 "Language: sl\n"
 
-msgid "Terminologies"
+msgid "Terminology"
 msgstr "Terminologija"
 
 msgid "Search collection"
@@ -137,7 +137,7 @@ msgid "Add"
 msgstr "Dodajte"
 
 msgid "No values yet"
-msgstr "Ni še vrednosti"
+msgstr "Ni še vpisa"
 
 msgid "Add concept reference"
 msgstr "Dodajte sklic na pojem"
@@ -149,7 +149,7 @@ msgid "Unlinked selected text"
 msgstr "Nepovezano izbrano besedilo"
 
 msgid "No terms yet"
-msgstr "Ni še pogojev"
+msgstr "Ni še vpisa"
 
 msgid "Remove term"
 msgstr "Odstranite izraz"
@@ -175,7 +175,7 @@ msgstr "Podrobnosti o uporabniku"
 msgid "Reference Data"
 msgstr "Šifranti"
 
-msgid "Data Vocabularies"
+msgid "Data models"
 msgstr "Podatkovna besedišča"
 
 msgid "Comments"
@@ -194,7 +194,7 @@ msgid "Associative"
 msgstr "Asociativno"
 
 msgid "Add information domain"
-msgstr "Dodajte informacijsko domeno"
+msgstr "Dodajte informacijsko področje"
 
 msgid "Confirm import"
 msgstr "Potrdite uvoz"
@@ -251,10 +251,10 @@ msgid "Add organization"
 msgstr "Dodajte organizacijo"
 
 msgid "Search information domain"
-msgstr "Domena iskanja informacij"
+msgstr "Področje iskanja informacij"
 
 msgid "Choose information domain"
-msgstr "Izberite informacijsko domeno"
+msgstr "Izberite informacijsko področje"
 
 msgid "Search organization"
 msgstr "Iščite organizacijo"
@@ -272,7 +272,7 @@ msgid "Add vocabulary"
 msgstr "Dodajte terminologijo"
 
 msgid "ToolInfo"
-msgstr "Orodje za terminologije se uporablja za zbiranje, vzdrževanje in objavo skupnih terminologij javne uprave. Oblikovalci podatkov lahko uporabljajo orodje za definiranje izrazov in odnosov. Izrazi, njihove definicije ter tudi vizualizacija odnosov med pojmi so javno dostopni vsem zainteresiranim."
+msgstr "Orodje za terminologije se uporablja za zbiranje, vzdrževanje in objavo skupne terminologije javne uprave."
 
 msgid "Search vocabularies"
 msgstr "Iščite terminologijo"
@@ -284,7 +284,7 @@ msgid "to concepts"
 msgstr "pojmi"
 
 msgid "Filter with information domain"
-msgstr "Filter z informacijsko domeno"
+msgstr "Filtriranje z informacijskim področjem"
 
 msgid "result"
 msgstr "rezultat"
@@ -311,7 +311,7 @@ msgid "Terminology details"
 msgstr "Terminologija"
 
 msgid "Choose action"
-msgstr "Izberite akcijo"
+msgstr "Izberite dejanje"
 
 msgid "Add email subscription"
 msgstr "Dodajte naročnino na e-poštna obvestila"
@@ -323,7 +323,7 @@ msgid "Export terminology Excel"
 msgstr "Izvoz terminologije v Excel"
 
 msgid "Information domain"
-msgstr "Informacijska domena"
+msgstr "Informacijsko področje"
 
 msgid "Organization"
 msgstr "Organizacija"
@@ -365,7 +365,7 @@ msgid "Daily"
 msgstr "Dnevno"
 
 msgid "Code list resources"
-msgstr "Viri kodnega seznama"
+msgstr "Viri šifrantov"
 
 msgid "Terminology resources"
 msgstr "Terminološki viri"

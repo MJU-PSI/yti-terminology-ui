@@ -24,7 +24,7 @@ import { HttpErrorResponse } from '@angular/common/http';
         <span translate>Add vocabulary</span>
       </button>
 
-      <h4 class="tool-inner-title" translate>Terminologies</h4>
+      <h4 class="tool-inner-title" translate>Terminology</h4>
       <div class="tool-info"><p translate>ToolInfo</p></div>
 
       <div><span class="search-label" translate>Search vocabularies</span></div>
