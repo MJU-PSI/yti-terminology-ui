@@ -176,7 +176,7 @@ msgid "Reference Data"
 msgstr "Šifranti"
 
 msgid "Data models"
-msgstr "Podatkovna besedišča"
+msgstr "Podatkovni modeli"
 
 msgid "Comments"
 msgstr "Komentarji"
