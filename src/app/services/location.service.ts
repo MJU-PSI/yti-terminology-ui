@@ -83,6 +83,20 @@ export class LocationService implements OnDestroy {
     }]);
   }
 
+  atAccessibilityPage(): void {
+    this.changeLocation([{
+      localizationKey: 'Accessibility',
+      route: ['accessibility']
+    }]);
+  }
+
+  atPrivacyPage(): void {
+    this.changeLocation([{
+      localizationKey: 'Privacy and protection of personal data',
+      route: ['privacy']
+    }]);
+  }
+
   private changeLocation(location: Location[], showFooter: boolean = true): void {
     location.unshift(frontPage);
     this.location.next(location);

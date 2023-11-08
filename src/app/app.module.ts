@@ -114,6 +114,8 @@ import slCommonPo from 'raw-loader!po-loader?format=mf!../../node_modules/@mju-p
 import { AnnotationsComponent } from './components/form/anotations.component';
 import { AnnotationComponent } from './components/form/annotation.component';
 import { InputAnnotationIdComponent } from './components/form/input-annotation-id.component';
+import { AccessibilityPageComponent } from './components/accessibility/accessibility-page.component';
+import { PrivacyPageComponent } from './components/privacy/privacy-page.component';
 
 function removeEmptyValues(obj: {}) {
 
@@ -190,6 +192,8 @@ const appRoutes: Routes = [
   },
   { path: 'userDetails', component: UserDetailsComponent },
   { path: 'information', component: InformationAboutServiceComponent },
+  { path: 'accessibility', component: AccessibilityPageComponent },
+  { path: 'privacy', component: PrivacyPageComponent },
   // NOTE: If createRefreshRouteMatcher(['re']) starts to work after angular upgrade, then switch to that.
   { matcher: refreshRouteMatcher, component: RefreshComponent }
 ];
@@ -273,7 +277,9 @@ export function initApp(configurationService: ConfigurationService) {
     UrlInputModalComponent,
     AnnotationsComponent,
     AnnotationComponent,
-    InputAnnotationIdComponent
+    InputAnnotationIdComponent,
+    AccessibilityPageComponent,
+    PrivacyPageComponent
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,8 @@ const versionInfo = require('!raw-loader!../../version.txt');
                 [showLicenseIcon]="true"
                 [version]="version"
                 (informationClick)="navigateToInformation()"
+                (accessibilityClick)="navigateToAccessibility()"
+                (privacyClick)="navigateToPrivacy()"
                 *ngIf="showFooter"></app-footer>
   `
 })
@@ -43,5 +45,13 @@ export class AppComponent {
 
   navigateToInformation() {
     this.router.navigate(['/information']);
+  }
+
+  navigateToAccessibility() {
+    this.router.navigate(['/accessibility']);
+  }
+
+  navigateToPrivacy() {
+    this.router.navigate(['/privacy']);
   }
 }

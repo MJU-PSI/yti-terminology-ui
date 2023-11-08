@@ -32,7 +32,7 @@ export class LanguageService implements Localizer {
     this.language$.subscribe(lang => this.translateService.use(lang));
 
     combineLatest(this.language$, this.filterLanguage$)
-      .subscribe(([lang, filterLang]) => this.translateLanguage$.next(filterLang || lang));
+      .subscribe(([lang, filterLang]) => this.translateLanguage$.next(lang || filterLang));
   }
 
   get language(): Language {
