@@ -1,27 +1,50 @@
 <div class="content-box">
-  <h1>Terminologija</h1>
-  <p>
-    V modulu Terminologija so enolično in jasno definirani ključni pojmi, ki se uporabljajo v okviru javne uprave.
-    Nudi rešitve za semantične ovire, ki so lahko:
-  </p>
-  <ul>
-      <li>različne definicije pojmov,</li>
-      <li>isti termin za več pojmov ali več terminov za isti pojem,</li>
-      <li>opis istega pojma z različnimi atributi ali z različnim številom atributov,</li>
-      <li>uporaba različnih enot,</li>
-      <li>različna natančnost merskih lestvic,</li>
-      <li>itd.</li>
-  </ul>
-  <p>V modulu Terminologija imajo vsi pojmi nedvoumno in neredundantno definicijo. Najmanj, kar zagotavlja, je:</p>
-  <ul>
-      <li>če se nek termin uporablja za različne pojme in v različnih kontekstih, je v določenem kontekstu eksplicitno kvalificiran,</li>
-      <li>če se uporablja več terminov za isti pojem, je eden določen kot prednostni, ostali pa kot sinonimi, psevdonimi itd.</li>
-  </ul>
-  <p>Termini so lahko organizirani tudi v hierarhično strukturo. Vsak termin je lahko v enem ali več odnosih nadrejenosti ali podrejenosti do drugih terminov. <br>
-    Dovoljena je tudi mrežna struktura (en termin ima lahko več nadrejenih terminov). Odnosi med pojmi lahko vključujejo tudi asociativne (nehierarhične) odnose.</p>
-  <p>Modul Terminologija vsebuje tudi druge metapodatke (npr. izvorno vsebinsko področje, skrbništvo pojmov itd.)</p>
-  <p>Modul Terminologija se vzajemno povezuje in usklajuje z modulom Podatkovni modeli in Šifranti.</p>
+
+  <ng-container *ngIf="currentLang === 'en'">
+    <h1>Terminology</h1>
+    <p>
+      The Terminology module uniquely and clearly defines the key terms used in public administration. It provides solutions to semantic barriers, which may includeIn
+    </p>
+    <ul>
+        <li>different definitions of concepts,</li>
+        <li>the same term for several concepts or several terms for the same concept,</li>
+        <li>describing the same concept with different attributes or with a different number of attributes,</li>
+        <li>the use of different units,</li>
+        <li>different accuracy of measurement scales.</li>
+        <li>etc.</li>
+    </ul>
+    <p>In the Terminology module, all terms have an unambiguous and non-redundant definition. The minimum it provides is:</p>
+    <ul>
+        <li>if a term is used for different concepts and in different contexts, it must explicitly be qualified in a certain context,</li>
+        <li>if several terms are used for the same concept, one must be designated as preferred, and the others as synonyms, pseudonyms, etc.</li>
+    </ul>
+    <p>Terms can also be organised in a hierarchical structure. Each term can have one or more parent or child relationships to other terms. A network structure is also allowed (a term can have several parent terms). Relationships between terms can also include associative (non-hierarchical) relationships.</p>
+    <p>The Terminology module also contains other metadata</p>
+    <p>The Terminology module is interelated and coordinated with the Data Models and Reference Data (Code lists) module.</p>
+  </ng-container>
+
+  <ng-container *ngIf="currentLang !== 'en'">
+    <h1>Terminologija</h1>
+    <p>
+      V modulu Terminologija so enolično in jasno definirani ključni pojmi, ki se uporabljajo v okviru javne uprave.
+      Modul omogoča rešitve za semantične ovire, ki so lahko:
+    </p>
+    <ul>
+        <li>različne definicije pojmov,</li>
+        <li>isti termin za več pojmov ali več terminov za isti pojem,</li>
+        <li>opis istega pojma z različnimi atributi ali z različnim številom atributov,</li>
+        <li>uporaba različnih enot,</li>
+        <li>različna natančnost merskih lestvic,</li>
+        <li>itd.</li>
+    </ul>
+    <p>V modulu Terminologija imajo vsi pojmi nedvoumno in neredundantno definicijo. Najmanj, kar zagotavlja, je:</p>
+    <ul>
+        <li>če se nek termin uporablja za različne pojme in v različnih kontekstih, je v določenem kontekstu eksplicitno kvalificiran,</li>
+        <li>če se uporablja več terminov za isti pojem, je eden določen kot prednostni, ostali pa kot sinonimi, psevdonimi itd.</li>
+    </ul>
+    <p>Termini so lahko organizirani tudi v hierarhično strukturo. Vsak termin je lahko v enem ali več odnosih nadrejenosti ali podrejenosti do drugih terminov. Dovoljena je tudi mrežna struktura (en termin ima lahko več nadrejenih terminov). Odnosi med pojmi lahko vključujejo tudi asociativne (nehierarhične) odnose.</p>
+    <p>Modul Terminologija vsebuje tudi druge metapodatke (npr. izvorno vsebinsko področje, skrbništvo pojmov itd.)</p>
+    <p>Modul Terminologija se vzajemno povezuje in usklajuje z moduloma Podatkovni modeli in Šifranti.</p>
+  </ng-container>
 
 </div>
-
-
