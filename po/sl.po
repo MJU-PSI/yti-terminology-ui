@@ -365,16 +365,16 @@ msgid "Daily"
 msgstr "Dnevno"
 
 msgid "Code list resources"
-msgstr "Viri šifrantov"
+msgstr "Viri v orodju Šifranti"
 
 msgid "Terminology resources"
-msgstr "Terminološki viri"
+msgstr "Viri v orodju Terminologija"
 
 msgid "Datamodel resources"
-msgstr "Viri podatkovnega modela"
+msgstr "Viri v orodju Podatkovni modeli"
 
 msgid "Comments resources"
-msgstr "Viri komentarjev"
+msgstr "Viri v orodju Komentarji"
 
 msgid "INFORMATION"
 msgstr "INFORMACIJE"
